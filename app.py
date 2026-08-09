@@ -1368,7 +1368,7 @@ for ipo in preapply_ipos:
             if gmp_change is None:
 
                 trend_text = (
-                    "🟡 No previous GMP"
+                    "🟡"
                 )
 
                 trend_class = (
@@ -1378,7 +1378,7 @@ for ipo in preapply_ipos:
             elif gmp_change > 0:
 
                 trend_text = (
-                    f"🟢 +₹{gmp_change:g} GMP today"
+                    f"🟢+₹{gmp_change:g}"
                 )
 
                 trend_class = (
@@ -1388,7 +1388,7 @@ for ipo in preapply_ipos:
             elif gmp_change < 0:
 
                 trend_text = (
-                    f"🔴 −₹{abs(gmp_change):g} GMP today"
+                    f"🔴−₹{abs(gmp_change):g}"
                 )
 
                 trend_class = (
@@ -1398,7 +1398,7 @@ for ipo in preapply_ipos:
             else:
 
                 trend_text = (
-                    "🟡 No change today"
+                    "🟡"
                 )
 
                 trend_class = (
