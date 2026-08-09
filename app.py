@@ -631,7 +631,7 @@ def get_ipowatch_url(company):
 # LOAD DATA
 # =========================================================
 
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=1800)
 def load_data():
     data_file = Path(__file__).parent / "latest_data.json"
 
