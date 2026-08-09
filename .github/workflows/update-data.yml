@@ -28,6 +28,8 @@ jobs:
       - name: Update IPO data
         run: |
           python update_data.py
+          echo "===== FETCHED DATA ====="
+          cat latest_data.json
 
       - name: Commit updated data
         run: |
