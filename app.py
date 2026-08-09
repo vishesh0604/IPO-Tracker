@@ -291,7 +291,21 @@ st.markdown(
     text-align: right;
     margin-top: 3px;
 }
+.gmp-trend-mobile {
+    display: none;
+}
 @media screen and (max-width: 600px) {
+
+    .gmp-trend-desktop {
+        display: none !important;
+    }
+
+    .gmp-trend-mobile {
+        display: inline !important;
+        white-space: nowrap !important;
+        font-size: 11px !important;
+        line-height: 18px !important;
+    }
 
     .block-container {
         padding: 2.8rem 0.6rem !important;
@@ -332,12 +346,6 @@ st.markdown(
         padding: 10px !important;
     }
 
-    /* Keep card's top row horizontal */
-    div[data-testid="stHorizontalBlock"] {
-        flex-wrap: nowrap !important;
-        gap: 0.5rem !important;
-    }
-
     div[data-testid="stHorizontalBlock"] > div {
         min-width: 0 !important;
     }
@@ -371,6 +379,7 @@ st.markdown(
         margin-top: 2px !important;
     }
 
+    
     .detail-label {
         font-size: 8px !important;
         margin-bottom: 2px !important;
@@ -1043,13 +1052,17 @@ for ipo in apply_ipos:
             if gmp_change is None:
 
                 trend_text = (
-                    "🟡 No previous GMP"
+                    '<span class="gmp-trend-desktop">'
+                    '🟡 No previous GMP'
+                    '</span>'
+                    '<span class="gmp-trend-mobile">'
+                    '🟡 No prev GMP'
+                    '</span>'
                 )
 
                 trend_class = (
                     "gmp-trend-neutral"
                 )
-
             elif gmp_change > 0:
 
                 trend_text = (
