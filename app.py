@@ -702,7 +702,7 @@ st.markdown(
 )
 st.markdown(
     '<div class="developer-credit">'
-    'Developed Vishesh Vasudeva'
+    'Developed by Vishesh Vasudeva'
     '</div>',
     unsafe_allow_html=True
 )
