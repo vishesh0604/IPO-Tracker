@@ -669,7 +669,17 @@ except Exception as e:
 all_open_ipos = data["open"]
 
 recent_closed = data["recent_closed"]
+gmp_history_file = (
+    Path(__file__).parent / "gmp_history.json"
+)
 
+with open(
+    gmp_history_file,
+    "r",
+    encoding="utf-8"
+) as file:
+    gmp_history = json.load(file)
+    
 
 # =========================================================
 # SPLIT APPLY / PRE-APPLY
@@ -701,6 +711,33 @@ preapply_ipos.sort(
     )
 )
 
+# =========================================================
+# GMP DAILY TREND
+# =========================================================
+
+for ipo in apply_ipos + preapply_ipos:
+
+    company = ipo["company"]
+
+    history = gmp_history.get(
+        company,
+        []
+    )
+
+    if len(history) >= 2:
+
+        current_gmp = history[-1]["gmp"]
+        previous_gmp = history[-2]["gmp"]
+
+        gmp_change = (
+            current_gmp - previous_gmp
+        )
+
+    else:
+
+        gmp_change = None
+
+    ipo["gmp_change"] = gmp_change
 
 # =========================================================
 # HEADER
@@ -997,9 +1034,70 @@ for ipo in apply_ipos:
                 unsafe_allow_html=True
             )
 
+            # GMP DAILY TREND
+
+            gmp_change = ipo.get(
+                "gmp_change"
+            )
+
+            if gmp_change is None:
+
+                trend_text = (
+                    "🟡 No previous GMP"
+                )
+
+                trend_class = (
+                    "gmp-trend-neutral"
+                )
+
+            elif gmp_change > 0:
+
+                trend_text = (
+                    f"🟢 +₹{gmp_change:g} GMP today"
+                )
+
+                trend_class = (
+                    "gmp-trend-up"
+                )
+
+            elif gmp_change < 0:
+
+                trend_text = (
+                    f"🔴 −₹{abs(gmp_change):g} GMP today"
+                )
+
+                trend_class = (
+                    "gmp-trend-down"
+                )
+
+            else:
+
+                trend_text = (
+                    "🟡 No change today"
+                )
+
+                trend_class = (
+                    "gmp-trend-neutral"
+                )
+
+            st.markdown(
+                f'''
+                <div class="{trend_class}"
+                     style="
+                         text-align:right;
+                         height:18px;
+                         line-height:18px;
+                         margin-top:4px;
+                         white-space:nowrap;
+                     ">
+                    {trend_text}
+                </div>
+                ''',
+                unsafe_allow_html=True
+            )
+
 
         st.divider()
-
 
         # -------------------------------------------------
         # DETAILS
@@ -1248,7 +1346,68 @@ for ipo in preapply_ipos:
                 unsafe_allow_html=True
             )
 
+            # GMP DAILY TREND
 
+            gmp_change = ipo.get(
+                "gmp_change"
+            )
+
+            if gmp_change is None:
+
+                trend_text = (
+                    "🟡 No previous GMP"
+                )
+
+                trend_class = (
+                    "gmp-trend-neutral"
+                )
+
+            elif gmp_change > 0:
+
+                trend_text = (
+                    f"🟢 +₹{gmp_change:g} GMP today"
+                )
+
+                trend_class = (
+                    "gmp-trend-up"
+                )
+
+            elif gmp_change < 0:
+
+                trend_text = (
+                    f"🔴 −₹{abs(gmp_change):g} GMP today"
+                )
+
+                trend_class = (
+                    "gmp-trend-down"
+                )
+
+            else:
+
+                trend_text = (
+                    "🟡 No change today"
+                )
+
+                trend_class = (
+                    "gmp-trend-neutral"
+                )
+
+            st.markdown(
+                f'''
+                <div class="{trend_class}"
+                     style="
+                         text-align:right;
+                         height:18px;
+                         line-height:18px;
+                         margin-top:4px;
+                         white-space:nowrap;
+                     ">
+                    {trend_text}
+                </div>
+                ''',
+                unsafe_allow_html=True
+            )
+            
         st.divider()
 
 
