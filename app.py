@@ -9,7 +9,6 @@ from zoneinfo import ZoneInfo
 
 import json
 from pathlib import Path
-from update_data import update_data
 
 
 # =========================================================
@@ -729,10 +728,10 @@ st.markdown(
 
 st.markdown(
     f'<div class="refresh-text">'
-    f'Data fetched: '
-    f'{fetched_at.strftime("%d %b %Y, %I:%M %p")}'
+    f'Last updated: '
+    f'{fetched_at.strftime("%d %b %Y, %I:%M %p")} IST'
     f' &nbsp; · &nbsp; '
-    f'Auto-cache: 6 hours'
+    f'Updates automatically every 6 hours'
     f'</div>',
     unsafe_allow_html=True
 )
@@ -741,11 +740,11 @@ st.write("")
 
 
 # =========================================================
-# FILTERS + REFRESH
+# FILTERS
 # =========================================================
 
-filter_col1, filter_col2, refresh_col = st.columns(
-    [3, 2, 1]
+filter_col1, filter_col2 = st.columns(
+    [3, 2]
 )
 
 
@@ -770,19 +769,7 @@ with filter_col2:
         key="ipo_type_filter"
     )
 
-
-if st.button(
-    "↻ Refresh Data",
-    type="primary",
-    use_container_width=True
-):
-    with st.spinner("Fetching latest IPO data..."):
-        update_data()
-
-    st.cache_data.clear()
-    st.rerun()
     
-
 # =========================================================
 # APPLY FILTERS
 # =========================================================
