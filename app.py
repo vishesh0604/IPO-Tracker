@@ -7,7 +7,9 @@ from zoneinfo import ZoneInfo
 # IMPORT DATA
 # =========================================================
 
-from ipo_data import get_dashboard_data
+import json
+from pathlib import Path
+from update_data import update_data
 
 
 # =========================================================
@@ -621,12 +623,23 @@ def get_ipowatch_url(company):
 # LOAD DATA
 # =========================================================
 
-@st.cache_data(ttl=3600)
+@st.cache_data
 def load_data():
+    data_file = Path(__file__).parent / "latest_data.json"
 
-    data = get_dashboard_data()
+    with open(
+        data_file,
+        "r",
+        encoding="utf-8"
+    ) as file:
+        saved_data = json.load(file)
 
-    fetched_at = datetime.now(ZoneInfo("Asia/Kolkata"))
+    data = saved_data["data"]
+
+    fetched_at = datetime.strptime(
+        saved_data["fetched_at"],
+        "%Y-%m-%d %H:%M"
+    )
 
     return data, fetched_at
 
@@ -634,7 +647,7 @@ def load_data():
 try:
 
     with st.spinner(
-        "Fetching latest IPO data..."
+        "Loading IPO data..."
     ):
 
         data, fetched_at = load_data()
@@ -719,7 +732,7 @@ st.markdown(
     f'Data fetched: '
     f'{fetched_at.strftime("%d %b %Y, %I:%M %p")}'
     f' &nbsp; · &nbsp; '
-    f'Auto-cache: 1 hour'
+    f'Auto-cache: 6 hours'
     f'</div>',
     unsafe_allow_html=True
 )
@@ -758,18 +771,17 @@ with filter_col2:
     )
 
 
-with refresh_col:
-    st.write("")
+if st.button(
+    "↻ Refresh Data",
+    type="primary",
+    use_container_width=True
+):
+    with st.spinner("Fetching latest IPO data..."):
+        update_data()
 
-    if st.button(
-        "↻ Refresh Data",
-        type="primary",
-        use_container_width=True
-    ):
-        st.cache_data.clear()
-
-        st.rerun()
-
+    st.cache_data.clear()
+    st.rerun()
+    
 
 # =========================================================
 # APPLY FILTERS
