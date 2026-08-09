@@ -2,7 +2,7 @@ name: Update IPO Data
 
 on:
   schedule:
-    - cron: "30 0,6,12,18 * * *"
+    - cron: "50 * * * *"
   workflow_dispatch:
 
 permissions:
