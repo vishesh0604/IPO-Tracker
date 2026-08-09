@@ -1087,6 +1087,10 @@ for ipo in apply_ipos:
 
                 trend_text = (
                     "🟡 No change today"
+                    '</span>'
+                    '<span class="gmp-trend-mobile">'
+                    '🟡 No change today'
+                    '</span>'
                 )
 
                 trend_class = (
