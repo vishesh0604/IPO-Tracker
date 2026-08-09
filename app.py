@@ -1053,10 +1053,10 @@ for ipo in apply_ipos:
 
                 trend_text = (
                     '<span class="gmp-trend-desktop">'
-                    '🟡 No previous GMP'
+                    '🟡'
                     '</span>'
                     '<span class="gmp-trend-mobile">'
-                    '🟡 No prev GMP'
+                    '🟡'
                     '</span>'
                 )
 
@@ -1066,7 +1066,7 @@ for ipo in apply_ipos:
             elif gmp_change > 0:
 
                 trend_text = (
-                    f"🟢 +₹{gmp_change:g} GMP today"
+                    f"🟢+₹{gmp_change:g}"
                 )
 
                 trend_class = (
@@ -1076,7 +1076,7 @@ for ipo in apply_ipos:
             elif gmp_change < 0:
 
                 trend_text = (
-                    f"🔴 −₹{abs(gmp_change):g} GMP today"
+                    f"🔴−₹{abs(gmp_change):g}"
                 )
 
                 trend_class = (
@@ -1086,7 +1086,7 @@ for ipo in apply_ipos:
             else:
 
                 trend_text = (
-                    "🟡 No change today"
+                    "🟡"
                 )
 
                 trend_class = (
