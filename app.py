@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 # =========================================================
@@ -625,7 +626,7 @@ def load_data():
 
     data = get_dashboard_data()
 
-    fetched_at = datetime.now()
+    fetched_at = datetime.now(ZoneInfo("Asia/Kolkata"))
 
     return data, fetched_at
 
