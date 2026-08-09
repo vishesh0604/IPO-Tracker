@@ -56,6 +56,8 @@ def update_gmp_history(data, timestamp):
         + data.get("recent_closed", [])
     )
 
+    current_date = timestamp[:10]
+
     for ipo in all_ipos:
         company = ipo.get("company")
         gmp = ipo.get("gmp")
@@ -79,17 +81,51 @@ def update_gmp_history(data, timestamp):
         if company not in history:
             history[company] = []
 
-        history[company].append(
-            {
-                "timestamp": timestamp,
-                "gmp": gmp_value
-            }
+        # -------------------------------------------------
+        # REMOVE DUPLICATES FOR THE SAME DAY
+        # -------------------------------------------------
+
+        daily_entries = []
+        other_entries = []
+
+        for entry in history[company]:
+            entry_date = str(
+                entry.get("timestamp", "")
+            )[:10]
+
+            if entry_date == current_date:
+                daily_entries.append(entry)
+            else:
+                other_entries.append(entry)
+
+        # -------------------------------------------------
+        # KEEP ONLY THE LATEST ENTRY FOR TODAY
+        # -------------------------------------------------
+
+        latest_today = {
+            "timestamp": timestamp,
+            "gmp": gmp_value
+        }
+
+        history[company] = (
+            other_entries
+            + [latest_today]
+        )
+
+        # Keep history sorted by date/time
+        history[company].sort(
+            key=lambda entry: entry.get(
+                "timestamp",
+                ""
+            )
         )
 
     save_json(
         GMP_HISTORY_FILE,
         history
     )
+    
+
 
 
 def update_data():
