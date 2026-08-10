@@ -195,6 +195,8 @@ st.markdown(
 
 .status-open {
     display: inline-block;
+    width: 82px;
+    box-sizing: border-box;
     padding: 4px 9px;
     border-radius: 5px;
     background: rgba(46, 204, 113, 0.12);
@@ -202,9 +204,13 @@ st.markdown(
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.5px;
+    text-align: center;
 }
+
 .status-last-day {
     display: inline-block;
+    width: 82px;
+    box-sizing: border-box;
     margin-left: 5px;
     padding: 4px 9px;
     border-radius: 5px;
@@ -213,6 +219,7 @@ st.markdown(
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .status-preapply {
