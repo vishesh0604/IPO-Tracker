@@ -99,6 +99,17 @@ def get_groww_ipos():
 
     html = get_page(GROWW_URL)
 
+    # -------------------------------------------------
+    # TEMPORARY GITHUB ACTION DIAGNOSTIC
+    # -------------------------------------------------
+
+    print("===== GROWW DIAGNOSTIC =====")
+    print("Raw HTML length:", len(html))
+    print(
+        "LAPL present in raw HTML:",
+        "LAPL Automotive" in html
+    )
+
     soup = BeautifulSoup(
         html,
         "html.parser"
@@ -106,6 +117,49 @@ def get_groww_ipos():
 
     rows = soup.select("tr.cur-po")
 
+    print("Groww rows found:", len(rows))
+
+    lapl_found = False
+
+    for diagnostic_row in rows:
+        diagnostic_company = diagnostic_row.select_one(
+            '[aria-label="Company name"]'
+        )
+
+        if diagnostic_company:
+            diagnostic_name = diagnostic_company.get_text(
+                strip=True
+            )
+
+            if "LAPL" in diagnostic_name.upper():
+                lapl_found = True
+
+                diagnostic_cells = diagnostic_row.find_all("td")
+
+                diagnostic_values = [
+                    cell.get_text(
+                        " ",
+                        strip=True
+                    )
+                    for cell in diagnostic_cells
+                ]
+
+                print("LAPL ROW FOUND")
+                print(
+                    "LAPL cell count:",
+                    len(diagnostic_values)
+                )
+                print(
+                    "LAPL values:",
+                    diagnostic_values
+                )
+
+    print(
+        "LAPL found in parsed rows:",
+        lapl_found
+    )
+
+    print("============================")
     ipos = []
 
     for row in rows:
@@ -208,7 +262,7 @@ def get_groww_ipos():
 
         else:
             continue
-        
+
         ipos.append(ipo)
 
     return ipos
