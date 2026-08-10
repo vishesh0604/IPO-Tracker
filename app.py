@@ -777,7 +777,7 @@ st.markdown(
     f'Last updated: '
     f'{fetched_at.strftime("%d %b %Y, %I:%M %p")} IST'
     f' &nbsp; · &nbsp; '
-    f'Updates automatically every 6 hours'
+    f'Updated automatically as new data becomes available'
     f'</div>',
     unsafe_allow_html=True
 )
