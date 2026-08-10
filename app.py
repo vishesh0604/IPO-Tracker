@@ -380,12 +380,12 @@ st.markdown(
     }
 
     .status-open,
+    .status-last-day,
     .status-preapply {
-        margin-top: 5px !important;
-        padding: 3px 7px !important;
-        font-size: 8px !important;
+        margin-top: 9px !important;
+        padding: 4px 9px !important;
+        font-size: 10px !important;
     }
-
     .gmp-label {
         font-size: 8px !important;
     }
