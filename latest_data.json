@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-10 05:32",
+  "fetched_at": "2026-08-10 11:29",
   "data": {
     "open": [
       {
@@ -9,19 +9,19 @@
         "close_date": "11 Aug 2026",
         "allotment_date": "August 12, 2026",
         "issue_price": "₹200 - ₹212",
-        "subscription": "2.59x",
+        "subscription": "3.21x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Technocraft Ventures",
-        "gmp": "₹16",
+        "gmp": "₹23",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹212",
-        "estimated_listing": "₹228 (7.55%)",
-        "gmp_last_updated": "16:47",
+        "estimated_listing": "₹235 (10.85%)",
+        "gmp_last_updated": "10:20",
         "match_confidence": 100.0,
-        "gmp_percentage": "7.55%"
+        "gmp_percentage": "10.85%"
       },
       {
         "company": "LEAP India",
@@ -30,19 +30,19 @@
         "close_date": "11 Aug 2026",
         "allotment_date": "August 12, 2026",
         "issue_price": "₹151 - ₹159",
-        "subscription": "0.26x",
+        "subscription": "0.33x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "LEAP India",
-        "gmp": "₹15",
+        "gmp": "₹16",
         "gmp_status": "Open",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹159",
-        "estimated_listing": "₹174 (9.43%)",
-        "gmp_last_updated": "16:47",
+        "estimated_listing": "₹175 (10.06%)",
+        "gmp_last_updated": "10:26",
         "match_confidence": 100.0,
-        "gmp_percentage": "9.43%"
+        "gmp_percentage": "10.06%"
       },
       {
         "company": "Dhoot Transmission",
@@ -51,19 +51,19 @@
         "close_date": "12 Aug 2026",
         "allotment_date": "August 13, 2026",
         "issue_price": "₹829 - ₹871",
-        "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "subscription": "0.11x",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Dhoot Transmission",
-        "gmp": "₹247",
-        "gmp_status": "Upcoming",
-        "gmp_trend": "🔴",
+        "gmp": "₹259",
+        "gmp_status": "Open",
+        "gmp_trend": "🟢",
         "gmp_price_band": "₹871",
-        "estimated_listing": "₹1118 (28.36%)",
-        "gmp_last_updated": "16:50",
+        "estimated_listing": "₹1130 (29.74%)",
+        "gmp_last_updated": "10:30",
         "match_confidence": 100.0,
-        "gmp_percentage": "28.36%"
+        "gmp_percentage": "29.74%"
       },
       {
         "company": "Molbio Diagnostics",
@@ -72,19 +72,19 @@
         "close_date": "12 Aug 2026",
         "allotment_date": "August 13, 2026",
         "issue_price": "₹768 - ₹807",
-        "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "subscription": "0.13x",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Molbio Diagnostics",
-        "gmp": "₹180",
-        "gmp_status": "Upcoming",
+        "gmp": "₹132",
+        "gmp_status": "Open",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹807",
-        "estimated_listing": "₹987 (22.30%)",
-        "gmp_last_updated": "16:48",
+        "estimated_listing": "₹939 (16.36%)",
+        "gmp_last_updated": "10:20",
         "match_confidence": 100.0,
-        "gmp_percentage": "22.30%"
+        "gmp_percentage": "16.36%"
       },
       {
         "company": "Milky Mist Dairy Food",
@@ -98,14 +98,14 @@
         "groww_status": "Pre-apply",
         "status_source": "current",
         "ipowatch_name": "Milky Mist",
-        "gmp": "₹25",
+        "gmp": "₹26",
         "gmp_status": "Upcoming",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹140",
-        "estimated_listing": "₹165 (17.86%)",
-        "gmp_last_updated": "16:47",
+        "estimated_listing": "₹166 (18.57%)",
+        "gmp_last_updated": "10:27",
         "match_confidence": 100.0,
-        "gmp_percentage": "17.86%"
+        "gmp_percentage": "18.57%"
       },
       {
         "company": "Shiprocket",
@@ -119,14 +119,14 @@
         "groww_status": "Pre-apply",
         "status_source": "current",
         "ipowatch_name": "Shiprocket",
-        "gmp": "₹14",
+        "gmp": "₹22",
         "gmp_status": "Upcoming",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
-        "estimated_listing": "₹111 (14.43%)",
-        "gmp_last_updated": "16:49",
+        "estimated_listing": "₹119 (22.68%)",
+        "gmp_last_updated": "10:16",
         "match_confidence": 100.0,
-        "gmp_percentage": "14.43%"
+        "gmp_percentage": "22.68%"
       },
       {
         "company": "LAPL Automotive",
@@ -135,19 +135,19 @@
         "close_date": "10 Aug 2026",
         "allotment_date": "August 11, 2026",
         "issue_price": "₹88 - ₹94",
-        "subscription": "29.28x",
+        "subscription": "65.69x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "LAPL Automotive",
-        "gmp": "₹32",
+        "gmp": "₹37",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹94",
-        "estimated_listing": "₹126 (34.04%)",
-        "gmp_last_updated": "16:48",
+        "estimated_listing": "₹131 (39.36%)",
+        "gmp_last_updated": "10:19",
         "match_confidence": 100.0,
-        "gmp_percentage": "34.04%"
+        "gmp_percentage": "39.36%"
       },
       {
         "company": "Optimystix Entertainment",
@@ -156,7 +156,7 @@
         "close_date": "11 Aug 2026",
         "allotment_date": "August 12, 2026",
         "issue_price": "₹166 - ₹175",
-        "subscription": "0.63x",
+        "subscription": "0.69x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -166,7 +166,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹175",
         "estimated_listing": "₹180 (2.86%)",
-        "gmp_last_updated": "16:47",
+        "gmp_last_updated": "10:25",
         "match_confidence": 100.0,
         "gmp_percentage": "2.86%"
       }
@@ -189,7 +189,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹130",
         "estimated_listing": "₹156 (20.00%)",
-        "gmp_last_updated": "16:47",
+        "gmp_last_updated": "10:21",
         "match_confidence": 96.6,
         "gmp_percentage": "20.00%"
       },
@@ -205,14 +205,14 @@
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Ardee Industries",
-        "gmp": "₹15",
+        "gmp": "₹16",
         "gmp_status": "Closed",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹53",
-        "estimated_listing": "₹68 (28.30%)",
-        "gmp_last_updated": "16:47",
+        "estimated_listing": "₹69 (30.19%)",
+        "gmp_last_updated": "10:23",
         "match_confidence": 100.0,
-        "gmp_percentage": "28.30%"
+        "gmp_percentage": "30.19%"
       },
       {
         "company": "Aegeus Technologies",
@@ -231,7 +231,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹105",
         "estimated_listing": "₹117 (11.43%)",
-        "gmp_last_updated": "16:47",
+        "gmp_last_updated": "10:23",
         "match_confidence": 100.0,
         "gmp_percentage": "11.43%"
       }
