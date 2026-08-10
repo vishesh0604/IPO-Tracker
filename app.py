@@ -195,9 +195,9 @@ st.markdown(
 
 .status-open {
     display: inline-block;
-    width: 82px;
+    height: 30px;
     box-sizing: border-box;
-    padding: 4px 9px;
+    padding: 0 9px;
     border-radius: 5px;
     background: rgba(46, 204, 113, 0.12);
     color: #2ecc71;
@@ -205,14 +205,15 @@ st.markdown(
     font-weight: 800;
     letter-spacing: 0.5px;
     text-align: center;
+    line-height: 30px;
 }
 
 .status-last-day {
     display: inline-block;
-    width: 82px;
+    height: 30px;
     box-sizing: border-box;
     margin-left: 5px;
-    padding: 4px 9px;
+    padding: 0 9px;
     border-radius: 5px;
     background: rgba(231, 76, 60, 0.12);
     color: #e74c3c;
@@ -220,6 +221,7 @@ st.markdown(
     font-weight: 800;
     letter-spacing: 0.5px;
     text-align: center;
+    line-height: 30px;
 }
 
 .status-preapply {
