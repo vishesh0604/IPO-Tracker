@@ -195,11 +195,21 @@ st.markdown(
 
 .status-open {
     display: inline-block;
-    margin-top: 9px;
     padding: 4px 9px;
     border-radius: 5px;
     background: rgba(46, 204, 113, 0.12);
     color: #2ecc71;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+.status-last-day {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 4px 9px;
+    border-radius: 5px;
+    background: rgba(231, 76, 60, 0.12);
+    color: #e74c3c;
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -476,7 +486,7 @@ div[data-testid="stHorizontalBlock"]:has(
     align-items: center;
 
     padding: 0 !important;
-    margin: 25px 0 0 0 !important;
+    margin: 45px 0 0 0 !important;
 }
 
 .site-logo {
@@ -621,7 +631,9 @@ def countdown(close_date):
     if date is None:
         return ""
 
-    today = datetime.now().date()
+    today = datetime.now(
+        ZoneInfo("Asia/Kolkata")
+    ).date()
 
     days = (
         date - today
@@ -1059,7 +1071,6 @@ for ipo in apply_ipos:
             [3, 1]
         )
 
-
         # -------------------------------------------------
         # TITLE
         # -------------------------------------------------
@@ -1075,23 +1086,33 @@ for ipo in apply_ipos:
                 unsafe_allow_html=True
             )
 
+            today_ist = datetime.now(
+                ZoneInfo("Asia/Kolkata")
+            ).date()
+
+            close_date = parse_date(
+                ipo["close_date"]
+            )
+
+            last_day = (
+                close_date == today_ist
+            )
+
             st.markdown(
                 f'''
                 <div class="ipo-card-type">
                     {ipo["type"]}
                 </div>
+
+                <div style="margin-top: 9px;">
+                    <span class="status-open">
+                        OPEN
+                    </span>
+                    {"<span class='status-last-day'>LAST DAY</span>" if last_day else ""}
+                </div>
                 ''',
                 unsafe_allow_html=True
             )
-
-            st.markdown(
-                '<span class="status-open">'
-                'OPEN'
-                '</span>',
-                unsafe_allow_html=True
-            )
-
-
         # -------------------------------------------------
         # GMP
         # -------------------------------------------------
