@@ -10,6 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 LATEST_DATA_FILE = BASE_DIR / "latest_data.json"
 GMP_HISTORY_FILE = BASE_DIR / "gmp_history.json"
+GMP_LATEST_FILE = BASE_DIR / "gmp_latest.json"
 
 
 def get_ist_time():
@@ -18,13 +19,13 @@ def get_ist_time():
     ).strftime("%Y-%m-%d %H:%M")
 
 
-def load_gmp_history():
-    if not GMP_HISTORY_FILE.exists():
+def load_json(file_path):
+    if not file_path.exists():
         return {}
 
     try:
         with open(
-            GMP_HISTORY_FILE,
+            file_path,
             "r",
             encoding="utf-8"
         ) as file:
@@ -49,16 +50,16 @@ def save_json(file_path, data):
 
 
 def update_gmp_history(data, timestamp):
-    history = load_gmp_history()
+    history = load_json(GMP_HISTORY_FILE)
+    latest = load_json(GMP_LATEST_FILE)
 
     all_ipos = (
         data.get("open", [])
         + data.get("recent_closed", [])
     )
 
-    current_date = timestamp[:10]
-
     for ipo in all_ipos:
+
         company = ipo.get("company")
         gmp = ipo.get("gmp")
 
@@ -78,42 +79,54 @@ def update_gmp_history(data, timestamp):
         except ValueError:
             continue
 
-        if company not in history:
-            history[company] = []
-
         # -------------------------------------------------
-        # REMOVE DUPLICATES FOR THE SAME DAY
+        # LATEST OBSERVATION
         # -------------------------------------------------
-
-        daily_entries = []
-        other_entries = []
-
-        for entry in history[company]:
-            entry_date = str(
-                entry.get("timestamp", "")
-            )[:10]
-
-            if entry_date == current_date:
-                daily_entries.append(entry)
-            else:
-                other_entries.append(entry)
-
-        # -------------------------------------------------
-        # KEEP ONLY THE LATEST ENTRY FOR TODAY
+        #
+        # ALWAYS update this.
+        #
+        # This tells us the most recent time our system
+        # actually checked and observed this GMP value.
         # -------------------------------------------------
 
-        latest_today = {
+        latest[company] = {
             "timestamp": timestamp,
             "gmp": gmp_value
         }
 
-        history[company] = (
-            other_entries
-            + [latest_today]
-        )
+        # -------------------------------------------------
+        # HISTORICAL GRAPH DATA
+        # -------------------------------------------------
+        #
+        # Only create a new historical point when the
+        # GMP value actually changes.
+        # -------------------------------------------------
 
-        # Keep history sorted by date/time
-        history[company].sort(
+        if company not in history:
+            history[company] = []
+
+        company_history = history[company]
+
+        if not company_history:
+
+            company_history.append({
+                "timestamp": timestamp,
+                "gmp": gmp_value
+            })
+
+        else:
+
+            last_gmp = company_history[-1].get("gmp")
+
+            if last_gmp != gmp_value:
+
+                company_history.append({
+                    "timestamp": timestamp,
+                    "gmp": gmp_value
+                })
+
+        # Keep history sorted
+        company_history.sort(
             key=lambda entry: entry.get(
                 "timestamp",
                 ""
@@ -124,8 +137,11 @@ def update_gmp_history(data, timestamp):
         GMP_HISTORY_FILE,
         history
     )
-    
 
+    save_json(
+        GMP_LATEST_FILE,
+        latest
+    )
 
 
 def update_data():
