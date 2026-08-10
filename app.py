@@ -17,7 +17,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="IPO Tracker",
-    page_icon="📈",
+    page_icon="ipo_tracker_favicon.png",
     layout="wide",
 )
 # =========================================================
