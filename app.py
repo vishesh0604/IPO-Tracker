@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 
 import json
 from pathlib import Path
+import base64
 
 
 # =========================================================
@@ -81,6 +82,14 @@ if not st.session_state.welcome_seen:
 st.markdown(
     """
 <style>
+
+[data-testid="stAppViewContainer"] .main {
+    padding-top: 0 !important;
+}
+
+[data-testid="stAppViewContainer"] .block-container {
+    padding-top: 0 !important;
+}
 
 .block-container {
     max-width: 1200px;
@@ -446,8 +455,70 @@ div[data-testid="stHorizontalBlock"]:has(
     ) > div:nth-child(2) {
         flex: 2 1 0% !important;
     }
+        div[data-testid="stHorizontalBlock"]:has(
+        input[placeholder="Search by company name..."]
+    ) > div:nth-child(2) {
+        flex: 2 1 0% !important;
+    }
+    /* MAIN LOGO */
 
+    }
+    /* MAIN LOGO SPACING */
+
+/* MAIN LOGO */
+
+/* WEBSITE LOGO HEADER */
+
+.site-logo-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 !important;
+    margin: 25px 0 0 0 !important;
+}
+
+.site-logo {
+    width: 300px;
+    max-width: 55vw;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+
+    .site-logo-header {
+        padding: 6px 0 4px 0;
+        margin: -8px 0 2px 0;
+    }
+
+    .site-logo {
+        width: 180px;
+        max-width: 60vw;
+    }
+
+}
+.mobile-break {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-break {
+        display: inline;
+    }
+}
+.with-word {
+    text-transform: lowercase;
+}
+
+@media screen and (max-width: 600px) {
+    .with-word {
+        text-transform: capitalize;
+    }
+}
 </style>
+
 """,
     unsafe_allow_html=True,
 )
@@ -749,25 +820,40 @@ for ipo in apply_ipos + preapply_ipos:
     ipo["gmp_change"] = gmp_change
 
 # =========================================================
+# WEBSITE LOGO HEADER
+# =========================================================
+
+with open(
+    "ipo_tracker_logo.png",
+    "rb"
+) as logo_file:
+
+    logo_base64 = base64.b64encode(
+        logo_file.read()
+    ).decode()
+
+st.markdown(
+    f'''
+    <div class="site-logo-header">
+        <img
+            src="data:image/png;base64,{logo_base64}"
+            class="site-logo"
+        >
+    </div>
+    ''',
+    unsafe_allow_html=True
+)
+
+# =========================================================
 # HEADER
 # =========================================================
 
-st.markdown(
-    '<div class="main-title">'
-    'IPO Tracker'
-    '</div>',
-    unsafe_allow_html=True
-)
-st.markdown(
-    '<div class="developer-credit">'
-    'Developed by Vishesh Vasudeva'
-    '</div>',
-    unsafe_allow_html=True
-)
 
 st.markdown(
-    '<div class="subtitle">'
-    'Open & Upcoming Indian IPOs with live GMP data'
+    '<div class="developer-credit logo-byline">'
+    'Open & Upcoming Indian IPOs '
+    '<span class="mobile-break"><br></span>'
+    '<span class="with-word">with</span> live GMP data'
     '</div>',
     unsafe_allow_html=True
 )
