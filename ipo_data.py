@@ -135,13 +135,32 @@ def get_groww_ipos():
         ]
 
         # -------------------------------------------------
-        # OPEN / UPCOMING IPO FORMAT
-        # -------------------------------------------------
-        # -------------------------------------------------
-        # OPEN / PRE-APPLY IPO FORMAT
+        # DETERMINE OPEN VS CLOSED FROM THE DATA ITSELF
         # -------------------------------------------------
 
-        if len(values) == 7:
+        # Open / Pre-apply rows have the action in the final
+        # column. Closed rows have a listing date in values[4].
+        is_open = (
+            len(values) >= 7
+            and values[-1] in ["Apply", "Pre-apply"]
+        )
+
+        is_closed = False
+
+        if len(values) >= 6:
+            try:
+                parse_date(values[2])   # Open date
+                parse_date(values[3])   # Close date
+                parse_date(values[4])   # Listing date
+                is_closed = True
+            except ValueError:
+                pass
+
+        # -------------------------------------------------
+        # OPEN / PRE-APPLY IPO
+        # -------------------------------------------------
+
+        if is_open:
 
             ipo = {
                 "company": company,
@@ -154,17 +173,17 @@ def get_groww_ipos():
                 "action": values[6],
                 "groww_status": (
                     "Pre-apply"
-                    if values[6] == "Pre-apply"
+                    if values[-1] == "Pre-apply"
                     else "Open"
                 ),
                 "status_source": "current",
             }
 
         # -------------------------------------------------
-        # CLOSED IPO FORMAT
+        # CLOSED IPO
         # -------------------------------------------------
 
-        elif len(values) >= 9:
+        elif is_closed:
 
             ipo = {
                 "company": company,
@@ -173,16 +192,23 @@ def get_groww_ipos():
                 "close_date": values[3],
                 "allotment_date": values[4],
                 "issue_price": values[5],
-                "subscription": values[7],
-                "action": values[8],
+                "subscription": (
+                    values[7]
+                    if len(values) > 7
+                    else "—"
+                ),
+                "action": (
+                    values[8]
+                    if len(values) > 8
+                    else "Closed"
+                ),
                 "groww_status": "Closed",
                 "status_source": "closed",
             }
 
         else:
-
             continue
-
+        
         ipos.append(ipo)
 
     return ipos
