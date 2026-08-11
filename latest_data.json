@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11 17:01",
+  "fetched_at": "2026-08-11 20:48",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "12 Aug 2026",
         "allotment_date": "August 13, 2026",
         "issue_price": "₹829 - ₹871",
-        "subscription": "3.68x",
+        "subscription": "3.94x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -19,7 +19,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹871",
         "estimated_listing": "₹1121 (28.70%)",
-        "gmp_last_updated": "09:55",
+        "gmp_last_updated": "18:50",
         "match_confidence": 100.0,
         "gmp_percentage": "28.70%"
       },
@@ -30,7 +30,7 @@
         "close_date": "12 Aug 2026",
         "allotment_date": "August 13, 2026",
         "issue_price": "₹768 - ₹807",
-        "subscription": "3.02x",
+        "subscription": "3.11x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -40,7 +40,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹807",
         "estimated_listing": "₹934 (15.74%)",
-        "gmp_last_updated": "09:52",
+        "gmp_last_updated": "18:47",
         "match_confidence": 100.0,
         "gmp_percentage": "15.74%"
       },
@@ -51,7 +51,7 @@
         "close_date": "13 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹133 - ₹140",
-        "subscription": "0.76x",
+        "subscription": "0.79x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -61,7 +61,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹140",
         "estimated_listing": "₹161 (15.00%)",
-        "gmp_last_updated": "09:54",
+        "gmp_last_updated": "18:47",
         "match_confidence": 100.0,
         "gmp_percentage": "15.00%"
       },
@@ -82,7 +82,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
         "estimated_listing": "₹124 (27.84%)",
-        "gmp_last_updated": "09:49",
+        "gmp_last_updated": "18:45",
         "match_confidence": 100.0,
         "gmp_percentage": "27.84%"
       },
@@ -103,7 +103,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹285",
         "estimated_listing": "₹338 (18.60%)",
-        "gmp_last_updated": "09:46",
+        "gmp_last_updated": "18:45",
         "match_confidence": 100.0,
         "gmp_percentage": "18.60%"
       },
@@ -124,7 +124,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹130",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:48",
+        "gmp_last_updated": "18:46",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -145,7 +145,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹156",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:48",
+        "gmp_last_updated": "18:46",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       }
@@ -168,7 +168,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹94",
         "estimated_listing": "₹133 (41.49%)",
-        "gmp_last_updated": "09:50",
+        "gmp_last_updated": "18:50",
         "match_confidence": 100.0,
         "gmp_percentage": "41.49%"
       },
@@ -189,30 +189,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹130",
         "estimated_listing": "₹156 (20.00%)",
-        "gmp_last_updated": "10:00",
+        "gmp_last_updated": "18:50",
         "match_confidence": 96.6,
         "gmp_percentage": "20.00%"
-      },
-      {
-        "company": "Ardee Industries",
-        "type": "Mainboard",
-        "open_date": "05 Aug 2026",
-        "close_date": "07 Aug 2026",
-        "allotment_date": "12 Aug 2026",
-        "issue_price": "₹53.00",
-        "subscription": "133.31x",
-        "action": "--",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "ipowatch_name": "Ardee Industries",
-        "gmp": "₹15",
-        "gmp_status": "Closed",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹53",
-        "estimated_listing": "₹68 (27.36%)",
-        "gmp_last_updated": "09:56",
-        "match_confidence": 100.0,
-        "gmp_percentage": "27.36%"
       }
     ]
   }
