@@ -22,17 +22,14 @@ st.set_page_config(
     layout="wide",
 )
 # =========================================================
-# WELCOME POPUP
+# WELCOME POPUP — ONCE PER SESSION
 # =========================================================
 
 if "welcome_seen" not in st.session_state:
-    st.session_state.welcome_seen = False
-
-if not st.session_state.welcome_seen:
+    st.session_state.welcome_seen = True
 
     @st.dialog("Welcome to IPO Tracker")
     def welcome_popup():
-
         st.markdown(
             """
             **Developed by Vishesh Vasudeva**
@@ -43,9 +40,9 @@ if not st.session_state.welcome_seen:
             - Mainboard & SME IPOs
             - Application & allotment dates
             - Issue price & GMP prices
-            
 
             ### ABOUT THE DATA
+
             IPO data is sourced from [Groww](https://groww.in/ipo), while GMP data is sourced from [IPOWatch](https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/).
 
             Please note that GMP and other IPO information can change throughout the day.
@@ -68,12 +65,9 @@ if not st.session_state.welcome_seen:
             type="primary",
             use_container_width=True
         ):
-
-            st.session_state.welcome_seen = True
             st.rerun()
 
     welcome_popup()
-
 
 # =========================================================
 # CSS
