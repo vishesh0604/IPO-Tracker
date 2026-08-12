@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-12 23:34",
+  "fetched_at": "2026-08-13 02:56",
   "data": {
     "open": [
       {
@@ -152,6 +152,48 @@
     ],
     "recent_closed": [
       {
+        "company": "Dhoot Transmission",
+        "type": "Mainboard",
+        "open_date": "10 Aug 2026",
+        "close_date": "12 Aug 2026",
+        "allotment_date": "17 Aug 2026",
+        "issue_price": "₹871.00",
+        "subscription": "74.10x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Dhoot Transmission",
+        "gmp": "₹255",
+        "gmp_status": "Open",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹871",
+        "estimated_listing": "₹1126 (29.28%)",
+        "gmp_last_updated": "15:52",
+        "match_confidence": 100.0,
+        "gmp_percentage": "29.28%"
+      },
+      {
+        "company": "Molbio Diagnostics",
+        "type": "Mainboard",
+        "open_date": "10 Aug 2026",
+        "close_date": "12 Aug 2026",
+        "allotment_date": "17 Aug 2026",
+        "issue_price": "₹807.00",
+        "subscription": "70.05x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Molbio Diagnostics",
+        "gmp": "₹138",
+        "gmp_status": "Open",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹807",
+        "estimated_listing": "₹945 (17.10%)",
+        "gmp_last_updated": "15:52",
+        "match_confidence": 100.0,
+        "gmp_percentage": "17.10%"
+      },
+      {
         "company": "Technocraft Ventures",
         "type": "Mainboard",
         "open_date": "07 Aug 2026",
@@ -171,48 +213,6 @@
         "gmp_last_updated": "15:52",
         "match_confidence": 100.0,
         "gmp_percentage": "14.15%"
-      },
-      {
-        "company": "Optimystix Entertainment",
-        "type": "SME",
-        "open_date": "07 Aug 2026",
-        "close_date": "11 Aug 2026",
-        "allotment_date": "14 Aug 2026",
-        "issue_price": "₹175.00",
-        "subscription": "1.90x",
-        "action": "--",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "ipowatch_name": "Optimystix Entertainment",
-        "gmp": "₹5",
-        "gmp_status": "Closed",
-        "gmp_trend": "🟢",
-        "gmp_price_band": "₹175",
-        "estimated_listing": "₹180 (2.86%)",
-        "gmp_last_updated": "15:52",
-        "match_confidence": 100.0,
-        "gmp_percentage": "2.86%"
-      },
-      {
-        "company": "LEAP India",
-        "type": "Mainboard",
-        "open_date": "07 Aug 2026",
-        "close_date": "11 Aug 2026",
-        "allotment_date": "14 Aug 2026",
-        "issue_price": "₹159.00",
-        "subscription": "8.35x",
-        "action": "--",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "ipowatch_name": "LEAP India",
-        "gmp": "₹13",
-        "gmp_status": "Closed",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹159",
-        "estimated_listing": "₹172 (8.18%)",
-        "gmp_last_updated": "15:52",
-        "match_confidence": 100.0,
-        "gmp_percentage": "8.18%"
       }
     ]
   }
