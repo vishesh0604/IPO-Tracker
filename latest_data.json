@@ -1,28 +1,7 @@
 {
-  "fetched_at": "2026-08-13 16:13",
+  "fetched_at": "2026-08-13 23:37",
   "data": {
     "open": [
-      {
-        "company": "Milky Mist Dairy Food",
-        "type": "Mainboard",
-        "open_date": "11 Aug 2026",
-        "close_date": "13 Aug 2026",
-        "allotment_date": "TBA",
-        "issue_price": "₹133 - ₹140",
-        "subscription": "51.82x",
-        "action": "Apply",
-        "groww_status": "Open",
-        "status_source": "current",
-        "ipowatch_name": "Milky Mist",
-        "gmp": "₹29",
-        "gmp_status": "Open",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹140",
-        "estimated_listing": "₹169 (20.71%)",
-        "gmp_last_updated": "09:25",
-        "match_confidence": 100.0,
-        "gmp_percentage": "15.71%"
-      },
       {
         "company": "Shiprocket",
         "type": "Mainboard",
@@ -30,7 +9,7 @@
         "close_date": "14 Aug 2026",
         "allotment_date": "August 17, 2026",
         "issue_price": "₹92 - ₹97",
-        "subscription": "2.82x",
+        "subscription": "3.16x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -40,7 +19,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
         "estimated_listing": "₹131 (35.05%)",
-        "gmp_last_updated": "09:28",
+        "gmp_last_updated": "16:25",
         "match_confidence": 100.0,
         "gmp_percentage": "35.05%"
       },
@@ -49,9 +28,9 @@
         "type": "Mainboard",
         "open_date": "12 Aug 2026",
         "close_date": "14 Aug 2026",
-        "allotment_date": "August 17, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹271 - ₹285",
-        "subscription": "6.37x",
+        "subscription": "7.78x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -61,51 +40,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹285",
         "estimated_listing": "₹363 (27.37%)",
-        "gmp_last_updated": "09:29",
+        "gmp_last_updated": "13 Aug, 16:09",
         "match_confidence": 100.0,
-        "gmp_percentage": "25.96%"
-      },
-      {
-        "company": "Sham Foam",
-        "type": "SME",
-        "open_date": "11 Aug 2026",
-        "close_date": "13 Aug 2026",
-        "allotment_date": "August 14, 2026",
-        "issue_price": "₹130 - ₹130",
-        "subscription": "--",
-        "action": "Apply",
-        "groww_status": "Open",
-        "status_source": "current",
-        "ipowatch_name": "Sham Foam",
-        "gmp": "₹0",
-        "gmp_status": "Open",
-        "gmp_trend": "🟡",
-        "gmp_price_band": "₹130",
-        "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:27",
-        "match_confidence": 100.0,
-        "gmp_percentage": "-%"
-      },
-      {
-        "company": "Fascinate Textiles",
-        "type": "SME",
-        "open_date": "11 Aug 2026",
-        "close_date": "13 Aug 2026",
-        "allotment_date": "August 14, 2026",
-        "issue_price": "₹148 - ₹156",
-        "subscription": "0.43x",
-        "action": "Apply",
-        "groww_status": "Open",
-        "status_source": "current",
-        "ipowatch_name": "Fascinate Textiles",
-        "gmp": "₹0",
-        "gmp_status": "Open",
-        "gmp_trend": "🟡",
-        "gmp_price_band": "₹156",
-        "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:26",
-        "match_confidence": 100.0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Pramodini Medicare",
@@ -114,7 +51,7 @@
         "close_date": "14 Aug 2026",
         "allotment_date": "August 17, 2026",
         "issue_price": "₹110 - ₹118",
-        "subscription": "0.89x",
+        "subscription": "0.91x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -124,7 +61,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹118",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:30",
+        "gmp_last_updated": "16:24",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -145,9 +82,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹115",
         "estimated_listing": "₹121 (5.22%)",
-        "gmp_last_updated": "09:33",
+        "gmp_last_updated": "16:21",
         "match_confidence": 100.0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "5.22%"
       },
       {
         "company": "Credent Connect N Care",
@@ -156,7 +93,7 @@
         "close_date": "17 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹179 - ₹189",
-        "subscription": "1.61x",
+        "subscription": "1.99x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -166,16 +103,16 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹189",
         "estimated_listing": "₹251 (32.80%)",
-        "gmp_last_updated": "09:31",
+        "gmp_last_updated": "13 Aug, 16:09",
         "match_confidence": 100.0,
-        "gmp_percentage": "26.46%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Skytech Infinite Platform",
         "type": "SME",
         "open_date": "14 Aug 2026",
         "close_date": "18 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 19, 2026",
         "issue_price": "₹73 - ₹77",
         "subscription": "--",
         "action": "Pre-apply",
@@ -187,7 +124,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹77",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:31",
+        "gmp_last_updated": "16:23",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       }
@@ -210,7 +147,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹871",
         "estimated_listing": "₹1147 (31.69%)",
-        "gmp_last_updated": "09:24",
+        "gmp_last_updated": "16:28",
         "match_confidence": 100.0,
         "gmp_percentage": "31.69%"
       },
@@ -231,30 +168,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹807",
         "estimated_listing": "₹963 (19.33%)",
-        "gmp_last_updated": "09:25",
+        "gmp_last_updated": "13 Aug, 16:09",
         "match_confidence": 100.0,
-        "gmp_percentage": "19.08%"
-      },
-      {
-        "company": "Technocraft Ventures",
-        "type": "Mainboard",
-        "open_date": "07 Aug 2026",
-        "close_date": "11 Aug 2026",
-        "allotment_date": "14 Aug 2026",
-        "issue_price": "₹212.00",
-        "subscription": "38.39x",
-        "action": "--",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "ipowatch_name": "Technocraft Ventures",
-        "gmp": "₹37",
-        "gmp_status": "Closed",
-        "gmp_trend": "🟢",
-        "gmp_price_band": "₹212",
-        "estimated_listing": "₹249 (17.45%)",
-        "gmp_last_updated": "09:22",
-        "match_confidence": 100.0,
-        "gmp_percentage": "17.45%"
+        "gmp_percentage": "—"
       }
     ]
   }
