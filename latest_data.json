@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-13 23:37",
+  "fetched_at": "2026-08-14 02:58",
   "data": {
     "open": [
       {
@@ -28,7 +28,7 @@
         "type": "Mainboard",
         "open_date": "12 Aug 2026",
         "close_date": "14 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 17, 2026",
         "issue_price": "₹271 - ₹285",
         "subscription": "7.78x",
         "action": "Apply",
@@ -40,9 +40,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹285",
         "estimated_listing": "₹363 (27.37%)",
-        "gmp_last_updated": "13 Aug, 16:09",
+        "gmp_last_updated": "16:24",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "27.37%"
       },
       {
         "company": "Pramodini Medicare",
@@ -103,9 +103,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹189",
         "estimated_listing": "₹251 (32.80%)",
-        "gmp_last_updated": "13 Aug, 16:09",
+        "gmp_last_updated": "16:23",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "32.80%"
       },
       {
         "company": "Skytech Infinite Platform",
@@ -131,46 +131,67 @@
     ],
     "recent_closed": [
       {
-        "company": "Dhoot Transmission",
+        "company": "Milky Mist Dairy Food",
         "type": "Mainboard",
-        "open_date": "10 Aug 2026",
-        "close_date": "12 Aug 2026",
-        "allotment_date": "17 Aug 2026",
-        "issue_price": "₹871.00",
-        "subscription": "74.10x",
+        "open_date": "11 Aug 2026",
+        "close_date": "13 Aug 2026",
+        "allotment_date": "18 Aug 2026",
+        "issue_price": "₹140.00",
+        "subscription": "55.95x",
         "action": "--",
         "groww_status": "Closed",
         "status_source": "closed",
-        "ipowatch_name": "Dhoot Transmission",
-        "gmp": "₹276",
-        "gmp_status": "Closed",
-        "gmp_trend": "🟢",
-        "gmp_price_band": "₹871",
-        "estimated_listing": "₹1147 (31.69%)",
-        "gmp_last_updated": "16:28",
+        "ipowatch_name": "Milky Mist",
+        "gmp": "₹29",
+        "gmp_status": "Open",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹140",
+        "estimated_listing": "₹169 (20.71%)",
+        "gmp_last_updated": "16:26",
         "match_confidence": 100.0,
-        "gmp_percentage": "31.69%"
+        "gmp_percentage": "20.71%"
       },
       {
-        "company": "Molbio Diagnostics",
-        "type": "Mainboard",
-        "open_date": "10 Aug 2026",
-        "close_date": "12 Aug 2026",
-        "allotment_date": "17 Aug 2026",
-        "issue_price": "₹807.00",
-        "subscription": "70.05x",
+        "company": "Sham Foam",
+        "type": "SME",
+        "open_date": "11 Aug 2026",
+        "close_date": "13 Aug 2026",
+        "allotment_date": "18 Aug 2026",
+        "issue_price": "₹130.00",
+        "subscription": "--",
         "action": "--",
         "groww_status": "Closed",
         "status_source": "closed",
-        "ipowatch_name": "Molbio Diagnostics",
-        "gmp": "₹156",
-        "gmp_status": "Closed",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹807",
-        "estimated_listing": "₹963 (19.33%)",
-        "gmp_last_updated": "13 Aug, 16:09",
+        "ipowatch_name": "Sham Foam",
+        "gmp": "₹0",
+        "gmp_status": "Open",
+        "gmp_trend": "🟡",
+        "gmp_price_band": "₹130",
+        "estimated_listing": "₹- (0.00%)",
+        "gmp_last_updated": "16:25",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "-%"
+      },
+      {
+        "company": "Fascinate Textiles",
+        "type": "SME",
+        "open_date": "11 Aug 2026",
+        "close_date": "13 Aug 2026",
+        "allotment_date": "18 Aug 2026",
+        "issue_price": "₹156.00",
+        "subscription": "0.44x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Fascinate Textiles",
+        "gmp": "₹0",
+        "gmp_status": "Open",
+        "gmp_trend": "🟡",
+        "gmp_price_band": "₹156",
+        "estimated_listing": "₹- (0.00%)",
+        "gmp_last_updated": "16:25",
+        "match_confidence": 100.0,
+        "gmp_percentage": "-%"
       }
     ]
   }
