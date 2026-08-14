@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-14 23:13",
+  "fetched_at": "2026-08-15 01:29",
   "data": {
     "open": [
       {
@@ -110,25 +110,67 @@
     ],
     "recent_closed": [
       {
-        "company": "Milky Mist Dairy Food",
-        "type": "Mainboard",
-        "open_date": "11 Aug 2026",
-        "close_date": "13 Aug 2026",
-        "allotment_date": "18 Aug 2026",
-        "issue_price": "₹140.00",
-        "subscription": "55.95x",
+        "company": "Pramodini Medicare",
+        "type": "SME",
+        "open_date": "12 Aug 2026",
+        "close_date": "14 Aug 2026",
+        "allotment_date": "19 Aug 2026",
+        "issue_price": "₹118.00",
+        "subscription": "3.63x",
         "action": "--",
         "groww_status": "Closed",
         "status_source": "closed",
-        "ipowatch_name": "Milky Mist",
-        "gmp": "₹26",
-        "gmp_status": "Closed",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹140",
-        "estimated_listing": "₹166 (18.57%)",
+        "ipowatch_name": "Pramodini Medicare",
+        "gmp": "₹0",
+        "gmp_status": "Open",
+        "gmp_trend": "🟡",
+        "gmp_price_band": "₹118",
+        "estimated_listing": "₹- (0.00%)",
         "gmp_last_updated": "15:02",
         "match_confidence": 100.0,
-        "gmp_percentage": "18.57%"
+        "gmp_percentage": "-%"
+      },
+      {
+        "company": "Shiprocket",
+        "type": "Mainboard",
+        "open_date": "12 Aug 2026",
+        "close_date": "14 Aug 2026",
+        "allotment_date": "19 Aug 2026",
+        "issue_price": "₹97.00",
+        "subscription": "99.02x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Shiprocket",
+        "gmp": "₹36",
+        "gmp_status": "Open",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹97",
+        "estimated_listing": "₹133 (37.11%)",
+        "gmp_last_updated": "15:02",
+        "match_confidence": 100.0,
+        "gmp_percentage": "37.11%"
+      },
+      {
+        "company": "Behari Lal Engineering",
+        "type": "Mainboard",
+        "open_date": "12 Aug 2026",
+        "close_date": "14 Aug 2026",
+        "allotment_date": "19 Aug 2026",
+        "issue_price": "₹285.00",
+        "subscription": "106.48x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Behari Lal Engineering",
+        "gmp": "₹80",
+        "gmp_status": "Open",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹285",
+        "estimated_listing": "₹365 (28.07%)",
+        "gmp_last_updated": "15:02",
+        "match_confidence": 100.0,
+        "gmp_percentage": "28.07%"
       }
     ]
   }
