@@ -103,6 +103,10 @@
     {
       "timestamp": "2026-08-13 16:13",
       "gmp": 29.0
+    },
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 26.0
     }
   ],
   "Shiprocket": [
@@ -125,6 +129,10 @@
     {
       "timestamp": "2026-08-13 16:13",
       "gmp": 34.0
+    },
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 36.0
     }
   ],
   "LAPL Automotive": [
@@ -185,6 +193,10 @@
     {
       "timestamp": "2026-08-13 16:13",
       "gmp": 78.0
+    },
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 80.0
     }
   ],
   "Sham Foam": [
@@ -213,18 +225,42 @@
     {
       "timestamp": "2026-08-13 16:13",
       "gmp": 6.0
+    },
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 0.0
     }
   ],
   "Credent Connect N Care": [
     {
       "timestamp": "2026-08-13 16:13",
       "gmp": 62.0
+    },
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 75.0
     }
   ],
   "Skytech Infinite Platform": [
     {
       "timestamp": "2026-08-13 16:13",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 13.0
+    }
+  ],
+  "ENS Enterprises": [
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 0.0
+    }
+  ],
+  "Technocrats Plasma": [
+    {
+      "timestamp": "2026-08-14 16:07",
+      "gmp": 21.0
     }
   ]
 }
