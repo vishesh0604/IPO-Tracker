@@ -546,6 +546,10 @@ div[data-testid="stHorizontalBlock"]:has(
     background: #2B202F !important;
 }
 
+/* Remove Streamlit footer completely */
+footer {
+    display: none !important;
+}
 
 /* =========================================================
     STREAMLIT HEADER
