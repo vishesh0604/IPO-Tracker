@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15 23:31",
+  "fetched_at": "2026-08-15 23:38",
   "data": {
     "open": [
       {
@@ -245,6 +245,50 @@
         "gmp_last_updated": "15:02",
         "match_confidence": 100.0,
         "gmp_percentage": "28.07%"
+      },
+      {
+        "company": "Q&T Foods",
+        "type": "SME",
+        "open_date": "12 Aug 2026",
+        "close_date": "14 Aug 2026",
+        "allotment_date": "19 Aug 2026",
+        "issue_price": "₹115.00",
+        "subscription": "--",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Q&T Foods",
+        "ipowatch_url": "https://ipowatch.in/qt-foods-ipo/",
+        "gmp": "₹0",
+        "gmp_status": "Open",
+        "gmp_trend": "🟡",
+        "gmp_price_band": "₹115",
+        "estimated_listing": "₹- (0.00%)",
+        "gmp_last_updated": "15:02",
+        "match_confidence": 100.0,
+        "gmp_percentage": "-%"
+      },
+      {
+        "company": "Milky Mist Dairy Food",
+        "type": "Mainboard",
+        "open_date": "11 Aug 2026",
+        "close_date": "13 Aug 2026",
+        "allotment_date": "18 Aug 2026",
+        "issue_price": "₹140.00",
+        "subscription": "55.95x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Milky Mist",
+        "ipowatch_url": "https://ipowatch.in/milky-mist-dairy-food-ipo/",
+        "gmp": "₹20",
+        "gmp_status": "Closed",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹140",
+        "estimated_listing": "₹160 (14.29%)",
+        "gmp_last_updated": "15:02",
+        "match_confidence": 100.0,
+        "gmp_percentage": "18.57%"
       }
     ]
   }
