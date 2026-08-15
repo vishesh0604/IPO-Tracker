@@ -522,6 +522,16 @@ div[data-testid="stHorizontalBlock"]:has(
         text-transform: capitalize;
     }
 }
+
+/* =========================================================
+    STREAMLIT HEADER
+    ========================================================= */
+
+[data-testid="stHeader"] {
+    background: #1A121B !important;
+    display: none !important;
+}
+
 </style>
 
 """,
