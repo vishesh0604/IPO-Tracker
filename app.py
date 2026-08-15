@@ -650,60 +650,12 @@ def countdown(close_date):
 # IPOWATCH URL
 # =========================================================
 
-def get_ipowatch_url(company):
+def get_ipowatch_url(ipo):
 
-    known_urls = {
-
-        "G V Electricals":
-            "https://ipowatch.in/gv-electricals-ipo/",
-
-        "Ardee Industries":
-            "https://ipowatch.in/ardee-industries-ipo/",
-
-        "Aegeus Technologies":
-            "https://ipowatch.in/aegeus-technologies-ipo/",
-    }
-
-    if company in known_urls:
-
-        return known_urls[company]
-
-
-    slug = company.lower().strip()
-
-    characters = []
-
-    for character in slug:
-
-        if character.isalnum():
-
-            characters.append(
-                character
-            )
-
-        else:
-
-            characters.append("-")
-
-
-    slug = "".join(
-        characters
+    return ipo.get(
+        "ipowatch_url",
+        "https://ipowatch.in/"
     )
-
-    while "--" in slug:
-
-        slug = slug.replace(
-            "--",
-            "-"
-        )
-
-    slug = slug.strip("-")
-
-    return (
-        f"https://ipowatch.in/"
-        f"{slug}-ipo/"
-    )
-
 
 # =========================================================
 # LOAD DATA
@@ -786,14 +738,14 @@ preapply_ipos = [
 ]
 apply_ipos.sort(
     key=lambda ipo: datetime.strptime(
-        ipo["open_date"],
+        ipo["close_date"],
         "%d %b %Y"
     )
 )
 
 preapply_ipos.sort(
     key=lambda ipo: datetime.strptime(
-        ipo["open_date"],
+        ipo["close_date"],
         "%d %b %Y"
     )
 )
@@ -1053,9 +1005,7 @@ for ipo in apply_ipos:
         )
     )
 
-    ipowatch_url = get_ipowatch_url(
-        ipo["company"]
-    )
+    ipowatch_url = get_ipowatch_url(ipo)
 
 
     with st.container(
@@ -1386,9 +1336,7 @@ for ipo in preapply_ipos:
         )
     )
 
-    ipowatch_url = get_ipowatch_url(
-        ipo["company"]
-    )
+    ipowatch_url = get_ipowatch_url(ipo)
 
 
     with st.container(
@@ -1676,9 +1624,7 @@ st.markdown(
 
 for ipo in recent_closed:
 
-    ipowatch_url = get_ipowatch_url(
-        ipo["company"]
-    )
+    ipowatch_url = get_ipowatch_url(ipo)
 
 
     with st.container(

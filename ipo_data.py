@@ -246,6 +246,12 @@ def get_open_ipos(ipos):
 
             open_ipos.append(ipo)
 
+    # Always display open IPOs chronologically
+    # by their closing/application deadline.
+    open_ipos.sort(
+        key=lambda ipo: parse_date(ipo["close_date"])
+    )
+
     return open_ipos
 
 
@@ -346,6 +352,18 @@ def get_ipowatch_ipos():
         if len(values) < 8:
             continue
 
+        # Get the REAL IPOWatch URL from the IPO name link.
+        ipowatch_url = None
+
+        if cells:
+            link = cells[0].find(
+                "a",
+                href=True
+            )
+
+            if link:
+                ipowatch_url = link["href"]
+
         ipo = {
             "company": values[0],
             "gmp": values[1],
@@ -355,15 +373,17 @@ def get_ipowatch_ipos():
             "date": values[5],
             "type": values[6],
             "status": values[7],
-            "last_updated": values[8]
-            if len(values) > 8
-            else "",
+            "last_updated": (
+                values[8]
+                if len(values) > 8
+                else ""
+            ),
+            "ipowatch_url": ipowatch_url,
         }
 
         ipos.append(ipo)
 
     return ipos
-
 
 # =========================================================
 # MATCH COMPANY TO IPOWATCH
@@ -736,6 +756,9 @@ def enrich_ipo(
         result["ipowatch_name"] = (
             match["company"]
         )
+        result["ipowatch_url"] = (
+        match.get("ipowatch_url")
+        )
 
         result["gmp"] = match["gmp"]
 
@@ -767,6 +790,7 @@ def enrich_ipo(
     else:
 
         result["ipowatch_name"] = "Not found"
+        result["ipowatch_url"] = None
         result["gmp"] = "—"
         result["gmp_status"] = "—"
         result["gmp_trend"] = "—"
