@@ -546,21 +546,26 @@ div[data-testid="stHorizontalBlock"]:has(
     background: #2B202F !important;
 }
 
-/* Remove Streamlit Cloud branding/status widget */
-div[data-testid="stStatusWidget"] {
+/* REMOVE STREAMLIT CLOUD BRANDING */
+
+[data-testid="stStatusWidget"],
+[data-testid="stDecoration"],
+[data-testid="stToolbar"],
+.stDeployButton,
+div[class*="stStatusWidget"],
+div[class*="stDecoration"] {
     display: none !important;
     visibility: hidden !important;
-    height: 0 !important;
+    opacity: 0 !important;
     width: 0 !important;
-    position: fixed !important;
+    height: 0 !important;
     pointer-events: none !important;
 }
 
-/* Remove Streamlit footer */
 footer {
     display: none !important;
+    visibility: hidden !important;
 }
-
 
 /* =========================================================
     STREAMLIT HEADER
