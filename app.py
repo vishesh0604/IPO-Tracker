@@ -546,10 +546,21 @@ div[data-testid="stHorizontalBlock"]:has(
     background: #2B202F !important;
 }
 
-/* Remove Streamlit footer completely */
+/* Remove Streamlit Cloud branding/status widget */
+div[data-testid="stStatusWidget"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: fixed !important;
+    pointer-events: none !important;
+}
+
+/* Remove Streamlit footer */
 footer {
     display: none !important;
 }
+
 
 /* =========================================================
     STREAMLIT HEADER
