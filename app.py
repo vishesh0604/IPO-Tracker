@@ -546,26 +546,6 @@ div[data-testid="stHorizontalBlock"]:has(
     background: #2B202F !important;
 }
 
-/* REMOVE STREAMLIT CLOUD BRANDING */
-
-[data-testid="stStatusWidget"],
-[data-testid="stDecoration"],
-[data-testid="stToolbar"],
-.stDeployButton,
-div[class*="stStatusWidget"],
-div[class*="stDecoration"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    pointer-events: none !important;
-}
-
-footer {
-    display: none !important;
-    visibility: hidden !important;
-}
 
 /* =========================================================
     STREAMLIT HEADER
