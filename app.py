@@ -162,10 +162,17 @@ st.markdown(
 .apply-heading {
     border-left: 4px solid #2ecc71;
     padding-left: 12px;
+    margin-top: 38px;
+    margin-bottom: 15px;
 }
 
 .preapply-heading {
     border-left: 4px solid #f1c40f;
+    padding-left: 12px;
+}
+
+.closed-heading {
+    border-left: 4px solid #FF0000;
     padding-left: 12px;
 }
 
@@ -524,6 +531,23 @@ div[data-testid="stHorizontalBlock"]:has(
 }
 
 /* =========================================================
+   IPO CARDS — USE SECONDARY THEME
+   ========================================================= */
+
+[class*="st-key-ipo-card-apply-"],
+[class*="st-key-ipo-card-preapply-"],
+[class*="st-key-ipo-card-closed-"] {
+    background: #2B202F !important;
+}
+
+[class*="st-key-ipo-card-apply-"] > div,
+[class*="st-key-ipo-card-preapply-"] > div,
+[class*="st-key-ipo-card-closed-"] > div {
+    background: #2B202F !important;
+}
+
+
+/* =========================================================
     STREAMLIT HEADER
     ========================================================= */
 
@@ -531,6 +555,7 @@ div[data-testid="stHorizontalBlock"]:has(
     background: #1A121B !important;
     display: none !important;
 }
+
 
 </style>
 
@@ -992,19 +1017,18 @@ with s3:
 # =========================================================
 
 st.markdown(
-    '<div class="section-title apply-heading">'
-    'Apply Now'
-    '</div>',
+    '''
+    <div class="apply-heading">
+        <div class="section-title">
+            Apply Now
+        </div>
+        <div class="section-subtitle">
+            IPO is currently open for application
+        </div>
+    </div>
+    ''',
     unsafe_allow_html=True
 )
-
-st.markdown(
-    '<div class="section-subtitle">'
-    'IPO is currently open for application'
-    '</div>',
-    unsafe_allow_html=True
-)
-
 
 for ipo in apply_ipos:
 
@@ -1019,7 +1043,8 @@ for ipo in apply_ipos:
 
 
     with st.container(
-        border=True
+        border=True,
+        key=f"ipo-card-apply-{ipo['company']}"
     ):
 
         left, right = st.columns(
@@ -1316,16 +1341,16 @@ for ipo in apply_ipos:
 # =========================================================
 
 st.markdown(
-    '<div class="section-title preapply-heading">'
-    'Pre-Apply'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="section-subtitle">'
-    'Upcoming IPOs available for pre-application on Groww'
-    '</div>',
+    '''
+    <div class="preapply-heading">
+        <div class="section-title">
+            Pre-Apply
+        </div>
+        <div class="section-subtitle">
+            Upcoming IPOs available for pre-application on Groww
+        </div>
+    </div>
+    ''',
     unsafe_allow_html=True
 )
 
@@ -1350,7 +1375,8 @@ for ipo in preapply_ipos:
 
 
     with st.container(
-        border=True
+        border=True,
+        key=f"ipo-card-preapply-{ipo['company']}"
     ):
 
         left, right = st.columns(
@@ -1618,19 +1644,18 @@ for ipo in preapply_ipos:
 # =========================================================
 
 st.markdown(
-    '<div class="section-title">'
-    '3 Most Recent Closed IPOs'
-    '</div>',
+    '''
+    <div class="closed-heading">
+        <div class="section-title">
+            5 Most Recent Closed IPOs
+        </div>
+        <div class="section-subtitle">
+            Recent issues for reference
+        </div>
+    </div>
+    ''',
     unsafe_allow_html=True
 )
-
-st.markdown(
-    '<div class="section-subtitle">'
-    'Recent issues for reference'
-    '</div>',
-    unsafe_allow_html=True
-)
-
 
 for ipo in recent_closed:
 
@@ -1638,7 +1663,8 @@ for ipo in recent_closed:
 
 
     with st.container(
-        border=True
+        border=True,
+        key=f"ipo-card-closed-{ipo['company']}"
     ):
 
         left, right = st.columns(

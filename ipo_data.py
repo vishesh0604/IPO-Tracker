@@ -295,7 +295,7 @@ def get_recent_closed_ipos(ipos):
         reverse=True
     )
 
-    closed_ipos = closed_ipos[:3]
+    closed_ipos = closed_ipos[:5]
 
     for ipo in closed_ipos:
 
