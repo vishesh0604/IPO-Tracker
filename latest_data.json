@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15 08:11",
+  "fetched_at": "2026-08-15 09:37",
   "data": {
     "open": [
       {
@@ -14,11 +14,11 @@
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Credent Connect N Care",
-        "gmp": "₹75",
+        "gmp": "₹65",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹189",
-        "estimated_listing": "₹266 (39.68%)",
+        "estimated_listing": "₹256 (34.39%)",
         "gmp_last_updated": "15:02",
         "match_confidence": 100.0,
         "gmp_percentage": "39.68%"
@@ -56,11 +56,11 @@
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Technocrats Plasma Systems",
-        "gmp": "₹21",
+        "gmp": "₹25",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹132",
-        "estimated_listing": "₹153 (15.91%)",
+        "estimated_listing": "₹157 (18.39%)",
         "gmp_last_updated": "15:01",
         "match_confidence": 81.8,
         "gmp_percentage": "15.91%"
@@ -142,11 +142,11 @@
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Shiprocket",
-        "gmp": "₹36",
+        "gmp": "₹33",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
-        "estimated_listing": "₹133 (37.11%)",
+        "estimated_listing": "₹130 (34.02%)",
         "gmp_last_updated": "15:02",
         "match_confidence": 100.0,
         "gmp_percentage": "37.11%"
@@ -163,11 +163,11 @@
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Behari Lal Engineering",
-        "gmp": "₹80",
+        "gmp": "₹85",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹285",
-        "estimated_listing": "₹365 (28.07%)",
+        "estimated_listing": "₹370 (29.82%)",
         "gmp_last_updated": "15:02",
         "match_confidence": 100.0,
         "gmp_percentage": "28.07%"
