@@ -29,37 +29,40 @@ st.set_page_config(
 if "welcome_seen" not in st.session_state:
     st.session_state.welcome_seen = True
 
-    @st.dialog("Welcome to IPO Tracker")
+    @st.dialog("Welcome to IPO Tracker!")
     def welcome_popup():
-        st.markdown(
-            """
-            **Developed by Vishesh Vasudeva**
 
-            ### WHAT YOU CAN TRACK
+        with st.container(
+            key="welcome-scroll"
+        ):
+            st.markdown(
+                """
 
-            - Current & upcoming IPOs
-            - Mainboard & SME IPOs
-            - Application & allotment dates
-            - Issue price & GMP prices
+                ### WHAT YOU CAN TRACK
 
-            ### ABOUT THE DATA
+                - Current & upcoming IPOs
+                - Mainboard & SME IPOs
+                - Application & allotment dates
+                - Issue price & GMP prices
 
-            IPO data is sourced from [Groww](https://groww.in/ipo), while GMP data is sourced from [IPOWatch](https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/).
+                ### ABOUT THE DATA
 
-            Please note that GMP and other IPO information can change throughout the day.
+                IPO data is sourced from [Groww](https://groww.in/ipo), while GMP data is sourced from [IPOWatch](https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/).
 
-            Information displayed on this website is provided for informational purposes.
+                Please note that GMP and other IPO information can change throughout the day.
 
-            ### DISCLAIMER
+                Information displayed on this website is provided for informational purposes.
 
-            IPO Tracker is an independent informational project and
-            **is not investment advice or a recommendation to apply for
-            or avoid any IPO**.
+                ### DISCLAIMER
 
-            Please verify important information with official sources
-            before making any investment decision.
-            """
-        )
+                IPO Tracker is an independent informational project and
+                **is not investment advice or a recommendation to apply for
+                or avoid any IPO**.
+
+                Please verify important information with official sources
+                before making any investment decision.
+                """
+            )
 
         if st.button(
             "Understood!",
@@ -595,7 +598,53 @@ div[data-testid="stAlert"] svg {
     fill: #FFFFFF !important;
 }
 
-/* =========================================================
+/* Welcome dialog scroll area */
+div.st-key-welcome-scroll {
+    height: 70vh !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* LOCK THE PAGE WHILE WELCOME DIALOG IS OPEN */
+html:has(div[data-testid="stDialog"]),
+body:has(div[data-testid="stDialog"]) {
+    overflow: hidden !important;
+}
+
+/* CENTER THE WELCOME DIALOG */
+div[data-testid="stDialog"] {
+    position: fixed !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+/* LET THE OUTER FLEX CONTAINER POSITION THE DIALOG */
+div[data-testid="stDialog"] div[role="dialog"] {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ONLY THE WELCOME CONTENT SCROLLS */
+div.st-key-welcome-scroll {
+    height: 70vh !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain !important;
+}
+
+
+    /* =========================================================
     STREAMLIT HEADER
     ========================================================= */
 
