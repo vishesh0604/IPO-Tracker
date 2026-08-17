@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 09:09",
+  "fetched_at": "2026-08-17 13:39",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "17 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹179 - ₹189",
-        "subscription": "11.23x",
+        "subscription": "54.44x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -20,18 +20,18 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹189",
         "estimated_listing": "₹244 (29.10%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "09:46",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "29.10%"
       },
       {
         "company": "ENS Enterprises",
         "type": "SME",
         "open_date": "14 Aug 2026",
         "close_date": "18 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 19, 2026",
         "issue_price": "₹87 - ₹92",
-        "subscription": "0.59x",
+        "subscription": "0.89x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -42,7 +42,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹92",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "15:01",
+        "gmp_last_updated": "09:52",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -53,7 +53,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹125 - ₹132",
-        "subscription": "0.39x",
+        "subscription": "2.54x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -64,9 +64,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹132",
         "estimated_listing": "₹164 (24.24%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "09:52",
         "match_confidence": 81.8,
-        "gmp_percentage": "—"
+        "gmp_percentage": "24.24%"
       },
       {
         "company": "Skytech Infinite Platform",
@@ -75,7 +75,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "August 19, 2026",
         "issue_price": "₹73 - ₹77",
-        "subscription": "0.42x",
+        "subscription": "0.73x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -86,20 +86,20 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹77",
         "estimated_listing": "₹84 (9.09%)",
-        "gmp_last_updated": "15:01",
+        "gmp_last_updated": "17 Aug, 13:35",
         "match_confidence": 100.0,
-        "gmp_percentage": "16.88%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Lalithaa Jewellery Mart",
         "type": "Mainboard",
         "open_date": "17 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 20, 2026",
         "issue_price": "₹190 - ₹201",
-        "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "subscription": "0.28x",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Lalithaa Jewellery Mart",
         "ipowatch_url": "https://ipowatch.in/lalithaa-jewellery-mart-ipo/",
@@ -108,9 +108,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹201",
         "estimated_listing": "₹231 (14.92%)",
-        "gmp_last_updated": "15:01",
+        "gmp_last_updated": "09:49",
         "match_confidence": 100.0,
-        "gmp_percentage": "18.91%"
+        "gmp_percentage": "14.92%"
       },
       {
         "company": "Horizon Industrial",
@@ -119,9 +119,9 @@
         "close_date": "19 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹57 - ₹60",
-        "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "subscription": "0.03x",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Horizon Industrial Parks",
         "ipowatch_url": "https://ipowatch.in//horizon-industrial-parks-ipo/",
@@ -130,9 +130,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹60",
         "estimated_listing": "₹66 (6.67%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "09:50",
         "match_confidence": 85.7,
-        "gmp_percentage": "—"
+        "gmp_percentage": "6.67%"
       },
       {
         "company": "Fascinate Textiles",
@@ -141,7 +141,7 @@
         "close_date": "19 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹142 - ₹151",
-        "subscription": "0.54x",
+        "subscription": "0.71x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -152,9 +152,53 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹156",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "17 Aug, 13:35",
         "match_confidence": 100.0,
         "gmp_percentage": "—"
+      },
+      {
+        "company": "Sunshine Picture",
+        "type": "Mainboard",
+        "open_date": "18 Aug 2026",
+        "close_date": "20 Aug 2026",
+        "allotment_date": "TBA",
+        "issue_price": "₹342 - ₹360",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Sunshine Pictures",
+        "ipowatch_url": "https://ipowatch.in/sunshine-pictures-ipo/",
+        "gmp": "₹54",
+        "gmp_status": "Upcoming",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹360",
+        "estimated_listing": "₹414 (15.00%)",
+        "gmp_last_updated": "17 Aug, 13:35",
+        "match_confidence": 97.0,
+        "gmp_percentage": "—"
+      },
+      {
+        "company": "Shankesh Jewellers",
+        "type": "Mainboard",
+        "open_date": "18 Aug 2026",
+        "close_date": "20 Aug 2026",
+        "allotment_date": "TBA",
+        "issue_price": "₹88 - ₹93",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Shankesh Jewellers",
+        "ipowatch_url": "https://ipowatch.in/shankesh-jewellers-ipo/",
+        "gmp": "₹5",
+        "gmp_status": "Upcoming",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹93",
+        "estimated_listing": "₹98 (5.38%)",
+        "gmp_last_updated": "09:57",
+        "match_confidence": 100.0,
+        "gmp_percentage": "5.38%"
       },
       {
         "company": "Gaja Alternate Asset Management",
@@ -174,7 +218,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹160",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "17 Aug, 13:35",
         "match_confidence": 96.9,
         "gmp_percentage": "—"
       }
@@ -198,9 +242,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹118",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "09:45",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "-%"
       },
       {
         "company": "Shiprocket",
@@ -220,9 +264,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
         "estimated_listing": "₹130 (34.02%)",
-        "gmp_last_updated": "15:02",
+        "gmp_last_updated": "09:38",
         "match_confidence": 100.0,
-        "gmp_percentage": "37.11%"
+        "gmp_percentage": "34.02%"
       },
       {
         "company": "Behari Lal Engineering",
@@ -242,9 +286,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹285",
         "estimated_listing": "₹370 (29.82%)",
-        "gmp_last_updated": "15:02",
+        "gmp_last_updated": "09:44",
         "match_confidence": 100.0,
-        "gmp_percentage": "28.07%"
+        "gmp_percentage": "29.82%"
       },
       {
         "company": "Q&T Foods",
@@ -264,7 +308,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹115",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "17 Aug, 13:35",
         "match_confidence": 100.0,
         "gmp_percentage": "—"
       },
@@ -286,7 +330,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹140",
         "estimated_listing": "₹160 (14.29%)",
-        "gmp_last_updated": "17 Aug, 07:40",
+        "gmp_last_updated": "17 Aug, 13:35",
         "match_confidence": 100.0,
         "gmp_percentage": "—"
       }
