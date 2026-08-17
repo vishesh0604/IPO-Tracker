@@ -1422,7 +1422,7 @@ for ipo in apply_ipos:
         with link1:
 
             st.link_button(
-                "Open IPOWatch",
+                "Open IPOWatch :material/open_in_new:",
                 ipowatch_url,
                 use_container_width=True
             )
@@ -1431,7 +1431,7 @@ for ipo in apply_ipos:
         with link2:
 
             st.link_button(
-                "Open Groww IPOs",
+                "Open Groww IPOs :material/open_in_new:",
                 "https://groww.in/ipo",
                 use_container_width=True
             )
@@ -1725,7 +1725,7 @@ for ipo in preapply_ipos:
         with link1:
 
             st.link_button(
-                "Open IPOWatch",
+                "Open IPOWatch :material/open_in_new:",
                 ipowatch_url,
                 use_container_width=True
             )
@@ -1734,7 +1734,7 @@ for ipo in preapply_ipos:
         with link2:
 
             st.link_button(
-                "Open Groww IPOs",
+                "Open Groww IPOs :material/open_in_new:",
                 "https://groww.in/ipo",
                 use_container_width=True
             )
@@ -1845,7 +1845,7 @@ for ipo in recent_closed:
 
 
         st.link_button(
-            "Open IPOWatch",
+            "Open IPOWatch :material/open_in_new:",
             ipowatch_url,
             use_container_width=True
         )
