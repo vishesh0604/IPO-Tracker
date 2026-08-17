@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 13:39",
+  "fetched_at": "2026-08-17 15:49",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "17 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹179 - ₹189",
-        "subscription": "54.44x",
+        "subscription": "121.97x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -20,9 +20,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹189",
         "estimated_listing": "₹244 (29.10%)",
-        "gmp_last_updated": "09:46",
+        "gmp_last_updated": "17 Aug, 15:41",
         "match_confidence": 100.0,
-        "gmp_percentage": "29.10%"
+        "gmp_percentage": "—"
       },
       {
         "company": "ENS Enterprises",
@@ -31,7 +31,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "August 19, 2026",
         "issue_price": "₹87 - ₹92",
-        "subscription": "0.89x",
+        "subscription": "1.25x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -53,7 +53,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹125 - ₹132",
-        "subscription": "2.54x",
+        "subscription": "3.80x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -64,9 +64,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹132",
         "estimated_listing": "₹164 (24.24%)",
-        "gmp_last_updated": "09:52",
+        "gmp_last_updated": "17 Aug, 15:41",
         "match_confidence": 81.8,
-        "gmp_percentage": "24.24%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Skytech Infinite Platform",
@@ -75,7 +75,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "August 19, 2026",
         "issue_price": "₹73 - ₹77",
-        "subscription": "0.73x",
+        "subscription": "0.85x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -86,9 +86,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹77",
         "estimated_listing": "₹84 (9.09%)",
-        "gmp_last_updated": "17 Aug, 13:35",
+        "gmp_last_updated": "09:48",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "9.09%"
       },
       {
         "company": "Lalithaa Jewellery Mart",
@@ -97,7 +97,7 @@
         "close_date": "19 Aug 2026",
         "allotment_date": "August 20, 2026",
         "issue_price": "₹190 - ₹201",
-        "subscription": "0.28x",
+        "subscription": "0.43x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -119,7 +119,7 @@
         "close_date": "19 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹57 - ₹60",
-        "subscription": "0.03x",
+        "subscription": "0.13x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -139,9 +139,9 @@
         "type": "SME",
         "open_date": "11 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 20, 2026",
         "issue_price": "₹142 - ₹151",
-        "subscription": "0.71x",
+        "subscription": "0.82x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -152,9 +152,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹156",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 13:35",
+        "gmp_last_updated": "09:38",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "-%"
       },
       {
         "company": "Sunshine Picture",
@@ -174,7 +174,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹360",
         "estimated_listing": "₹414 (15.00%)",
-        "gmp_last_updated": "17 Aug, 13:35",
+        "gmp_last_updated": "17 Aug, 15:41",
         "match_confidence": 97.0,
         "gmp_percentage": "—"
       },
@@ -183,7 +183,7 @@
         "type": "Mainboard",
         "open_date": "18 Aug 2026",
         "close_date": "20 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 21, 2026",
         "issue_price": "₹88 - ₹93",
         "subscription": "--",
         "action": "Pre-apply",
@@ -218,7 +218,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹160",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 13:35",
+        "gmp_last_updated": "17 Aug, 15:41",
         "match_confidence": 96.9,
         "gmp_percentage": "—"
       }
@@ -308,9 +308,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹115",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 13:35",
+        "gmp_last_updated": "09:46",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "-%"
       },
       {
         "company": "Milky Mist Dairy Food",
@@ -330,7 +330,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹140",
         "estimated_listing": "₹160 (14.29%)",
-        "gmp_last_updated": "17 Aug, 13:35",
+        "gmp_last_updated": "17 Aug, 15:41",
         "match_confidence": 100.0,
         "gmp_percentage": "—"
       }
