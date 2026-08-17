@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 22:29",
+  "fetched_at": "2026-08-18 00:47",
   "data": {
     "open": [
       {
@@ -202,6 +202,28 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Credent Connect N Care",
+        "type": "SME",
+        "open_date": "13 Aug 2026",
+        "close_date": "17 Aug 2026",
+        "allotment_date": "20 Aug 2026",
+        "issue_price": "₹189.00",
+        "subscription": "142.01x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Credent Connect N Care",
+        "ipowatch_url": "https://ipowatch.in/credent-connect-ipo/",
+        "gmp": "₹55",
+        "gmp_status": "Open",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹189",
+        "estimated_listing": "₹244 (29.10%)",
+        "gmp_last_updated": "18:08",
+        "match_confidence": 100.0,
+        "gmp_percentage": "29.10%"
+      },
       {
         "company": "Pramodini Medicare",
         "type": "SME",
