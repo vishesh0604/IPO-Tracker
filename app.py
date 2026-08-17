@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime
 from zoneinfo import ZoneInfo
+import streamlit.components.v1 as components
 
 
 # =========================================================
@@ -129,6 +130,7 @@ st.markdown(
     text-align: center;
 }
 
+
 .summary-number {
     font-size: 28px;
     font-weight: 800;
@@ -143,6 +145,24 @@ st.markdown(
     letter-spacing: 0.6px;
 }
 
+.summary-link {
+    display: block;
+    text-decoration: none !important;
+    color: inherit !important;
+    border: 1px solid rgba(128,128,128,0.22);
+    border-radius: 12px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.summary-link:hover {
+    background: #2B202F !important;
+    border-color: rgba(255,255,255,0.12);
+    text-decoration: none !important;
+}
+
+.summary-link .summary-box {
+    border: none !important;
+}
 
 /* SECTION */
 
@@ -546,6 +566,34 @@ div[data-testid="stHorizontalBlock"]:has(
     background: #2B202F !important;
 }
 
+#apply-now,
+#pre-apply {
+    scroll-margin-top: 35px;
+}
+
+/* Custom st.info box */
+div[data-testid="stAlert"] {
+    background: #2B202F !important;
+    background-color: #2B202F !important;
+    border: 1px solid #2B202F !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+div[data-testid="stAlert"] > div {
+    background: #2B202F !important;
+    background-color: #2B202F !important;
+    border-radius: 12px !important;
+}
+
+div[data-testid="stAlert"] p {
+    color: #FFFFFF !important;
+}
+
+div[data-testid="stAlert"] svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+}
 
 /* =========================================================
     STREAMLIT HEADER
@@ -962,55 +1010,102 @@ s1, s2, s3 = st.columns(3)
 
 
 with s1:
-
     st.markdown(
         f'''
-        <div class="summary-box">
-            <div class="summary-number">
-                {len(all_open_ipos)}
+        <a href="#apply-now" class="summary-link">
+            <div class="summary-box">
+                <div class="summary-number">
+                    {len(all_open_ipos)}
+                </div>
+                <div class="summary-label">
+                    Open IPOs
+                    </br>
+                    (Click to view)
+                </div>
             </div>
-            <div class="summary-label">
-                Open IPOs
-            </div>
-        </div>
+        </a>
         ''',
         unsafe_allow_html=True
     )
 
 
 with s2:
-
     st.markdown(
         f'''
-        <div class="summary-box">
-            <div class="summary-number">
-                {len(apply_ipos)}
+        <a href="#apply-now" class="summary-link">
+            <div class="summary-box">
+                <div class="summary-number">
+                    {len(apply_ipos)}
+                </div>
+                <div class="summary-label">
+                    Apply
+                    </br>
+                    (Click to view)
+                </div>
             </div>
-            <div class="summary-label">
-                Apply
-            </div>
-        </div>
+        </a>
         ''',
         unsafe_allow_html=True
     )
 
 
 with s3:
-
     st.markdown(
         f'''
-        <div class="summary-box">
-            <div class="summary-number">
-                {len(preapply_ipos)}
+        <a href="#pre-apply" class="summary-link">
+            <div class="summary-box">
+                <div class="summary-number">
+                    {len(preapply_ipos)}
+                </div>
+                <div class="summary-label">
+                    Pre-apply
+                    </br>
+                    (Click to view)
+                </div>
             </div>
-            <div class="summary-label">
-                Pre-apply
-            </div>
-        </div>
+        </a>
         ''',
         unsafe_allow_html=True
     )
 
+components.html(
+    """
+    <script>
+        const parentDoc = window.parent.document;
+
+        parentDoc.addEventListener("click", function (event) {
+            const link = event.target.closest("a.summary-link");
+
+            if (!link) {
+                return;
+            }
+
+            const href = link.getAttribute("href");
+
+            if (
+                href !== "#apply-now" &&
+                href !== "#pre-apply"
+            ) {
+                return;
+            }
+
+            const target = parentDoc.querySelector(href);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, true);
+    </script>
+    """,
+    height=0,
+)
 
 # =========================================================
 # APPLY-NOW
@@ -1018,7 +1113,7 @@ with s3:
 
 st.markdown(
     '''
-    <div class="apply-heading">
+    <div id="apply-now" class="apply-heading">
         <div class="section-title">
             Apply Now
         </div>
@@ -1029,6 +1124,12 @@ st.markdown(
     ''',
     unsafe_allow_html=True
 )
+
+if not apply_ipos:
+
+    st.info(
+        "No IPOs match your current filters."
+    )
 
 for ipo in apply_ipos:
 
@@ -1342,7 +1443,7 @@ for ipo in apply_ipos:
 
 st.markdown(
     '''
-    <div class="preapply-heading">
+    <div id="pre-apply" class="preapply-heading">
         <div class="section-title">
             Pre-Apply
         </div>
@@ -1358,7 +1459,7 @@ st.markdown(
 if not preapply_ipos:
 
     st.info(
-        "No Pre-Apply IPOs match your current filters."
+        "No IPOs match your current filters."
     )
 
 
