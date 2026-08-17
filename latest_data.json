@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 05:31",
+  "fetched_at": "2026-08-17 09:09",
   "data": {
     "open": [
       {
@@ -15,21 +15,21 @@
         "status_source": "current",
         "ipowatch_name": "Credent Connect N Care",
         "ipowatch_url": "https://ipowatch.in/credent-connect-ipo/",
-        "gmp": "₹65",
+        "gmp": "₹55",
         "gmp_status": "Open",
-        "gmp_trend": "🟢",
+        "gmp_trend": "🔴",
         "gmp_price_band": "₹189",
-        "estimated_listing": "₹256 (34.39%)",
-        "gmp_last_updated": "15:02",
+        "estimated_listing": "₹244 (29.10%)",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "39.68%"
+        "gmp_percentage": "—"
       },
       {
         "company": "ENS Enterprises",
         "type": "SME",
         "open_date": "14 Aug 2026",
         "close_date": "18 Aug 2026",
-        "allotment_date": "August 19, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹87 - ₹92",
         "subscription": "0.59x",
         "action": "Apply",
@@ -59,14 +59,14 @@
         "status_source": "current",
         "ipowatch_name": "Technocrats Plasma Systems",
         "ipowatch_url": "https://ipowatch.in/technocrats-plasma-systems-ipo/",
-        "gmp": "₹25",
+        "gmp": "₹32",
         "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹132",
-        "estimated_listing": "₹157 (18.39%)",
-        "gmp_last_updated": "15:01",
+        "estimated_listing": "₹164 (24.24%)",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 81.8,
-        "gmp_percentage": "15.91%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Skytech Infinite Platform",
@@ -81,11 +81,11 @@
         "status_source": "current",
         "ipowatch_name": "Skytech Infinite Platform",
         "ipowatch_url": "https://ipowatch.in/skytech-infinite-platform-ipo/",
-        "gmp": "₹13",
+        "gmp": "₹7",
         "gmp_status": "Open",
-        "gmp_trend": "🟢",
+        "gmp_trend": "🔴",
         "gmp_price_band": "₹77",
-        "estimated_listing": "₹90 (16.88%)",
+        "estimated_listing": "₹84 (9.09%)",
         "gmp_last_updated": "15:01",
         "match_confidence": 100.0,
         "gmp_percentage": "16.88%"
@@ -95,7 +95,7 @@
         "type": "Mainboard",
         "open_date": "17 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "August 20, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹190 - ₹201",
         "subscription": "--",
         "action": "Pre-apply",
@@ -104,7 +104,7 @@
         "ipowatch_name": "Lalithaa Jewellery Mart",
         "ipowatch_url": "https://ipowatch.in/lalithaa-jewellery-mart-ipo/",
         "gmp": "₹30",
-        "gmp_status": "Upcoming",
+        "gmp_status": "Open",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹201",
         "estimated_listing": "₹231 (14.92%)",
@@ -126,20 +126,20 @@
         "ipowatch_name": "Horizon Industrial Parks",
         "ipowatch_url": "https://ipowatch.in//horizon-industrial-parks-ipo/",
         "gmp": "₹4",
-        "gmp_status": "Upcoming",
+        "gmp_status": "Open",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹60",
         "estimated_listing": "₹66 (6.67%)",
-        "gmp_last_updated": "15:01",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 85.7,
-        "gmp_percentage": "6.67%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Fascinate Textiles",
         "type": "SME",
         "open_date": "11 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "August 20, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹142 - ₹151",
         "subscription": "0.54x",
         "action": "Apply",
@@ -152,9 +152,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹156",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "15:04",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Gaja Alternate Asset Management",
@@ -174,7 +174,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹160",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "15 Aug, 8:15",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 96.9,
         "gmp_percentage": "—"
       }
@@ -198,9 +198,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹118",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "15:02",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Shiprocket",
@@ -264,9 +264,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹115",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "15:02",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Milky Mist Dairy Food",
@@ -286,9 +286,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹140",
         "estimated_listing": "₹160 (14.29%)",
-        "gmp_last_updated": "15:02",
+        "gmp_last_updated": "17 Aug, 07:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "18.57%"
+        "gmp_percentage": "—"
       }
     ]
   }
