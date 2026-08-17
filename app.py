@@ -893,7 +893,7 @@ st.markdown(
 
 st.markdown(
     '<div class="developer-credit logo-byline">'
-    'Open & Upcoming Indian IPOs '
+    'Open & Upcoming Indian Market IPOs '
     '<span class="mobile-break"><br></span>'
     '<span class="with-word">with</span> live GMP data'
     '</div>',
@@ -1118,7 +1118,7 @@ st.markdown(
             Apply Now
         </div>
         <div class="section-subtitle">
-            IPO is currently open for application
+            IPOs currently open for application
         </div>
     </div>
     ''',
@@ -1448,7 +1448,7 @@ st.markdown(
             Pre-Apply
         </div>
         <div class="section-subtitle">
-            Upcoming IPOs available for pre-application on Groww
+            Upcoming IPOs available for pre-application
         </div>
     </div>
     ''',
