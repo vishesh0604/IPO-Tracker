@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 17:20",
+  "fetched_at": "2026-08-17 19:26",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "August 19, 2026",
         "issue_price": "₹87 - ₹92",
-        "subscription": "1.39x",
+        "subscription": "1.40x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -20,7 +20,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹92",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:52",
+        "gmp_last_updated": "18:06",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -31,7 +31,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "TBA",
         "issue_price": "₹125 - ₹132",
-        "subscription": "5.19x",
+        "subscription": "5.38x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -42,7 +42,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹132",
         "estimated_listing": "₹164 (24.24%)",
-        "gmp_last_updated": "09:52",
+        "gmp_last_updated": "18:06",
         "match_confidence": 81.8,
         "gmp_percentage": "24.24%"
       },
@@ -53,7 +53,7 @@
         "close_date": "18 Aug 2026",
         "allotment_date": "August 19, 2026",
         "issue_price": "₹73 - ₹77",
-        "subscription": "0.92x",
+        "subscription": "0.93x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -64,7 +64,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹77",
         "estimated_listing": "₹84 (9.09%)",
-        "gmp_last_updated": "09:48",
+        "gmp_last_updated": "18:07",
         "match_confidence": 100.0,
         "gmp_percentage": "9.09%"
       },
@@ -86,7 +86,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹201",
         "estimated_listing": "₹231 (14.92%)",
-        "gmp_last_updated": "09:49",
+        "gmp_last_updated": "18:06",
         "match_confidence": 100.0,
         "gmp_percentage": "14.92%"
       },
@@ -108,7 +108,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹60",
         "estimated_listing": "₹66 (6.67%)",
-        "gmp_last_updated": "09:50",
+        "gmp_last_updated": "18:07",
         "match_confidence": 85.7,
         "gmp_percentage": "6.67%"
       },
@@ -130,7 +130,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹156",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:38",
+        "gmp_last_updated": "18:08",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -152,7 +152,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹360",
         "estimated_listing": "₹414 (15.00%)",
-        "gmp_last_updated": "09:40",
+        "gmp_last_updated": "18:08",
         "match_confidence": 97.0,
         "gmp_percentage": "15.00%"
       },
@@ -174,7 +174,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹93",
         "estimated_listing": "₹98 (5.38%)",
-        "gmp_last_updated": "09:57",
+        "gmp_last_updated": "18:06",
         "match_confidence": 100.0,
         "gmp_percentage": "5.38%"
       },
@@ -191,12 +191,12 @@
         "status_source": "current",
         "ipowatch_name": "Gaja Alternative Asset Management",
         "ipowatch_url": "https://ipowatch.in/gaja-alternative-asset-management-ipo/",
-        "gmp": "₹0",
+        "gmp": "₹10",
         "gmp_status": "Upcoming",
-        "gmp_trend": "🟡",
+        "gmp_trend": "🟢",
         "gmp_price_band": "₹160",
-        "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17 Aug, 15:41",
+        "estimated_listing": "₹170 (6.25%)",
+        "gmp_last_updated": "17 Aug, 17:58",
         "match_confidence": 96.9,
         "gmp_percentage": "—"
       }
@@ -220,7 +220,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹118",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:45",
+        "gmp_last_updated": "18:08",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -242,7 +242,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
         "estimated_listing": "₹130 (34.02%)",
-        "gmp_last_updated": "09:38",
+        "gmp_last_updated": "18:08",
         "match_confidence": 100.0,
         "gmp_percentage": "34.02%"
       },
@@ -264,7 +264,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹285",
         "estimated_listing": "₹370 (29.82%)",
-        "gmp_last_updated": "09:44",
+        "gmp_last_updated": "18:08",
         "match_confidence": 100.0,
         "gmp_percentage": "29.82%"
       },
@@ -286,7 +286,7 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹115",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:46",
+        "gmp_last_updated": "18:07",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       }
