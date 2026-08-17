@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18 04:20",
+  "fetched_at": "2026-08-18 05:14",
   "data": {
     "open": [
       {
@@ -117,7 +117,7 @@
         "type": "SME",
         "open_date": "11 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "August 20, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹142 - ₹151",
         "subscription": "0.87x",
         "action": "Apply",
@@ -152,16 +152,16 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹360",
         "estimated_listing": "₹414 (15.00%)",
-        "gmp_last_updated": "18:08",
+        "gmp_last_updated": "17 Aug, 17:58",
         "match_confidence": 97.0,
-        "gmp_percentage": "15.00%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Shankesh Jewellers",
         "type": "Mainboard",
         "open_date": "18 Aug 2026",
         "close_date": "20 Aug 2026",
-        "allotment_date": "August 21, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹88 - ₹93",
         "subscription": "--",
         "action": "Pre-apply",
@@ -264,9 +264,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹97",
         "estimated_listing": "₹130 (34.02%)",
-        "gmp_last_updated": "18:08",
+        "gmp_last_updated": "17 Aug, 17:58",
         "match_confidence": 100.0,
-        "gmp_percentage": "34.02%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Behari Lal Engineering",
