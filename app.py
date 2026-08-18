@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from html import escape
 
 
 
@@ -645,8 +646,69 @@ div.st-key-welcome-scroll {
     overscroll-behavior: contain !important;
 }
 
+/* =========================================================
+   QUICK OVERVIEW
+   ========================================================= */
 
-    /* =========================================================
+div.st-key-quick-overview-scroll {
+    height: calc(100dvh - 220px) !important;
+    max-height: calc(100dvh - 220px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain !important;
+}
+
+.quick-overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.quick-overview-table th {
+    text-align: left;
+    padding: 10px 8px;
+    color: #888;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(128,128,128,0.22);
+}
+
+.quick-overview-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid rgba(128,128,128,0.12);
+    vertical-align: middle;
+}
+
+.quick-overview-table th:not(:first-child),
+.quick-overview-table td:not(:first-child) {
+    text-align: right;
+}
+
+.quick-overview-section {
+    font-size: 17px;
+    font-weight: 800;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #2B202F;
+}
+
+.quick-overview-empty {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+div.st-key-quick-overview-button button {
+    width: 100% !important;
+    min-height: 42px !important;
+    height: 42px !important;
+}
+
+
+ /* =========================================================
     STREAMLIT HEADER
     ========================================================= */
 
@@ -1048,6 +1110,109 @@ preapply_ipos = [
 ]
 
 # =========================================================
+# QUICK OVERVIEW
+# =========================================================
+
+def build_quick_overview_table(ipos):
+    rows = []
+
+    for ipo in ipos:
+        company = escape(str(ipo.get("company", "—")))
+        gmp = escape(str(ipo.get("gmp", "—")))
+        gmp_percentage = escape(
+            str(ipo.get("gmp_percentage", "—"))
+        )
+
+        history = gmp_history.get(
+            ipo.get("company"),
+            []
+        )
+
+        rows.append(
+            f"""
+            <tr>
+                <td>{company}</td>
+                <td>{gmp}</td>
+                <td>{gmp_percentage}</td>
+                
+            </tr>
+            """
+        )
+
+    if not rows:
+        return """
+        <div class="quick-overview-empty">
+            No IPOs available.
+        </div>
+        """
+
+    return f"""
+    <table class="quick-overview-table">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>₹GMP</th>
+                <th>GMP%</th>
+            </tr>
+        </thead>
+        <tbody>
+            {''.join(rows)}
+        </tbody>
+    </table>
+    """
+
+
+@st.dialog("Quick Overview")
+def quick_overview_popup():
+
+    # Use ALL current IPOs, not the filtered search results
+    overview_apply = [
+        ipo
+        for ipo in all_open_ipos
+        if ipo.get("groww_status") == "Open"
+    ]
+
+    overview_preapply = [
+        ipo
+        for ipo in all_open_ipos
+        if ipo.get("groww_status") == "Pre-apply"
+    ]
+
+    # Exactly the 5 closed IPOs shown on the main page
+    overview_closed = recent_closed[:5]
+
+    with st.container(
+        key="quick-overview-scroll"
+    ):
+
+        st.markdown(
+            '<div class="quick-overview-section">APPLY</div>',
+            unsafe_allow_html=True
+        )
+
+        st.html(
+            build_quick_overview_table(overview_apply)
+        )
+
+        st.markdown(
+            '<div class="quick-overview-section">PRE-APPLY</div>',
+            unsafe_allow_html=True
+        )
+
+        st.html(
+            build_quick_overview_table(overview_preapply)
+        )
+
+        st.markdown(
+            '<div class="quick-overview-section">CLOSED</div>',
+            unsafe_allow_html=True
+        )
+
+        st.html(
+            build_quick_overview_table(overview_closed)
+        )
+
+# =========================================================
 # SUMMARY
 # =========================================================
 
@@ -1156,6 +1321,14 @@ st.html(
     """,
     unsafe_allow_javascript=True,
 )
+
+if st.button(
+    "Quick Overview",
+    key="quick-overview-button",
+    type="secondary",
+    use_container_width=True
+):
+    quick_overview_popup()
 
 # =========================================================
 # APPLY-NOW
