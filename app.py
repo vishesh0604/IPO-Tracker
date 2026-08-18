@@ -784,10 +784,7 @@ def countdown(close_date):
 
 def get_ipowatch_url(ipo):
 
-    return ipo.get(
-        "ipowatch_url",
-        "https://ipowatch.in/"
-    )
+    return ipo.get("ipowatch_url") or "https://ipowatch.in/"
 
 # =========================================================
 # LOAD DATA
