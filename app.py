@@ -245,7 +245,7 @@ st.markdown(
 
 .status-preapply {
     display: inline-block;
-    margin-top: 9px;
+    margin-top: 0px;
     padding: 4px 9px;
     border-radius: 5px;
     background: rgba(241, 196, 15, 0.12);
@@ -1408,7 +1408,7 @@ for ipo in apply_ipos:
                     {ipo["type"]}
                 </div>
 
-                <div style="margin-top: 9px;">
+                <div style="margin-top: 0px;">
                     <span class="status-open">
                         OPEN
                     </span>
