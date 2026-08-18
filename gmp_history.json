@@ -209,6 +209,10 @@
     {
       "timestamp": "2026-08-15 09:37",
       "gmp": 85.0
+    },
+    {
+      "timestamp": "2026-08-18 08:38",
+      "gmp": 105.0
     }
   ],
   "Sham Foam": [
@@ -305,6 +309,10 @@
     {
       "timestamp": "2026-08-15 11:21",
       "gmp": 4.0
+    },
+    {
+      "timestamp": "2026-08-18 08:38",
+      "gmp": 2.0
     }
   ],
   "Gaja Alternate Asset Management": [
@@ -315,18 +323,30 @@
     {
       "timestamp": "2026-08-17 19:26",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-08-18 08:38",
+      "gmp": 7.0
     }
   ],
   "Sunshine Picture": [
     {
       "timestamp": "2026-08-17 13:39",
       "gmp": 54.0
+    },
+    {
+      "timestamp": "2026-08-18 08:38",
+      "gmp": 73.0
     }
   ],
   "Shankesh Jewellers": [
     {
       "timestamp": "2026-08-17 13:39",
       "gmp": 5.0
+    },
+    {
+      "timestamp": "2026-08-18 08:38",
+      "gmp": 2.0
     }
   ]
 }
