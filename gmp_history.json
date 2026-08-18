@@ -263,6 +263,10 @@
     {
       "timestamp": "2026-08-17 09:09",
       "gmp": 55.0
+    },
+    {
+      "timestamp": "2026-08-18 10:38",
+      "gmp": 45.0
     }
   ],
   "Skytech Infinite Platform": [
@@ -277,6 +281,10 @@
     {
       "timestamp": "2026-08-17 09:09",
       "gmp": 7.0
+    },
+    {
+      "timestamp": "2026-08-18 10:38",
+      "gmp": 2.0
     }
   ],
   "ENS Enterprises": [
@@ -347,6 +355,12 @@
     {
       "timestamp": "2026-08-18 08:38",
       "gmp": 2.0
+    }
+  ],
+  "Tempsens Instruments": [
+    {
+      "timestamp": "2026-08-18 10:38",
+      "gmp": 154.0
     }
   ]
 }
