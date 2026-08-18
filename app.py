@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 from zoneinfo import ZoneInfo
-import streamlit.components.v1 as components
+
 
 
 # =========================================================
@@ -185,14 +185,16 @@ st.markdown(
 .apply-heading {
     border-left: 4px solid #2ecc71;
     padding-left: 12px;
-    margin-top: 38px;
+    margin-top: 0px;
     margin-bottom: 15px;
 }
+
 
 .preapply-heading {
     border-left: 4px solid #f1c40f;
     padding-left: 12px;
 }
+
 
 .closed-heading {
     border-left: 4px solid #FF0000;
@@ -511,7 +513,7 @@ div[data-testid="stHorizontalBlock"]:has(
     align-items: center;
 
     padding: 0 !important;
-    margin: 45px 0 0 0 !important;
+    margin: 10px 0 0 0 !important;
 }
 
 .site-logo {
@@ -636,8 +638,8 @@ div[data-testid="stDialog"] div[role="dialog"] {
 
 /* ONLY THE WELCOME CONTENT SCROLLS */
 div.st-key-welcome-scroll {
-    height: 70vh !important;
-    max-height: 70vh !important;
+    height: calc(100dvh - 220px) !important;
+    max-height: calc(100dvh - 220px) !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     overscroll-behavior: contain !important;
@@ -1114,43 +1116,45 @@ with s3:
         unsafe_allow_html=True
     )
 
-components.html(
+st.html(
     """
     <script>
-        const parentDoc = window.parent.document;
+        if (!window.__ipoTrackerSmoothScrollInstalled) {
+            window.__ipoTrackerSmoothScrollInstalled = true;
 
-        parentDoc.addEventListener("click", function (event) {
-            const link = event.target.closest("a.summary-link");
+            document.addEventListener("click", function (event) {
+                const link = event.target.closest("a.summary-link");
 
-            if (!link) {
-                return;
-            }
+                if (!link) {
+                    return;
+                }
 
-            const href = link.getAttribute("href");
+                const href = link.getAttribute("href");
 
-            if (
-                href !== "#apply-now" &&
-                href !== "#pre-apply"
-            ) {
-                return;
-            }
+                if (
+                    href !== "#apply-now" &&
+                    href !== "#pre-apply"
+                ) {
+                    return;
+                }
 
-            const target = parentDoc.querySelector(href);
+                const target = document.querySelector(href);
 
-            if (!target) {
-                return;
-            }
+                if (!target) {
+                    return;
+                }
 
-            event.preventDefault();
+                event.preventDefault();
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }, true);
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, true);
+        }
     </script>
     """,
-    height=0,
+    unsafe_allow_javascript=True,
 )
 
 # =========================================================
