@@ -60,15 +60,15 @@
     "gmp": 0.0
   },
   "Credent Connect N Care": {
-    "timestamp": "2026-08-19 08:41",
-    "gmp": 45.0
+    "timestamp": "2026-08-19 10:41",
+    "gmp": 63.0
   },
   "Skytech Infinite Platform": {
     "timestamp": "2026-08-19 08:41",
     "gmp": 2.0
   },
   "ENS Enterprises": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 190.0
   },
   "Technocrats Plasma": {
@@ -76,31 +76,35 @@
     "gmp": 32.0
   },
   "Lalithaa Jewellery Mart": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 40.0
   },
   "Horizon Industrial": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 2.0
   },
   "Gaja Alternate Asset Management": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 30.0
   },
   "Sunshine Picture": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 77.0
   },
   "Shankesh Jewellers": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 5.0
   },
   "Tempsens Instruments": {
-    "timestamp": "2026-08-19 08:41",
+    "timestamp": "2026-08-19 10:41",
     "gmp": 170.0
   },
   "Mopshop Distribution": {
     "timestamp": "2026-08-19 08:41",
     "gmp": 18.0
+  },
+  "Augmont Enterprises": {
+    "timestamp": "2026-08-19 10:41",
+    "gmp": 190.0
   }
 }

@@ -267,6 +267,10 @@
     {
       "timestamp": "2026-08-18 10:38",
       "gmp": 45.0
+    },
+    {
+      "timestamp": "2026-08-19 10:41",
+      "gmp": 63.0
     }
   ],
   "Skytech Infinite Platform": [
@@ -391,6 +395,12 @@
     {
       "timestamp": "2026-08-18 17:22",
       "gmp": 18.0
+    }
+  ],
+  "Augmont Enterprises": [
+    {
+      "timestamp": "2026-08-19 10:41",
+      "gmp": 190.0
     }
   ]
 }

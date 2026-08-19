@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-19 08:41",
+  "fetched_at": "2026-08-19 10:41",
   "data": {
     "open": [
       {
@@ -7,7 +7,7 @@
         "type": "Mainboard",
         "open_date": "17 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "August 20, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹190 - ₹201",
         "subscription": "3.07x",
         "action": "Apply",
@@ -20,9 +20,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹201",
         "estimated_listing": "₹241 (19.90%)",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "09:33",
         "match_confidence": 100.0,
-        "gmp_percentage": "14.92%"
+        "gmp_percentage": "19.90%"
       },
       {
         "company": "Horizon Industrial",
@@ -42,16 +42,16 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹60",
         "estimated_listing": "₹62 (3.33%)",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "",
         "match_confidence": 85.7,
-        "gmp_percentage": "3.33%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Fascinate Textiles",
         "type": "SME",
         "open_date": "11 Aug 2026",
         "close_date": "19 Aug 2026",
-        "allotment_date": "August 20, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹142 - ₹151",
         "subscription": "0.95x",
         "action": "Apply",
@@ -64,7 +64,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "09:28",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -86,9 +86,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹360",
         "estimated_listing": "₹437 (21.39%)",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "09:29",
         "match_confidence": 97.0,
-        "gmp_percentage": "20.28%"
+        "gmp_percentage": "21.39%"
       },
       {
         "company": "Shankesh Jewellers",
@@ -108,9 +108,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹93",
         "estimated_listing": "₹98 (5.38%)",
-        "gmp_last_updated": "17:51",
+        "gmp_last_updated": "09:43",
         "match_confidence": 100.0,
-        "gmp_percentage": "2.15%"
+        "gmp_percentage": "5.38%"
       },
       {
         "company": "Gaja Alternate Asset Management",
@@ -120,8 +120,8 @@
         "allotment_date": "TBA",
         "issue_price": "₹152 - ₹160",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Gaja Alternative Asset Management",
         "ipowatch_url": "https://ipowatch.in/gaja-alternative-asset-management-ipo/",
@@ -142,19 +142,19 @@
         "allotment_date": "August 24, 2026",
         "issue_price": "₹95 - ₹99",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹-",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Mopshop Distribution",
@@ -164,19 +164,19 @@
         "allotment_date": "August 24, 2026",
         "issue_price": "₹138 - ₹138",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹18",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:51",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "13.04%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Tempsens Instruments",
@@ -196,9 +196,31 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹300",
         "estimated_listing": "₹470 (56.67%)",
-        "gmp_last_updated": "17:50",
+        "gmp_last_updated": "",
         "match_confidence": 100.0,
-        "gmp_percentage": "51.33%"
+        "gmp_percentage": "—"
+      },
+      {
+        "company": "Augmont Enterprises",
+        "type": "Mainboard",
+        "open_date": "21 Aug 2026",
+        "close_date": "25 Aug 2026",
+        "allotment_date": "TBA",
+        "issue_price": "₹750 - ₹788",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Augmont Enterprises",
+        "ipowatch_url": "https://ipowatch.in/augmont-enterprises-ipo/",
+        "gmp": "₹190",
+        "gmp_status": "19 Aug, 07:15",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹786",
+        "estimated_listing": "₹976 (24.11%)",
+        "gmp_last_updated": "",
+        "match_confidence": 100.0,
+        "gmp_percentage": "—"
       }
     ],
     "recent_closed": [
@@ -220,9 +242,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹786",
         "estimated_listing": "₹976 (24.11%)",
-        "gmp_last_updated": "17:51",
+        "gmp_last_updated": "09:40",
         "match_confidence": 76.5,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "4.35%"
       },
       {
         "company": "Technocrats Plasma",
@@ -237,14 +259,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹32",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:51",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "24.24%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Skytech Infinite Platform",
@@ -259,14 +281,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹2",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "2.60%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Credent Connect N Care",
@@ -281,14 +303,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹45",
+        "gmp": "₹63",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "09:32",
         "match_confidence": 0,
-        "gmp_percentage": "23.81%"
+        "gmp_percentage": "33.33%"
       },
       {
         "company": "Pramodini Medicare",
@@ -298,7 +320,7 @@
         "allotment_date": "19 Aug 2026",
         "issue_price": "₹118.00",
         "subscription": "3.63x",
-        "action": "--",
+        "action": "+1.69%",
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Not found",
@@ -308,7 +330,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:52",
+        "gmp_last_updated": "09:30",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       }
