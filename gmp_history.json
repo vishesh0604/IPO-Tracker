@@ -291,6 +291,10 @@
     {
       "timestamp": "2026-08-14 16:07",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-08-19 08:41",
+      "gmp": 190.0
     }
   ],
   "Technocrats Plasma": [
@@ -311,6 +315,10 @@
     {
       "timestamp": "2026-08-15 11:21",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-08-19 08:41",
+      "gmp": 40.0
     }
   ],
   "Horizon Industrial": [
@@ -335,6 +343,10 @@
     {
       "timestamp": "2026-08-18 08:38",
       "gmp": 7.0
+    },
+    {
+      "timestamp": "2026-08-19 08:41",
+      "gmp": 30.0
     }
   ],
   "Sunshine Picture": [
@@ -345,6 +357,10 @@
     {
       "timestamp": "2026-08-18 08:38",
       "gmp": 73.0
+    },
+    {
+      "timestamp": "2026-08-19 08:41",
+      "gmp": 77.0
     }
   ],
   "Shankesh Jewellers": [
@@ -355,12 +371,20 @@
     {
       "timestamp": "2026-08-18 08:38",
       "gmp": 2.0
+    },
+    {
+      "timestamp": "2026-08-19 08:41",
+      "gmp": 5.0
     }
   ],
   "Tempsens Instruments": [
     {
       "timestamp": "2026-08-18 10:38",
       "gmp": 154.0
+    },
+    {
+      "timestamp": "2026-08-19 08:41",
+      "gmp": 170.0
     }
   ],
   "Mopshop Distribution": [
