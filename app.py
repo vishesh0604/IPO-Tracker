@@ -1971,7 +1971,7 @@ st.markdown(
     '''
     <div class="closed-heading">
         <div class="section-title">
-            5 Most Recent Closed IPOs
+            Recently Closed IPOs
         </div>
         <div class="section-subtitle">
             Recent issues for reference
