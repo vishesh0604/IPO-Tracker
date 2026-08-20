@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20 23:30",
+  "fetched_at": "2026-08-21 01:29",
   "data": {
     "open": [
       {
@@ -86,9 +86,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹300",
         "estimated_listing": "₹550 (83.33%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "18:00",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "83.33%"
       },
       {
         "company": "Augmont Enterprises",
@@ -136,6 +136,50 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Sunshine Picture",
+        "type": "Mainboard",
+        "open_date": "18 Aug 2026",
+        "close_date": "20 Aug 2026",
+        "allotment_date": "25 Aug 2026",
+        "issue_price": "21 Aug 2026",
+        "subscription": "--",
+        "action": "105.34x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Sunshine Pictures",
+        "ipowatch_url": "https://ipowatch.in/sunshine-pictures-ipo/",
+        "gmp": "₹75",
+        "gmp_status": "20 Aug, 18:00",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹360",
+        "estimated_listing": "₹435 (20.83%)",
+        "gmp_last_updated": "18:00",
+        "match_confidence": 97.0,
+        "gmp_percentage": "20.83%"
+      },
+      {
+        "company": "Shankesh Jewellers",
+        "type": "Mainboard",
+        "open_date": "18 Aug 2026",
+        "close_date": "20 Aug 2026",
+        "allotment_date": "25 Aug 2026",
+        "issue_price": "21 Aug 2026",
+        "subscription": "--",
+        "action": "2.77x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Shankesh Jewellers",
+        "ipowatch_url": "https://ipowatch.in/shankesh-jewellers-ipo/",
+        "gmp": "₹2",
+        "gmp_status": "20 Aug, 18:00",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹93",
+        "estimated_listing": "₹95 (2.15%)",
+        "gmp_last_updated": "18:00",
+        "match_confidence": 100.0,
+        "gmp_percentage": "2.15%"
+      },
       {
         "company": "Fascinate Textiles",
         "type": "SME",
