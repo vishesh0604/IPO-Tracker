@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20 21:33",
+  "fetched_at": "2026-08-20 23:30",
   "data": {
     "open": [
       {
@@ -86,9 +86,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹300",
         "estimated_listing": "₹550 (83.33%)",
-        "gmp_last_updated": "18:00",
+        "gmp_last_updated": "",
         "match_confidence": 100.0,
-        "gmp_percentage": "83.33%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Augmont Enterprises",
