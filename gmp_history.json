@@ -349,6 +349,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 1.0
+    },
+    {
+      "timestamp": "2026-08-20 19:53",
+      "gmp": 2.0
     }
   ],
   "Gaja Alternate Asset Management": [
@@ -371,6 +375,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 25.0
+    },
+    {
+      "timestamp": "2026-08-20 19:53",
+      "gmp": 15.0
     }
   ],
   "Sunshine Picture": [
@@ -425,6 +433,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 220.0
+    },
+    {
+      "timestamp": "2026-08-20 19:53",
+      "gmp": 250.0
     }
   ],
   "Mopshop Distribution": [
@@ -439,6 +451,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 5.0
+    },
+    {
+      "timestamp": "2026-08-20 19:53",
+      "gmp": 0.0
     }
   ],
   "Augmont Enterprises": [
@@ -449,12 +465,20 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 270.0
+    },
+    {
+      "timestamp": "2026-08-20 19:53",
+      "gmp": 285.0
     }
   ],
   "Dhanwel Hybrid Seeds": [
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-08-20 19:53",
+      "gmp": 8.0
     }
   ],
   "Skyways Air Services": [
