@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-21 01:29",
+  "fetched_at": "2026-08-21 03:26",
   "data": {
     "open": [
       {
@@ -242,9 +242,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹60",
         "estimated_listing": "₹62 (3.33%)",
-        "gmp_last_updated": "18:00",
+        "gmp_last_updated": "",
         "match_confidence": 85.7,
-        "gmp_percentage": "3.33%"
+        "gmp_percentage": "—"
       }
     ]
   }
