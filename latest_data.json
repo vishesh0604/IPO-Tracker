@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20 08:40",
+  "fetched_at": "2026-08-20 10:46",
   "data": {
     "open": [
       {
@@ -15,14 +15,14 @@
         "status_source": "current",
         "ipowatch_name": "Sunshine Pictures",
         "ipowatch_url": "https://ipowatch.in/sunshine-pictures-ipo/",
-        "gmp": "₹77",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹80",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹360",
-        "estimated_listing": "₹437 (21.39%)",
-        "gmp_last_updated": "17:09",
+        "estimated_listing": "₹440 (22.22%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 97.0,
-        "gmp_percentage": "21.39%"
+        "gmp_percentage": "22.22%"
       },
       {
         "company": "Shankesh Jewellers",
@@ -37,14 +37,14 @@
         "status_source": "current",
         "ipowatch_name": "Shankesh Jewellers",
         "ipowatch_url": "https://ipowatch.in/shankesh-jewellers-ipo/",
-        "gmp": "₹5",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹2",
+        "gmp_status": "20 Aug, 8:40",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹93",
-        "estimated_listing": "₹98 (5.38%)",
-        "gmp_last_updated": "17:07",
+        "estimated_listing": "₹95 (2.15%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 100.0,
-        "gmp_percentage": "5.38%"
+        "gmp_percentage": "2.15%"
       },
       {
         "company": "Gaja Alternate Asset Management",
@@ -59,11 +59,11 @@
         "status_source": "current",
         "ipowatch_name": "Gaja Alternative Asset Management",
         "ipowatch_url": "https://ipowatch.in/gaja-alternative-asset-management-ipo/",
-        "gmp": "₹30",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹25",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹160",
-        "estimated_listing": "₹190 (18.75%)",
+        "estimated_listing": "₹185 (15.63%)",
         "gmp_last_updated": "",
         "match_confidence": 96.9,
         "gmp_percentage": "—"
@@ -81,14 +81,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹-",
+        "gmp": "₹10",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:08",
+        "gmp_last_updated": "08:30",
         "match_confidence": 0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "10.10%"
       },
       {
         "company": "Mopshop Distribution",
@@ -103,14 +103,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹22",
+        "gmp": "₹5",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:07",
+        "gmp_last_updated": "08:30",
         "match_confidence": 0,
-        "gmp_percentage": "15.94%"
+        "gmp_percentage": "3.62%"
       },
       {
         "company": "Tempsens Instruments",
@@ -120,19 +120,19 @@
         "allotment_date": "TBA",
         "issue_price": "₹285 - ₹300",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Tempsens Instruments",
         "ipowatch_url": "https://ipowatch.in/tempsens-instruments-india-ipo/",
-        "gmp": "₹180",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹220",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹300",
-        "estimated_listing": "₹480 (60.00%)",
-        "gmp_last_updated": "17:07",
+        "estimated_listing": "₹480 (73.33%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 100.0,
-        "gmp_percentage": "60.00%"
+        "gmp_percentage": "73.33%"
       },
       {
         "company": "Augmont Enterprises",
@@ -147,14 +147,36 @@
         "status_source": "current",
         "ipowatch_name": "Augmont Enterprises",
         "ipowatch_url": "https://ipowatch.in/augmont-enterprises-ipo/",
-        "gmp": "₹190",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹270",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹786",
-        "estimated_listing": "₹976 (24.11%)",
-        "gmp_last_updated": "17:05",
+        "estimated_listing": "₹1056 (34.35%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 100.0,
-        "gmp_percentage": "24.11%"
+        "gmp_percentage": "34.35%"
+      },
+      {
+        "company": "Skyways Air Services",
+        "type": "Mainboard",
+        "open_date": "24 Aug 2026",
+        "close_date": "27 Aug 2026",
+        "allotment_date": "TBA",
+        "issue_price": "₹131 - ₹138",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Skyways Air Services",
+        "ipowatch_url": "https://ipowatch.in/skyways-air-ipo/",
+        "gmp": "₹40",
+        "gmp_status": "20 Aug, 8:30",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹138",
+        "estimated_listing": "₹178 (28.99%)",
+        "gmp_last_updated": "08:30",
+        "match_confidence": 100.0,
+        "gmp_percentage": "28.99%"
       }
     ],
     "recent_closed": [
@@ -176,7 +198,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:09",
+        "gmp_last_updated": "8:30",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -193,14 +215,14 @@
         "status_source": "closed",
         "ipowatch_name": "Lalithaa Jewellery Mart",
         "ipowatch_url": "https://ipowatch.in/lalithaa-jewellery-mart-ipo/",
-        "gmp": "₹40",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹55",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹201",
-        "estimated_listing": "₹241 (19.90%)",
-        "gmp_last_updated": "17:07",
+        "estimated_listing": "₹256 (27.36%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 100.0,
-        "gmp_percentage": "19.90%"
+        "gmp_percentage": "27.36%"
       },
       {
         "company": "Horizon Industrial",
@@ -215,14 +237,14 @@
         "status_source": "closed",
         "ipowatch_name": "Horizon Industrial Parks",
         "ipowatch_url": "https://ipowatch.in//horizon-industrial-parks-ipo/",
-        "gmp": "₹2",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹1",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹60",
-        "estimated_listing": "₹62 (3.33%)",
-        "gmp_last_updated": "17:07",
+        "estimated_listing": "₹61 (1.67%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 85.7,
-        "gmp_percentage": "3.33%"
+        "gmp_percentage": "1.67%"
       },
       {
         "company": "ENS Enterprises",
@@ -237,12 +259,12 @@
         "status_source": "closed",
         "ipowatch_name": "Augmont Enterprises",
         "ipowatch_url": "https://ipowatch.in/augmont-enterprises-ipo/",
-        "gmp": "₹190",
-        "gmp_status": "19 Aug, 17:03",
+        "gmp": "₹270",
+        "gmp_status": "20 Aug, 8:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹786",
-        "estimated_listing": "₹976 (24.11%)",
-        "gmp_last_updated": "09:40",
+        "estimated_listing": "₹1056 (34.35%)",
+        "gmp_last_updated": "08:30",
         "match_confidence": 76.5,
         "gmp_percentage": "4.35%"
       },
@@ -264,7 +286,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:07",
+        "gmp_last_updated": "08:30",
         "match_confidence": 0,
         "gmp_percentage": "32.58%"
       }
