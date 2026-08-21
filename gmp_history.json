@@ -339,6 +339,10 @@
     {
       "timestamp": "2026-08-21 09:00",
       "gmp": 61.0
+    },
+    {
+      "timestamp": "2026-08-21 15:34",
+      "gmp": 59.0
     }
   ],
   "Horizon Industrial": [
@@ -387,6 +391,10 @@
     {
       "timestamp": "2026-08-21 09:00",
       "gmp": 18.0
+    },
+    {
+      "timestamp": "2026-08-21 15:34",
+      "gmp": 12.0
     }
   ],
   "Sunshine Picture": [
@@ -457,6 +465,10 @@
     {
       "timestamp": "2026-08-20 19:53",
       "gmp": 250.0
+    },
+    {
+      "timestamp": "2026-08-21 15:34",
+      "gmp": 325.0
     }
   ],
   "Mopshop Distribution": [
@@ -493,6 +505,10 @@
     {
       "timestamp": "2026-08-20 19:53",
       "gmp": 285.0
+    },
+    {
+      "timestamp": "2026-08-21 15:34",
+      "gmp": 300.0
     }
   ],
   "Dhanwel Hybrid Seeds": [
@@ -513,6 +529,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 40.0
+    },
+    {
+      "timestamp": "2026-08-21 15:34",
+      "gmp": 50.0
     }
   ],
   "Symbiotec Pharmalab": [
