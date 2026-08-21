@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-21 23:31",
+  "fetched_at": "2026-08-22 01:13",
   "data": {
     "open": [
       {
@@ -20,9 +20,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹300",
         "estimated_listing": "₹525 (108.33%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "12:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "108.33%"
       },
       {
         "company": "Augmont Enterprises",
@@ -73,7 +73,7 @@
         "type": "Mainboard",
         "open_date": "24 Aug 2026",
         "close_date": "27 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 28, 2026",
         "issue_price": "₹938 - ₹988",
         "subscription": "--",
         "action": "Pre-apply",
@@ -86,12 +86,78 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹988",
         "estimated_listing": "₹1308 (32.39%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "09:00",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "32.39%"
       }
     ],
     "recent_closed": [
+      {
+        "company": "Dhanwel Hybrid Seeds",
+        "type": "SME",
+        "open_date": "19 Aug 2026",
+        "close_date": "21 Aug 2026",
+        "allotment_date": "26 Aug 2026",
+        "issue_price": "24 Aug 2026",
+        "subscription": "--",
+        "action": "1.61x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹5",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
+        "gmp_last_updated": "9:00",
+        "match_confidence": 0,
+        "gmp_percentage": "5.05%"
+      },
+      {
+        "company": "Gaja Alternate Asset Management",
+        "type": "Mainboard",
+        "open_date": "19 Aug 2026",
+        "close_date": "21 Aug 2026",
+        "allotment_date": "26 Aug 2026",
+        "issue_price": "24 Aug 2026",
+        "subscription": "--",
+        "action": "31.16x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Gaja Alternative Asset Management",
+        "ipowatch_url": "https://ipowatch.in/gaja-alternative-asset-management-ipo/",
+        "gmp": "₹12",
+        "gmp_status": "21 Aug, 17:25",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹160",
+        "estimated_listing": "₹172 (7.50%)",
+        "gmp_last_updated": "",
+        "match_confidence": 96.9,
+        "gmp_percentage": "—"
+      },
+      {
+        "company": "Mopshop Distribution",
+        "type": "SME",
+        "open_date": "19 Aug 2026",
+        "close_date": "21 Aug 2026",
+        "allotment_date": "26 Aug 2026",
+        "issue_price": "24 Aug 2026",
+        "subscription": "--",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹1",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
+        "gmp_last_updated": "9:00",
+        "match_confidence": 0,
+        "gmp_percentage": "0.72%"
+      },
       {
         "company": "Sunshine Picture",
         "type": "Mainboard",
