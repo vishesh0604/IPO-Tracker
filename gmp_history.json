@@ -475,6 +475,10 @@
     {
       "timestamp": "2026-08-20 19:53",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-08-21 10:48",
+      "gmp": 1.0
     }
   ],
   "Augmont Enterprises": [
@@ -499,12 +503,22 @@
     {
       "timestamp": "2026-08-20 19:53",
       "gmp": 8.0
+    },
+    {
+      "timestamp": "2026-08-21 10:48",
+      "gmp": 5.0
     }
   ],
   "Skyways Air Services": [
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 40.0
+    }
+  ],
+  "Symbiotec Pharmalab": [
+    {
+      "timestamp": "2026-08-21 10:48",
+      "gmp": 320.0
     }
   ]
 }
