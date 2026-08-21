@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22 03:15",
+  "fetched_at": "2026-08-22 04:23",
   "data": {
     "open": [
       {
@@ -64,9 +64,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹138",
         "estimated_listing": "₹188 (36.23%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "12:18",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "36.23%"
       },
       {
         "company": "Symbiotec Pharmalab",
