@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22 02:17",
+  "fetched_at": "2026-08-22 03:15",
   "data": {
     "open": [
       {
@@ -64,9 +64,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹138",
         "estimated_listing": "₹188 (36.23%)",
-        "gmp_last_updated": "12:18",
+        "gmp_last_updated": "",
         "match_confidence": 100.0,
-        "gmp_percentage": "36.23%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Symbiotec Pharmalab",
@@ -176,9 +176,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹360",
         "estimated_listing": "₹440 (22.22%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "09:00",
         "match_confidence": 97.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "22.22%"
       },
       {
         "company": "Shankesh Jewellers",
