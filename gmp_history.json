@@ -335,6 +335,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 55.0
+    },
+    {
+      "timestamp": "2026-08-21 09:00",
+      "gmp": 61.0
     }
   ],
   "Horizon Industrial": [
@@ -379,6 +383,10 @@
     {
       "timestamp": "2026-08-20 19:53",
       "gmp": 15.0
+    },
+    {
+      "timestamp": "2026-08-21 09:00",
+      "gmp": 18.0
     }
   ],
   "Sunshine Picture": [
@@ -401,6 +409,10 @@
     {
       "timestamp": "2026-08-21 01:29",
       "gmp": 75.0
+    },
+    {
+      "timestamp": "2026-08-21 09:00",
+      "gmp": 80.0
     }
   ],
   "Shankesh Jewellers": [
@@ -419,6 +431,10 @@
     {
       "timestamp": "2026-08-20 10:46",
       "gmp": 2.0
+    },
+    {
+      "timestamp": "2026-08-21 09:00",
+      "gmp": 5.0
     }
   ],
   "Tempsens Instruments": [
