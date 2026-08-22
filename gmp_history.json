@@ -399,6 +399,10 @@
     {
       "timestamp": "2026-08-22 08:14",
       "gmp": 19.0
+    },
+    {
+      "timestamp": "2026-08-22 18:51",
+      "gmp": 17.0
     }
   ],
   "Sunshine Picture": [
@@ -429,6 +433,10 @@
     {
       "timestamp": "2026-08-22 08:14",
       "gmp": 62.0
+    },
+    {
+      "timestamp": "2026-08-22 18:51",
+      "gmp": 65.0
     }
   ],
   "Shankesh Jewellers": [
@@ -485,6 +493,10 @@
     {
       "timestamp": "2026-08-22 08:14",
       "gmp": 290.0
+    },
+    {
+      "timestamp": "2026-08-22 18:51",
+      "gmp": 310.0
     }
   ],
   "Mopshop Distribution": [
@@ -529,6 +541,10 @@
     {
       "timestamp": "2026-08-22 08:14",
       "gmp": 310.0
+    },
+    {
+      "timestamp": "2026-08-22 18:51",
+      "gmp": 380.0
     }
   ],
   "Dhanwel Hybrid Seeds": [
@@ -567,12 +583,20 @@
     {
       "timestamp": "2026-08-22 08:14",
       "gmp": 345.0
+    },
+    {
+      "timestamp": "2026-08-22 18:51",
+      "gmp": 380.0
     }
   ],
   "Hy-tech Engineers": [
     {
       "timestamp": "2026-08-22 11:26",
       "gmp": 22.0
+    },
+    {
+      "timestamp": "2026-08-22 18:51",
+      "gmp": 25.0
     }
   ],
   "Annu Projects": [
