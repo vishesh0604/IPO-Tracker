@@ -395,6 +395,10 @@
     {
       "timestamp": "2026-08-21 15:34",
       "gmp": 12.0
+    },
+    {
+      "timestamp": "2026-08-22 08:14",
+      "gmp": 19.0
     }
   ],
   "Sunshine Picture": [
@@ -421,6 +425,10 @@
     {
       "timestamp": "2026-08-21 09:00",
       "gmp": 80.0
+    },
+    {
+      "timestamp": "2026-08-22 08:14",
+      "gmp": 62.0
     }
   ],
   "Shankesh Jewellers": [
@@ -443,6 +451,10 @@
     {
       "timestamp": "2026-08-21 09:00",
       "gmp": 5.0
+    },
+    {
+      "timestamp": "2026-08-22 08:14",
+      "gmp": 0.0
     }
   ],
   "Tempsens Instruments": [
@@ -469,6 +481,10 @@
     {
       "timestamp": "2026-08-21 15:34",
       "gmp": 325.0
+    },
+    {
+      "timestamp": "2026-08-22 08:14",
+      "gmp": 290.0
     }
   ],
   "Mopshop Distribution": [
@@ -509,6 +525,10 @@
     {
       "timestamp": "2026-08-21 15:34",
       "gmp": 300.0
+    },
+    {
+      "timestamp": "2026-08-22 08:14",
+      "gmp": 310.0
     }
   ],
   "Dhanwel Hybrid Seeds": [
@@ -539,6 +559,10 @@
     {
       "timestamp": "2026-08-21 10:48",
       "gmp": 320.0
+    },
+    {
+      "timestamp": "2026-08-22 08:14",
+      "gmp": 345.0
     }
   ]
 }
