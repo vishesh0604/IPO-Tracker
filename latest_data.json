@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22 08:14",
+  "fetched_at": "2026-08-22 09:48",
   "data": {
     "open": [
       {
@@ -20,9 +20,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹300",
         "estimated_listing": "₹590 (96.67%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "8:00",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "96.67%"
       },
       {
         "company": "Augmont Enterprises",
@@ -42,9 +42,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹786",
         "estimated_listing": "₹1096 (39.34%)",
-        "gmp_last_updated": "12:36",
+        "gmp_last_updated": "8:00",
         "match_confidence": 100.0,
-        "gmp_percentage": "38.17%"
+        "gmp_percentage": "39.34%"
       },
       {
         "company": "Skyways Air Services",
@@ -64,7 +64,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹138",
         "estimated_listing": "₹188 (36.23%)",
-        "gmp_last_updated": "12:18",
+        "gmp_last_updated": "8:00",
         "match_confidence": 100.0,
         "gmp_percentage": "36.23%"
       },
@@ -86,9 +86,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹988",
         "estimated_listing": "₹1333 (34.92%)",
-        "gmp_last_updated": "09:00",
+        "gmp_last_updated": "8:00",
         "match_confidence": 100.0,
-        "gmp_percentage": "32.39%"
+        "gmp_percentage": "34.92%"
       }
     ],
     "recent_closed": [
@@ -105,14 +105,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹5",
+        "gmp": "₹1",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "9:00",
+        "gmp_last_updated": "8:00",
         "match_confidence": 0,
-        "gmp_percentage": "5.05%"
+        "gmp_percentage": "1.01%"
       },
       {
         "company": "Gaja Alternate Asset Management",
@@ -154,7 +154,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "9:00",
+        "gmp_last_updated": "8:00",
         "match_confidence": 0,
         "gmp_percentage": "0.72%"
       },
@@ -176,9 +176,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹360",
         "estimated_listing": "₹422 (17.22%)",
-        "gmp_last_updated": "09:00",
+        "gmp_last_updated": "8:00",
         "match_confidence": 97.0,
-        "gmp_percentage": "22.22%"
+        "gmp_percentage": "96.67%"
       },
       {
         "company": "Shankesh Jewellers",
@@ -195,12 +195,12 @@
         "ipowatch_url": "https://ipowatch.in/shankesh-jewellers-ipo/",
         "gmp": "₹0",
         "gmp_status": "22 Aug, 08:00",
-        "gmp_trend": "🔴",
+        "gmp_trend": "🟡",
         "gmp_price_band": "₹93",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "09:00",
+        "gmp_last_updated": "8:00",
         "match_confidence": 100.0,
-        "gmp_percentage": "5.38%"
+        "gmp_percentage": "0.00%"
       }
     ]
   }
