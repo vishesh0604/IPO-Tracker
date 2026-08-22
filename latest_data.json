@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22 21:32",
+  "fetched_at": "2026-08-22 23:11",
   "data": {
     "open": [
       {
@@ -108,9 +108,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹53",
         "estimated_listing": "₹77 (47.17%)",
-        "gmp_last_updated": "",
+        "gmp_last_updated": "17:35",
         "match_confidence": 100.0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "47.17%"
       },
       {
         "company": "ABH Healthcare",
@@ -139,7 +139,7 @@
         "type": "SME",
         "open_date": "24 Aug 2026",
         "close_date": "27 Aug 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "August 28, 2026",
         "issue_price": "₹95 - ₹100",
         "subscription": "--",
         "action": "Pre-apply",
