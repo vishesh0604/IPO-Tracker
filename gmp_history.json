@@ -463,6 +463,10 @@
     {
       "timestamp": "2026-08-22 08:14",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-08-24 09:10",
+      "gmp": 2.0
     }
   ],
   "Tempsens Instruments": [
@@ -497,6 +501,10 @@
     {
       "timestamp": "2026-08-22 18:51",
       "gmp": 310.0
+    },
+    {
+      "timestamp": "2026-08-24 09:10",
+      "gmp": 313.0
     }
   ],
   "Mopshop Distribution": [
@@ -573,6 +581,10 @@
     {
       "timestamp": "2026-08-21 15:34",
       "gmp": 50.0
+    },
+    {
+      "timestamp": "2026-08-24 09:10",
+      "gmp": 35.0
     }
   ],
   "Symbiotec Pharmalab": [
@@ -587,6 +599,10 @@
     {
       "timestamp": "2026-08-22 18:51",
       "gmp": 380.0
+    },
+    {
+      "timestamp": "2026-08-24 09:10",
+      "gmp": 409.0
     }
   ],
   "Hy-tech Engineers": [
@@ -609,6 +625,12 @@
     {
       "timestamp": "2026-08-22 11:26",
       "gmp": 32.0
+    }
+  ],
+  "Madhur Knit Crafts": [
+    {
+      "timestamp": "2026-08-24 09:10",
+      "gmp": 9.0
     }
   ]
 }
