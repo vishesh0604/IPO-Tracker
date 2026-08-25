@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-25 22:48",
+  "fetched_at": "2026-08-26 00:49",
   "data": {
     "open": [
       {
@@ -180,6 +180,28 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Augmont Enterprises",
+        "type": "Mainboard",
+        "open_date": "21 Aug 2026",
+        "close_date": "25 Aug 2026",
+        "allotment_date": "31 Aug 2026",
+        "issue_price": "27 Aug 2026",
+        "subscription": "--",
+        "action": "105.51x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Augmont Enterprises",
+        "ipowatch_url": "https://ipowatch.in/augmont-enterprises-ipo/",
+        "gmp": "₹325",
+        "gmp_status": "25 Aug, 17:00",
+        "gmp_trend": "🔴",
+        "gmp_price_band": "₹786",
+        "estimated_listing": "₹1111 (41.24%)",
+        "gmp_last_updated": "17:34",
+        "match_confidence": 100.0,
+        "gmp_percentage": "41.24%"
+      },
       {
         "company": "Tempsens Instruments",
         "type": "Mainboard",
