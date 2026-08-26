@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26 09:04",
+  "fetched_at": "2026-08-26 10:49",
   "data": {
     "open": [
       {
@@ -20,9 +20,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹138",
         "estimated_listing": "₹138 (21.01%)",
-        "gmp_last_updated": "17:34",
+        "gmp_last_updated": "09:38",
         "match_confidence": 100.0,
-        "gmp_percentage": "23.19%"
+        "gmp_percentage": "21.01%"
       },
       {
         "company": "Symbiotec Pharmalab",
@@ -42,9 +42,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹988",
         "estimated_listing": "₹1340 (35.63%)",
-        "gmp_last_updated": "17:33",
+        "gmp_last_updated": "09:39",
         "match_confidence": 100.0,
-        "gmp_percentage": "34.41%"
+        "gmp_percentage": "35.63%"
       },
       {
         "company": "Hy-tech Engineers",
@@ -64,7 +64,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹53",
         "estimated_listing": "₹83 (56.60%)",
-        "gmp_last_updated": "17:34",
+        "gmp_last_updated": "09:39",
         "match_confidence": 100.0,
         "gmp_percentage": "56.60%"
       },
@@ -86,7 +86,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:38",
+        "gmp_last_updated": "09:28",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -108,7 +108,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:35",
+        "gmp_last_updated": "09:29",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -130,9 +130,9 @@
         "gmp_trend": "🟡",
         "gmp_price_band": "₹99",
         "estimated_listing": "₹- (0.00%)",
-        "gmp_last_updated": "17:33",
+        "gmp_last_updated": "09:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "5.05%"
+        "gmp_percentage": "-%"
       },
       {
         "company": "Sumax Engineering",
@@ -147,14 +147,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹32",
+        "gmp": "₹35",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:35",
+        "gmp_last_updated": "09:29",
         "match_confidence": 0,
-        "gmp_percentage": "31.68%"
+        "gmp_percentage": "34.65%"
       },
       {
         "company": "Lumino Industries",
@@ -174,9 +174,53 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹82",
         "estimated_listing": "₹128 (56.10%)",
-        "gmp_last_updated": "17:33",
+        "gmp_last_updated": "09:41",
         "match_confidence": 100.0,
-        "gmp_percentage": "60.98%"
+        "gmp_percentage": "56.10%"
+      },
+      {
+        "company": "Priority Jewels",
+        "type": "Mainboard",
+        "open_date": "28 Aug 2026",
+        "close_date": "01 Sep 2026",
+        "allotment_date": "September 2, 2026",
+        "issue_price": "₹190 - ₹200",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Priority Jewels",
+        "ipowatch_url": "https://ipowatch.in/priority-jewels-ipo/",
+        "gmp": "₹30",
+        "gmp_status": "26 Aug, 07:20",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹200",
+        "estimated_listing": "₹230 (15.00%)",
+        "gmp_last_updated": "09:42",
+        "match_confidence": 100.0,
+        "gmp_percentage": "15.00%"
+      },
+      {
+        "company": "Paluck Technologies",
+        "type": "SME",
+        "open_date": "28 Aug 2026",
+        "close_date": "01 Sep 2026",
+        "allotment_date": "September 2, 2026",
+        "issue_price": "₹46 - ₹48",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹18",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
+        "gmp_last_updated": "09:31",
+        "match_confidence": 0,
+        "gmp_percentage": "37.50%"
       }
     ],
     "recent_closed": [
@@ -198,9 +242,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹786",
         "estimated_listing": "₹1101 (39.97%)",
-        "gmp_last_updated": "17:34",
+        "gmp_last_updated": "09:37",
         "match_confidence": 100.0,
-        "gmp_percentage": "41.24%"
+        "gmp_percentage": "39.97%"
       },
       {
         "company": "Tempsens Instruments",
@@ -220,7 +264,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹300",
         "estimated_listing": "₹617 (105.67%)",
-        "gmp_last_updated": "17:31",
+        "gmp_last_updated": "09:48",
         "match_confidence": 100.0,
         "gmp_percentage": "105.67%"
       },
@@ -231,7 +275,7 @@
         "close_date": "21 Aug 2026",
         "allotment_date": "26 Aug 2026",
         "issue_price": "24 Aug 2026",
-        "subscription": "--",
+        "subscription": "₹99.00",
         "action": "1.61x",
         "groww_status": "Closed",
         "status_source": "closed",
@@ -242,7 +286,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:38",
+        "gmp_last_updated": "09:28",
         "match_confidence": 0,
         "gmp_percentage": "1.01%"
       },
@@ -253,7 +297,7 @@
         "close_date": "21 Aug 2026",
         "allotment_date": "26 Aug 2026",
         "issue_price": "24 Aug 2026",
-        "subscription": "--",
+        "subscription": "₹185.00",
         "action": "31.16x",
         "groww_status": "Closed",
         "status_source": "closed",
@@ -275,7 +319,7 @@
         "close_date": "21 Aug 2026",
         "allotment_date": "26 Aug 2026",
         "issue_price": "24 Aug 2026",
-        "subscription": "--",
+        "subscription": "₹137.00",
         "action": "--",
         "groww_status": "Closed",
         "status_source": "closed",
@@ -286,7 +330,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:38",
+        "gmp_last_updated": "09:28",
         "match_confidence": 0,
         "gmp_percentage": "0.72%"
       }

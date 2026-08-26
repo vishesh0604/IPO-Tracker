@@ -701,6 +701,10 @@
     {
       "timestamp": "2026-08-22 11:26",
       "gmp": 32.0
+    },
+    {
+      "timestamp": "2026-08-26 10:49",
+      "gmp": 35.0
     }
   ],
   "Madhur Knit Crafts": [
@@ -717,6 +721,18 @@
     {
       "timestamp": "2026-08-26 09:04",
       "gmp": 46.0
+    }
+  ],
+  "Priority Jewels": [
+    {
+      "timestamp": "2026-08-26 10:49",
+      "gmp": 30.0
+    }
+  ],
+  "Paluck Technologies": [
+    {
+      "timestamp": "2026-08-26 10:49",
+      "gmp": 18.0
     }
   ]
 }
