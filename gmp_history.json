@@ -637,6 +637,10 @@
     {
       "timestamp": "2026-08-26 13:36",
       "gmp": 24.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 46.0
     }
   ],
   "Symbiotec Pharmalab": [
@@ -671,6 +675,10 @@
     {
       "timestamp": "2026-08-26 17:30",
       "gmp": 333.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 275.0
     }
   ],
   "Hy-tech Engineers": [
@@ -693,6 +701,10 @@
     {
       "timestamp": "2026-08-26 13:36",
       "gmp": 40.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 44.0
     }
   ],
   "Annu Projects": [
@@ -707,6 +719,10 @@
     {
       "timestamp": "2026-08-26 09:04",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 4.0
     }
   ],
   "Sumax Engineering": [
@@ -717,6 +733,10 @@
     {
       "timestamp": "2026-08-26 10:49",
       "gmp": 35.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 25.0
     }
   ],
   "Madhur Knit Crafts": [
@@ -737,18 +757,42 @@
     {
       "timestamp": "2026-08-26 17:30",
       "gmp": 48.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 50.0
     }
   ],
   "Priority Jewels": [
     {
       "timestamp": "2026-08-26 10:49",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 20.0
     }
   ],
   "Paluck Technologies": [
     {
       "timestamp": "2026-08-26 10:49",
       "gmp": 18.0
+    },
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 25.0
+    }
+  ],
+  "Kwick Forensic": [
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 64.0
+    }
+  ],
+  "ESDS Software Solution": [
+    {
+      "timestamp": "2026-08-28 07:00",
+      "gmp": 335.0
     }
   ]
 }
