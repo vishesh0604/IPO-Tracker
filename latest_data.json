@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01 15:24",
+  "fetched_at": "2026-09-01 16:24",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "01 Sep 2026",
         "allotment_date": "September 2, 2026",
         "issue_price": "₹190 - ₹200",
-        "subscription": "80.99x",
+        "subscription": "94.55x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -20,9 +20,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹200",
         "estimated_listing": "₹240 (20.00%)",
-        "gmp_last_updated": "14:08",
+        "gmp_last_updated": "15:24",
         "match_confidence": 100.0,
-        "gmp_percentage": "22.50%"
+        "gmp_percentage": "20.00%"
       },
       {
         "company": "ESDS Software Solution",
@@ -31,7 +31,7 @@
         "close_date": "01 Sep 2026",
         "allotment_date": "September 2, 2026",
         "issue_price": "₹408 - ₹429",
-        "subscription": "87.58x",
+        "subscription": "133.50x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -42,9 +42,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹429",
         "estimated_listing": "₹679 (58.28%)",
-        "gmp_last_updated": "14:07",
+        "gmp_last_updated": "15:31",
         "match_confidence": 74.3,
-        "gmp_percentage": "62.94%"
+        "gmp_percentage": "58.28%"
       },
       {
         "company": "Paluck Technologies",
@@ -53,7 +53,7 @@
         "close_date": "01 Sep 2026",
         "allotment_date": "September 2, 2026",
         "issue_price": "₹46 - ₹48",
-        "subscription": "189.09x",
+        "subscription": "240.56x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -75,7 +75,7 @@
         "close_date": "01 Sep 2026",
         "allotment_date": "September 2, 2026",
         "issue_price": "₹128 - ₹135",
-        "subscription": "0.80x",
+        "subscription": "2.94x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -97,7 +97,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹546 - ₹575",
-        "subscription": "0.21x",
+        "subscription": "0.22x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -108,7 +108,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹575",
         "estimated_listing": "₹579 (0.70%)",
-        "gmp_last_updated": "14:07",
+        "gmp_last_updated": "15:31",
         "match_confidence": 100.0,
         "gmp_percentage": "0.70%"
       },
@@ -119,7 +119,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹79 - ₹83",
-        "subscription": "2.90x",
+        "subscription": "3.01x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -141,7 +141,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹51 - ₹54",
-        "subscription": "1.60x",
+        "subscription": "1.74x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -152,9 +152,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹53",
         "estimated_listing": "₹88 (66.04%)",
-        "gmp_last_updated": "14:08",
+        "gmp_last_updated": "15:26",
         "match_confidence": 61.1,
-        "gmp_percentage": "1.85%"
+        "gmp_percentage": "-%"
       },
       {
         "company": "Ashutosh Fibre",
@@ -163,20 +163,20 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹87 - ₹92",
-        "subscription": "3.93x",
+        "subscription": "4.12x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹45",
+        "gmp": "₹25",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "14:08",
+        "gmp_last_updated": "15:24",
         "match_confidence": 0,
-        "gmp_percentage": "48.91%"
+        "gmp_percentage": "27.17%"
       },
       {
         "company": "Rays of Belief",
@@ -185,7 +185,7 @@
         "close_date": "03 Sep 2026",
         "allotment_date": "September 4, 2026",
         "issue_price": "₹227 - ₹239",
-        "subscription": "0.92x",
+        "subscription": "1.00x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -207,7 +207,7 @@
         "close_date": "03 Sep 2026",
         "allotment_date": "September 4, 2026",
         "issue_price": "₹168 - ₹177",
-        "subscription": "0.65x",
+        "subscription": "0.71x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -218,7 +218,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹177",
         "estimated_listing": "₹217 (22.60%)",
-        "gmp_last_updated": "14:06",
+        "gmp_last_updated": "15:34",
         "match_confidence": 100.0,
         "gmp_percentage": "22.60%"
       }
