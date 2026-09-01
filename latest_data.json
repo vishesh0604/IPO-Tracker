@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01 09:22",
+  "fetched_at": "2026-09-01 10:22",
   "data": {
     "open": [
       {
@@ -20,7 +20,7 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹200",
         "estimated_listing": "₹245 (22.50%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:38",
         "match_confidence": 100.0,
         "gmp_percentage": "22.50%"
       },
@@ -42,9 +42,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹429",
         "estimated_listing": "₹745 (73.66%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:47",
         "match_confidence": 74.3,
-        "gmp_percentage": "76.45%"
+        "gmp_percentage": "73.66%"
       },
       {
         "company": "Paluck Technologies",
@@ -59,14 +59,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹25",
+        "gmp": "₹30",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:43",
+        "gmp_last_updated": "09:33",
         "match_confidence": 0,
-        "gmp_percentage": "52.08%"
+        "gmp_percentage": "62.50%"
       },
       {
         "company": "Complete Sports and Management",
@@ -86,7 +86,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:43",
+        "gmp_last_updated": "09:32",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -108,9 +108,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹575",
         "estimated_listing": "₹585 (1.73%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:45",
         "match_confidence": 100.0,
-        "gmp_percentage": "4.87%"
+        "gmp_percentage": "1.73%"
       },
       {
         "company": "Shanti Inorganics",
@@ -130,7 +130,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:44",
+        "gmp_last_updated": "09:27",
         "match_confidence": 0,
         "gmp_percentage": "37.35%"
       },
@@ -152,9 +152,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹53",
         "estimated_listing": "₹88 (66.04%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:43",
         "match_confidence": 61.1,
-        "gmp_percentage": "5.56%"
+        "gmp_percentage": "1.85%"
       },
       {
         "company": "Ashutosh Fibre",
@@ -169,14 +169,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹37",
+        "gmp": "₹45",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:39",
         "match_confidence": 0,
-        "gmp_percentage": "40.22%"
+        "gmp_percentage": "48.91%"
       },
       {
         "company": "Rays of Belief",
@@ -186,8 +186,8 @@
         "allotment_date": "September 4, 2026",
         "issue_price": "₹227 - ₹239",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Rays of Belief",
         "ipowatch_url": "https://ipowatch.in/rays-of-belief-ipo-details/",
@@ -196,9 +196,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹239",
         "estimated_listing": "₹287 (20.08%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:36",
         "match_confidence": 100.0,
-        "gmp_percentage": "12.55%"
+        "gmp_percentage": "20.08%"
       },
       {
         "company": "Deepa Jewellers",
@@ -208,8 +208,8 @@
         "allotment_date": "September 4, 2026",
         "issue_price": "₹168 - ₹177",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Deepa Jewellers",
         "ipowatch_url": "https://ipowatch.in/deepa-jewellers-ipo/",
@@ -218,9 +218,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹177",
         "estimated_listing": "₹232 (31.07%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:49",
         "match_confidence": 100.0,
-        "gmp_percentage": "25.99%"
+        "gmp_percentage": "31.07%"
       }
     ],
     "recent_closed": [
@@ -237,14 +237,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹70",
+        "gmp": "₹85",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:43",
+        "gmp_last_updated": "09:30",
         "match_confidence": 0,
-        "gmp_percentage": "77.78%"
+        "gmp_percentage": "94.44%"
       },
       {
         "company": "Lumino Industries",
@@ -264,9 +264,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹82",
         "estimated_listing": "₹132 (60.98%)",
-        "gmp_last_updated": "17:42",
+        "gmp_last_updated": "09:35",
         "match_confidence": 100.0,
-        "gmp_percentage": "73.17%"
+        "gmp_percentage": "60.98%"
       },
       {
         "company": "Sumax Engineering",
@@ -281,14 +281,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹35",
+        "gmp": "₹36",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:44",
+        "gmp_last_updated": "09:29",
         "match_confidence": 0,
-        "gmp_percentage": "34.65%"
+        "gmp_percentage": "35.64%"
       },
       {
         "company": "Annu Projects",
@@ -308,7 +308,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹99",
         "estimated_listing": "₹99 (0.00%)",
-        "gmp_last_updated": "17:43",
+        "gmp_last_updated": "09:32",
         "match_confidence": 100.0,
         "gmp_percentage": "-%"
       },
@@ -319,7 +319,7 @@
         "close_date": "27 Aug 2026",
         "allotment_date": "01 Sep 2026",
         "issue_price": "28 Aug 2026",
-        "subscription": "--",
+        "subscription": "₹124.00",
         "action": "71.11x",
         "groww_status": "Closed",
         "status_source": "closed",
@@ -330,9 +330,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹138",
         "estimated_listing": "₹170 (23.19%)",
-        "gmp_last_updated": "17:45",
+        "gmp_last_updated": "09:26",
         "match_confidence": 100.0,
-        "gmp_percentage": "26.81%"
+        "gmp_percentage": "23.19%"
       }
     ]
   }
