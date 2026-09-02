@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02 08:26",
+  "fetched_at": "2026-09-02 09:22",
   "data": {
     "open": [
       {
@@ -7,7 +7,7 @@
         "type": "Mainboard",
         "open_date": "31 Aug 2026",
         "close_date": "02 Sep 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "September 3, 2026",
         "issue_price": "₹546 - ₹575",
         "subscription": "0.24x",
         "action": "Apply",
@@ -57,15 +57,15 @@
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
-        "ipowatch_name": "Hy-Tech Engineers",
-        "ipowatch_url": "https://ipowatch.in/hy-tech-engineers-ipo/",
-        "gmp": "₹35",
-        "gmp_status": "2 Sept, 07:30",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹53",
-        "estimated_listing": "₹88 (66.04%)",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹0",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
         "gmp_last_updated": "15:26",
-        "match_confidence": 61.1,
+        "match_confidence": 0,
         "gmp_percentage": "-%"
       },
       {
