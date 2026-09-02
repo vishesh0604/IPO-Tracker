@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02 18:26",
+  "fetched_at": "2026-09-02 19:23",
   "data": {
     "open": [
       {
@@ -7,7 +7,7 @@
         "type": "Mainboard",
         "open_date": "01 Sep 2026",
         "close_date": "03 Sep 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "September 4, 2026",
         "issue_price": "₹227 - ₹239",
         "subscription": "3.61x",
         "action": "Apply",
@@ -81,14 +81,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "—",
+        "gmp": "₹12",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "—",
+        "gmp_last_updated": "18:07",
         "match_confidence": 0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "11.76%"
       }
     ],
     "recent_closed": [
@@ -110,9 +110,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹200",
         "estimated_listing": "₹231 (15.50%)",
-        "gmp_last_updated": "18:06",
+        "gmp_last_updated": "",
         "match_confidence": 100.0,
-        "gmp_percentage": "15.50%"
+        "gmp_percentage": "—"
       }
     ]
   }
