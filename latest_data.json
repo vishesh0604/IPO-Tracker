@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02 14:24",
+  "fetched_at": "2026-09-02 15:23",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹546 - ₹575",
-        "subscription": "1.12x",
+        "subscription": "1.22x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -31,7 +31,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹79 - ₹83",
-        "subscription": "58.28x",
+        "subscription": "93.68x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -53,7 +53,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹51 - ₹54",
-        "subscription": "5.06x",
+        "subscription": "9.51x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -75,7 +75,7 @@
         "close_date": "02 Sep 2026",
         "allotment_date": "September 3, 2026",
         "issue_price": "₹87 - ₹92",
-        "subscription": "34.33x",
+        "subscription": "67.60x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -97,7 +97,7 @@
         "close_date": "03 Sep 2026",
         "allotment_date": "September 4, 2026",
         "issue_price": "₹227 - ₹239",
-        "subscription": "2.79x",
+        "subscription": "3.01x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -119,7 +119,7 @@
         "close_date": "03 Sep 2026",
         "allotment_date": "September 4, 2026",
         "issue_price": "₹168 - ₹177",
-        "subscription": "2.54x",
+        "subscription": "2.81x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -169,14 +169,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹12",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:32",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "11.76%"
+        "gmp_percentage": "—"
       }
     ],
     "recent_closed": [
