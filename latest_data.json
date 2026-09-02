@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02 09:22",
+  "fetched_at": "2026-09-02 10:24",
   "data": {
     "open": [
       {
@@ -20,7 +20,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹575",
         "estimated_listing": "₹579 (0.70%)",
-        "gmp_last_updated": "15:31",
+        "gmp_last_updated": "09:35",
         "match_confidence": 100.0,
         "gmp_percentage": "0.70%"
       },
@@ -37,14 +37,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹10",
+        "gmp": "₹36",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:17",
+        "gmp_last_updated": "09:44",
         "match_confidence": 0,
-        "gmp_percentage": "12.05%"
+        "gmp_percentage": "43.37%"
       },
       {
         "company": "Phychem Technologies",
@@ -59,14 +59,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹0",
+        "gmp": "₹1",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:26",
+        "gmp_last_updated": "09:36",
         "match_confidence": 0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "1.85%"
       },
       {
         "company": "Ashutosh Fibre",
@@ -81,21 +81,21 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹25",
+        "gmp": "₹10",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:24",
+        "gmp_last_updated": "09:37",
         "match_confidence": 0,
-        "gmp_percentage": "27.17%"
+        "gmp_percentage": "10.87%"
       },
       {
         "company": "Rays of Belief",
         "type": "Mainboard",
         "open_date": "01 Sep 2026",
         "close_date": "03 Sep 2026",
-        "allotment_date": "September 4, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹227 - ₹239",
         "subscription": "1.18x",
         "action": "Apply",
@@ -108,9 +108,9 @@
         "gmp_trend": "🟢",
         "gmp_price_band": "₹239",
         "estimated_listing": "₹277 (15.90%)",
-        "gmp_last_updated": "15:23",
+        "gmp_last_updated": "09:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "20.08%"
+        "gmp_percentage": "15.90%"
       },
       {
         "company": "Deepa Jewellers",
@@ -130,9 +130,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹177",
         "estimated_listing": "₹221 (24.86%)",
-        "gmp_last_updated": "15:34",
+        "gmp_last_updated": "09:33",
         "match_confidence": 100.0,
-        "gmp_percentage": "22.60%"
+        "gmp_percentage": "24.86%"
       },
       {
         "company": "Farm Peace",
@@ -152,7 +152,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:18",
+        "gmp_last_updated": "09:44",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -169,14 +169,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹8",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:34",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "7.84%"
+        "gmp_percentage": "—"
       }
     ],
     "recent_closed": [
@@ -198,9 +198,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹200",
         "estimated_listing": "₹231 (15.50%)",
-        "gmp_last_updated": "15:24",
+        "gmp_last_updated": "09:39",
         "match_confidence": 100.0,
-        "gmp_percentage": "20.00%"
+        "gmp_percentage": "15.50%"
       },
       {
         "company": "Paluck Technologies",
@@ -215,14 +215,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹30",
+        "gmp": "₹20",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:21",
+        "gmp_last_updated": "09:41",
         "match_confidence": 0,
-        "gmp_percentage": "62.50%"
+        "gmp_percentage": "41.67%"
       },
       {
         "company": "Complete Sports and Management",
@@ -242,7 +242,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:20",
+        "gmp_last_updated": "09:42",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -264,9 +264,9 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹429",
         "estimated_listing": "₹684 (59.44%)",
-        "gmp_last_updated": "15:31",
+        "gmp_last_updated": "09:35",
         "match_confidence": 74.3,
-        "gmp_percentage": "58.28%"
+        "gmp_percentage": "59.44%"
       },
       {
         "company": "Kwick Forensic",
@@ -281,14 +281,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹81",
+        "gmp": "₹75",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "15:20",
+        "gmp_last_updated": "09:42",
         "match_confidence": 0,
-        "gmp_percentage": "90.00%"
+        "gmp_percentage": "83.33%"
       }
     ]
   }

@@ -849,6 +849,10 @@
     {
       "timestamp": "2026-09-01 10:22",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-09-02 10:24",
+      "gmp": 20.0
     }
   ],
   "Kwick Forensic": [
@@ -867,6 +871,10 @@
     {
       "timestamp": "2026-09-01 15:24",
       "gmp": 81.0
+    },
+    {
+      "timestamp": "2026-09-02 10:24",
+      "gmp": 75.0
     }
   ],
   "ESDS Software Solution": [
@@ -941,6 +949,10 @@
     {
       "timestamp": "2026-09-02 09:22",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-09-02 10:24",
+      "gmp": 1.0
     }
   ],
   "Ashutosh Fibre": [
@@ -955,6 +967,10 @@
     {
       "timestamp": "2026-09-01 16:24",
       "gmp": 25.0
+    },
+    {
+      "timestamp": "2026-09-02 10:24",
+      "gmp": 10.0
     }
   ],
   "Shanti Inorganics": [
@@ -965,6 +981,10 @@
     {
       "timestamp": "2026-09-01 15:24",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-09-02 10:24",
+      "gmp": 36.0
     }
   ],
   "Rays of Belief": [
