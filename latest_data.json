@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02 07:32",
+  "fetched_at": "2026-09-02 08:26",
   "data": {
     "open": [
       {
@@ -7,7 +7,7 @@
         "type": "Mainboard",
         "open_date": "31 Aug 2026",
         "close_date": "02 Sep 2026",
-        "allotment_date": "September 3, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹546 - ₹575",
         "subscription": "0.24x",
         "action": "Apply",
@@ -103,11 +103,11 @@
         "status_source": "current",
         "ipowatch_name": "Rays of Belief",
         "ipowatch_url": "https://ipowatch.in/rays-of-belief-ipo-details/",
-        "gmp": "₹48",
+        "gmp": "₹38",
         "gmp_status": "2 Sept, 07:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹239",
-        "estimated_listing": "₹287 (20.08%)",
+        "estimated_listing": "₹277 (15.90%)",
         "gmp_last_updated": "15:23",
         "match_confidence": 100.0,
         "gmp_percentage": "20.08%"
@@ -125,11 +125,11 @@
         "status_source": "current",
         "ipowatch_name": "Deepa Jewellers",
         "ipowatch_url": "https://ipowatch.in/deepa-jewellers-ipo/",
-        "gmp": "₹40",
+        "gmp": "₹44",
         "gmp_status": "2 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹177",
-        "estimated_listing": "₹217 (22.60%)",
+        "estimated_listing": "₹221 (24.86%)",
         "gmp_last_updated": "15:34",
         "match_confidence": 100.0,
         "gmp_percentage": "22.60%"
@@ -193,11 +193,11 @@
         "status_source": "closed",
         "ipowatch_name": "Priority Jewels",
         "ipowatch_url": "https://ipowatch.in/priority-jewels-ipo/",
-        "gmp": "₹40",
+        "gmp": "₹31",
         "gmp_status": "2 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹200",
-        "estimated_listing": "₹240 (20.00%)",
+        "estimated_listing": "₹231 (15.50%)",
         "gmp_last_updated": "15:24",
         "match_confidence": 100.0,
         "gmp_percentage": "20.00%"
@@ -259,11 +259,11 @@
         "status_source": "closed",
         "ipowatch_name": "ESDS Software",
         "ipowatch_url": "https://ipowatch.in/esds-software-solution-ipo/",
-        "gmp": "₹250",
+        "gmp": "₹255",
         "gmp_status": "2 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹429",
-        "estimated_listing": "₹679 (58.28%)",
+        "estimated_listing": "₹684 (59.44%)",
         "gmp_last_updated": "15:31",
         "match_confidence": 74.3,
         "gmp_percentage": "58.28%"
