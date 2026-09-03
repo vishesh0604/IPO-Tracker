@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03 07:23",
+  "fetched_at": "2026-09-03 10:51",
   "data": {
     "open": [
       {
@@ -15,14 +15,14 @@
         "status_source": "current",
         "ipowatch_name": "Rays of Belief",
         "ipowatch_url": "https://ipowatch.in/rays-of-belief-ipo-details/",
-        "gmp": "₹38",
-        "gmp_status": "2 Sept, 17:42",
+        "gmp": "₹47",
+        "gmp_status": "3 Sept, 07:30",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹239",
-        "estimated_listing": "₹277 (15.90%)",
-        "gmp_last_updated": "18:06",
+        "estimated_listing": "₹286 (19.67%)",
+        "gmp_last_updated": "09:43",
         "match_confidence": 100.0,
-        "gmp_percentage": "15.90%"
+        "gmp_percentage": "19.67%"
       },
       {
         "company": "Deepa Jewellers",
@@ -37,14 +37,14 @@
         "status_source": "current",
         "ipowatch_name": "Deepa Jewellers",
         "ipowatch_url": "https://ipowatch.in/deepa-jewellers-ipo/",
-        "gmp": "₹44",
-        "gmp_status": "2 Sept, 17:42",
+        "gmp": "₹28",
+        "gmp_status": "3 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹177",
-        "estimated_listing": "₹221 (24.86%)",
-        "gmp_last_updated": "18:07",
+        "estimated_listing": "₹205 (15.82%)",
+        "gmp_last_updated": "09:39",
         "match_confidence": 100.0,
-        "gmp_percentage": "24.86%"
+        "gmp_percentage": "15.82%"
       },
       {
         "company": "Farm Peace",
@@ -64,7 +64,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "18:06",
+        "gmp_last_updated": "09:46",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -81,14 +81,36 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹12",
+        "gmp": "₹20",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "18:07",
+        "gmp_last_updated": "09:38",
         "match_confidence": 0,
-        "gmp_percentage": "11.76%"
+        "gmp_percentage": "19.61%"
+      },
+      {
+        "company": "Qualiance International",
+        "type": "SME",
+        "open_date": "04 Sep 2026",
+        "close_date": "08 Sep 2026",
+        "allotment_date": "September 9, 2026",
+        "issue_price": "₹120 - ₹127",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹55",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
+        "gmp_last_updated": "09:36",
+        "match_confidence": 0,
+        "gmp_percentage": "43.31%"
       }
     ],
     "recent_closed": [
@@ -105,14 +127,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹36",
+        "gmp": "₹13",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "18:06",
+        "gmp_last_updated": "09:48",
         "match_confidence": 0,
-        "gmp_percentage": "43.37%"
+        "gmp_percentage": "15.66%"
       },
       {
         "company": "Phychem Technologies",
@@ -132,7 +154,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "18:07",
+        "gmp_last_updated": "09:41",
         "match_confidence": 0,
         "gmp_percentage": "1.85%"
       },
@@ -149,14 +171,14 @@
         "status_source": "closed",
         "ipowatch_name": "Purple Style Labs",
         "ipowatch_url": "https://ipowatch.in/purple-style-labs-ipo/",
-        "gmp": "₹4",
-        "gmp_status": "2 Sept, 17:42",
+        "gmp": "₹2",
+        "gmp_status": "3 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹575",
-        "estimated_listing": "₹579 (0.70%)",
-        "gmp_last_updated": "18:07",
+        "estimated_listing": "₹577 (0.35%)",
+        "gmp_last_updated": "09:40",
         "match_confidence": 100.0,
-        "gmp_percentage": "0.70%"
+        "gmp_percentage": "0.35%"
       },
       {
         "company": "Ashutosh Fibre",
@@ -171,14 +193,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹10",
+        "gmp": "₹33",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "18:07",
+        "gmp_last_updated": "09:42",
         "match_confidence": 0,
-        "gmp_percentage": "10.87%"
+        "gmp_percentage": "35.87%"
       },
       {
         "company": "Priority Jewels",
@@ -194,11 +216,11 @@
         "ipowatch_name": "Priority Jewels",
         "ipowatch_url": "https://ipowatch.in/priority-jewels-ipo/",
         "gmp": "₹31",
-        "gmp_status": "2 Sept, 17:42",
+        "gmp_status": "3 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹200",
         "estimated_listing": "₹231 (15.50%)",
-        "gmp_last_updated": "18:06",
+        "gmp_last_updated": "09:42",
         "match_confidence": 100.0,
         "gmp_percentage": "15.50%"
       }

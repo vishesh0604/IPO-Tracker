@@ -935,6 +935,10 @@
     {
       "timestamp": "2026-09-01 14:24",
       "gmp": 4.0
+    },
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 2.0
     }
   ],
   "Phychem Technologies": [
@@ -971,6 +975,10 @@
     {
       "timestamp": "2026-09-02 10:24",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 33.0
     }
   ],
   "Shanti Inorganics": [
@@ -985,6 +993,10 @@
     {
       "timestamp": "2026-09-02 10:24",
       "gmp": 36.0
+    },
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 13.0
     }
   ],
   "Rays of Belief": [
@@ -1003,6 +1015,10 @@
     {
       "timestamp": "2026-09-02 08:26",
       "gmp": 38.0
+    },
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 47.0
     }
   ],
   "Deepa Jewellers": [
@@ -1025,6 +1041,10 @@
     {
       "timestamp": "2026-09-02 08:26",
       "gmp": 44.0
+    },
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 28.0
     }
   ],
   "Fly-Hi Maritime": [
@@ -1035,6 +1055,16 @@
     {
       "timestamp": "2026-09-02 11:22",
       "gmp": 12.0
+    },
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 20.0
+    }
+  ],
+  "Qualiance International": [
+    {
+      "timestamp": "2026-09-03 10:51",
+      "gmp": 55.0
     }
   ]
 }
