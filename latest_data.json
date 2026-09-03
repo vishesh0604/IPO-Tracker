@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04 00:25",
+  "fetched_at": "2026-09-04 01:21",
   "data": {
     "open": [
       {
@@ -127,14 +127,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "—",
+        "gmp": "₹13",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "—",
+        "gmp_last_updated": "17:16",
         "match_confidence": 0,
-        "gmp_percentage": "—"
+        "gmp_percentage": "15.66%"
       }
     ]
   }
