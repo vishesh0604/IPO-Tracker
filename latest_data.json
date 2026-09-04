@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04 08:22",
+  "fetched_at": "2026-09-04 09:22",
   "data": {
     "open": [
       {
@@ -20,7 +20,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:18",
+        "gmp_last_updated": "8:10",
         "match_confidence": 0,
         "gmp_percentage": "43.31%"
       }
@@ -44,7 +44,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹239",
         "estimated_listing": "₹254 (6.28%)",
-        "gmp_last_updated": "18:44",
+        "gmp_last_updated": "09:16",
         "match_confidence": 100.0,
         "gmp_percentage": "6.28%"
       },
@@ -66,7 +66,7 @@
         "gmp_trend": "🔴",
         "gmp_price_band": "₹177",
         "estimated_listing": "₹195 (10.17%)",
-        "gmp_last_updated": "18:42",
+        "gmp_last_updated": "09:18",
         "match_confidence": 100.0,
         "gmp_percentage": "10.17%"
       },
@@ -88,7 +88,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:16",
+        "gmp_last_updated": "8:10",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -110,7 +110,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "18:41",
+        "gmp_last_updated": "8:10",
         "match_confidence": 0,
         "gmp_percentage": "1.00%"
       },
@@ -127,14 +127,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹13",
+        "gmp": "₹34",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:16",
+        "gmp_last_updated": "8:10",
         "match_confidence": 0,
-        "gmp_percentage": "15.66%"
+        "gmp_percentage": "40.96%"
       }
     ]
   }
