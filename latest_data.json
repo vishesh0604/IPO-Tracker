@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04 09:22",
+  "fetched_at": "2026-09-04 10:23",
   "data": {
     "open": [
       {
@@ -10,8 +10,8 @@
         "allotment_date": "September 9, 2026",
         "issue_price": "₹120 - ₹127",
         "subscription": "--",
-        "action": "Pre-apply",
-        "groww_status": "Pre-apply",
+        "action": "Apply",
+        "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
@@ -105,14 +105,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹1",
+        "gmp": "—",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "8:10",
+        "gmp_last_updated": "—",
         "match_confidence": 0,
-        "gmp_percentage": "1.00%"
+        "gmp_percentage": "—"
       },
       {
         "company": "Shanti Inorganics",
