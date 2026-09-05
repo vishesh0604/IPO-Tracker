@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-05 07:21",
+  "fetched_at": "2026-09-05 08:22",
   "data": {
     "open": [
       {
@@ -39,11 +39,11 @@
         "status_source": "closed",
         "ipowatch_name": "Rays of Belief",
         "ipowatch_url": "https://ipowatch.in/rays-of-belief-ipo-details/",
-        "gmp": "₹15",
-        "gmp_status": "4 Sept, 08:10",
+        "gmp": "₹12",
+        "gmp_status": "5 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹239",
-        "estimated_listing": "₹254 (6.28%)",
+        "estimated_listing": "₹251 (5.02%)",
         "gmp_last_updated": "09:16",
         "match_confidence": 100.0,
         "gmp_percentage": "6.28%"
@@ -62,7 +62,7 @@
         "ipowatch_name": "Deepa Jewellers",
         "ipowatch_url": "https://ipowatch.in/deepa-jewellers-ipo/",
         "gmp": "₹18",
-        "gmp_status": "4 Sept, 08:10",
+        "gmp_status": "5 Sept, 07:30",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹177",
         "estimated_listing": "₹195 (10.17%)",
