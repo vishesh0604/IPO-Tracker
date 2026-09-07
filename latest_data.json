@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07 10:26",
+  "fetched_at": "2026-09-07 11:25",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "08 Sep 2026",
         "allotment_date": "September 9, 2026",
         "issue_price": "₹120 - ₹127",
-        "subscription": "12.51x",
+        "subscription": "31.75x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -95,7 +95,7 @@
         "type": "Mainboard",
         "open_date": "08 Sep 2026",
         "close_date": "10 Sep 2026",
-        "allotment_date": "TBA",
+        "allotment_date": "September 11, 2026",
         "issue_price": "₹172 - ₹182",
         "subscription": "--",
         "action": "Pre-apply",
@@ -139,7 +139,7 @@
         "type": "Mainboard",
         "open_date": "09 Sep 2026",
         "close_date": "11 Sep 2026",
-        "allotment_date": "September 15, 2026",
+        "allotment_date": "TBA",
         "issue_price": "₹241 - ₹254",
         "subscription": "--",
         "action": "Pre-apply",
