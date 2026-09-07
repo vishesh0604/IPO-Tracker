@@ -1001,6 +1001,10 @@
     {
       "timestamp": "2026-09-04 09:22",
       "gmp": 34.0
+    },
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 54.0
     }
   ],
   "Rays of Belief": [
@@ -1139,6 +1143,42 @@
     {
       "timestamp": "2026-09-07 07:23",
       "gmp": 35.0
+    }
+  ],
+  "Asset Reconstruction": [
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 0.0
+    }
+  ],
+  "Karamtara Engineering": [
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 55.0
+    }
+  ],
+  "LCC Projects": [
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 25.0
+    }
+  ],
+  "Manipal Payment and Identity Solutions": [
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 30.0
+    }
+  ],
+  "Rentomojo": [
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 149.0
+    }
+  ],
+  "Farm Peace": [
+    {
+      "timestamp": "2026-09-07 10:26",
+      "gmp": 50.0
     }
   ]
 }
