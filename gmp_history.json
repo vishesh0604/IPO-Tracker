@@ -1031,6 +1031,10 @@
     {
       "timestamp": "2026-09-05 08:22",
       "gmp": 12.0
+    },
+    {
+      "timestamp": "2026-09-07 07:23",
+      "gmp": 20.0
     }
   ],
   "Deepa Jewellers": [
@@ -1061,6 +1065,10 @@
     {
       "timestamp": "2026-09-04 00:25",
       "gmp": 18.0
+    },
+    {
+      "timestamp": "2026-09-07 07:23",
+      "gmp": 22.0
     }
   ],
   "Fly-Hi Maritime": [
@@ -1091,12 +1099,20 @@
     {
       "timestamp": "2026-09-05 10:21",
       "gmp": 37.0
+    },
+    {
+      "timestamp": "2026-09-07 07:23",
+      "gmp": 44.0
     }
   ],
   "Apana Logistics": [
     {
       "timestamp": "2026-09-06 10:22",
       "gmp": 37.0
+    },
+    {
+      "timestamp": "2026-09-07 07:23",
+      "gmp": 44.0
     }
   ],
   "Kanohar Electricals": [
@@ -1109,12 +1125,20 @@
     {
       "timestamp": "2026-09-06 10:22",
       "gmp": 170.0
+    },
+    {
+      "timestamp": "2026-09-07 07:23",
+      "gmp": 120.0
     }
   ],
   "Glass Wall Systems": [
     {
       "timestamp": "2026-09-06 10:22",
       "gmp": 65.0
+    },
+    {
+      "timestamp": "2026-09-07 07:23",
+      "gmp": 35.0
     }
   ]
 }
