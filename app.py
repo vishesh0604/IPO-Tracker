@@ -725,6 +725,131 @@ div.st-key-quick-overview-button button {
 )
 
 
+# =========================================================
+# DEPTH PASS — cards, summary cards, buttons only
+# =========================================================
+
+st.markdown(
+    """
+<style>
+
+/* ---------- TOP-OF-PAGE GLOW ---------- */
+
+[data-testid="stAppViewContainer"] {
+    background:
+        radial-gradient(1100px 620px at 50% -10%,
+                        rgba(163, 116, 232, 0.12), transparent 60%),
+        #1A121B !important;
+}
+
+/* ---------- IPO CARDS: raised, not flat ---------- */
+
+[class*="st-key-ipo-card-apply-"],
+[class*="st-key-ipo-card-preapply-"],
+[class*="st-key-ipo-card-closed-"] {
+    background: linear-gradient(180deg, #2D2230 0%, #2B202F 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top-color: rgba(255, 255, 255, 0.10) !important;
+    border-radius: 14px !important;
+    padding: 20px !important;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.22),
+        0 4px 10px -4px rgba(0, 0, 0, 0.24) !important;
+    transition: box-shadow .16s ease, border-color .16s ease !important;
+}
+
+[class*="st-key-ipo-card-apply-"] > div,
+[class*="st-key-ipo-card-preapply-"] > div,
+[class*="st-key-ipo-card-closed-"] > div {
+    background: transparent !important;
+}
+
+[class*="st-key-ipo-card-apply-"]:hover,
+[class*="st-key-ipo-card-preapply-"]:hover,
+[class*="st-key-ipo-card-closed-"]:hover {
+    transform: translateY(-2px);
+    border-top-color: rgba(255, 255, 255, 0.14) !important;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.22),
+        0 9px 18px -8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ---------- SUMMARY "CLICK TO VIEW" CARDS ---------- */
+
+.summary-link {
+    background: linear-gradient(180deg, #2D2230 0%, #2B202F 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top-color: rgba(255, 255, 255, 0.10) !important;
+    border-radius: 14px !important;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.22),
+        0 4px 10px -4px rgba(0, 0, 0, 0.24);
+    transition: box-shadow .16s ease, border-color .16s ease,
+                background .16s ease;
+}
+
+.summary-link .summary-box { padding: 20px 16px !important; }
+
+.summary-link:hover {
+    background: linear-gradient(180deg, #322636 0%, #2F2434 100%) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    border-top-color: rgba(255, 255, 255, 0.14) !important;
+    transform: translateY(-2px);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.22),
+        0 9px 18px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- BUTTONS: raised & tactile ---------- */
+
+a[data-testid="stBaseLinkButton-secondary"],
+button[data-testid="stBaseButton-secondary"],
+div[data-testid="stLinkButton"] a,
+div[data-testid="stButton"] button[kind="secondary"] {
+    background: linear-gradient(180deg, #362A3D 0%, #322638 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    border-top-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 11px !important;
+    color: #F1E9F4 !important;
+    font-weight: 600 !important;
+    min-height: 48px !important;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.2),
+        0 1px 1px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+    transition: box-shadow .1s ease, background .1s ease,
+                border-color .1s ease !important;
+}
+
+a[data-testid="stBaseLinkButton-secondary"]:hover,
+button[data-testid="stBaseButton-secondary"]:hover,
+div[data-testid="stLinkButton"] a:hover,
+div[data-testid="stButton"] button[kind="secondary"]:hover {
+    background: linear-gradient(180deg, #40334A 0%, #3C2F44 100%) !important;
+    border-top-color: rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px);
+    box-shadow:
+        0 3px 8px -2px rgba(0, 0, 0, 0.24),
+        0 2px 4px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+a[data-testid="stBaseLinkButton-secondary"]:active,
+button[data-testid="stBaseButton-secondary"]:active,
+div[data-testid="stLinkButton"] a:active,
+div[data-testid="stButton"] button[kind="secondary"]:active {
+    transform: translateY(1px);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.24),
+        0 1px 2px rgba(0, 0, 0, 0.16) !important;
+}
+
+</style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 # =========================================================
 # HELPERS
@@ -1830,7 +1955,7 @@ for ipo in preapply_ipos:
                 ''',
                 unsafe_allow_html=True
             )
-            
+
         st.divider()
 
 
