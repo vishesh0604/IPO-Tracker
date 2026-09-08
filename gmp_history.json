@@ -1039,6 +1039,10 @@
     {
       "timestamp": "2026-09-07 07:23",
       "gmp": 20.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 15.0
     }
   ],
   "Deepa Jewellers": [
@@ -1073,6 +1077,10 @@
     {
       "timestamp": "2026-09-07 07:23",
       "gmp": 22.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 24.0
     }
   ],
   "Fly-Hi Maritime": [
@@ -1123,6 +1131,10 @@
     {
       "timestamp": "2026-09-06 10:22",
       "gmp": 205.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 198.0
     }
   ],
   "Prasol Chemicals": [
@@ -1133,6 +1145,10 @@
     {
       "timestamp": "2026-09-07 07:23",
       "gmp": 120.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 85.0
     }
   ],
   "Glass Wall Systems": [
@@ -1143,18 +1159,30 @@
     {
       "timestamp": "2026-09-07 07:23",
       "gmp": 35.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 50.0
     }
   ],
   "Asset Reconstruction": [
     {
       "timestamp": "2026-09-07 10:26",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 27.0
     }
   ],
   "Karamtara Engineering": [
     {
       "timestamp": "2026-09-07 10:26",
       "gmp": 55.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 58.0
     }
   ],
   "LCC Projects": [
@@ -1167,12 +1195,20 @@
     {
       "timestamp": "2026-09-07 10:26",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 38.0
     }
   ],
   "Rentomojo": [
     {
       "timestamp": "2026-09-07 10:26",
       "gmp": 149.0
+    },
+    {
+      "timestamp": "2026-09-08 08:24",
+      "gmp": 125.0
     }
   ],
   "Farm Peace": [
