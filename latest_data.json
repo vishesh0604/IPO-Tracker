@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-08 20:17",
+  "fetched_at": "2026-09-08 23:37",
   "data": {
     "open": [
       {
@@ -37,14 +37,14 @@
         "status_source": "current",
         "ipowatch_name": "Kanohar Electricals",
         "ipowatch_url": "https://ipowatch.in/kanohar-electricals-ipo/",
-        "gmp": "₹198",
+        "gmp": "₹210",
         "gmp_status": "8 Sept, 17:44",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹632",
-        "estimated_listing": "₹830 (31.33%)",
+        "estimated_listing": "₹842 (33.23%)",
         "gmp_last_updated": "17:45",
         "match_confidence": 100.0,
-        "gmp_percentage": "31.33%"
+        "gmp_percentage": "33.23%"
       },
       {
         "company": "Prasol Chemicals",
@@ -59,14 +59,14 @@
         "status_source": "current",
         "ipowatch_name": "Prasol Chemicals",
         "ipowatch_url": "https://ipowatch.in/prasol-chemicals-ipo/",
-        "gmp": "₹85",
+        "gmp": "₹40",
         "gmp_status": "8 Sept, 17:44",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹676",
-        "estimated_listing": "₹761 (12.57%)",
+        "estimated_listing": "₹716 (5.91%)",
         "gmp_last_updated": "17:45",
         "match_confidence": 100.0,
-        "gmp_percentage": "12.57%"
+        "gmp_percentage": "5.91%"
       },
       {
         "company": "Glass Wall Systems",
@@ -81,11 +81,11 @@
         "status_source": "current",
         "ipowatch_name": "Glass Wall Systems",
         "ipowatch_url": "https://ipowatch.in/glass-wall-systems-ipo/",
-        "gmp": "₹50",
+        "gmp": "₹55",
         "gmp_status": "8 Sept, 17:44",
-        "gmp_trend": "🔴",
+        "gmp_trend": "🟢",
         "gmp_price_band": "₹182",
-        "estimated_listing": "₹232 (27.47%)",
+        "estimated_listing": "₹237 (30.22%)",
         "gmp_last_updated": "17:45",
         "match_confidence": 100.0,
         "gmp_percentage": "27.47%"
@@ -125,14 +125,14 @@
         "status_source": "current",
         "ipowatch_name": "Steamhouse India",
         "ipowatch_url": "https://ipowatch.in/steamhouse-india-ipo/",
-        "gmp": "₹0",
+        "gmp": "₹15",
         "gmp_status": "8 Sept, 17:44",
-        "gmp_trend": "🟡",
+        "gmp_trend": "🟢",
         "gmp_price_band": "₹81",
-        "estimated_listing": "₹- (0.00%)",
+        "estimated_listing": "₹96 (18.52%)",
         "gmp_last_updated": "17:45",
         "match_confidence": 100.0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "18.52%"
       },
       {
         "company": "Karamtara Engineering",
@@ -147,14 +147,14 @@
         "status_source": "current",
         "ipowatch_name": "Karamtara Engineering",
         "ipowatch_url": "https://ipowatch.in/karamtara-engineering-ipo/",
-        "gmp": "₹58",
+        "gmp": "₹65",
         "gmp_status": "8 Sept, 17:44",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹254",
-        "estimated_listing": "₹312 (22.83%)",
+        "estimated_listing": "₹319 (25.59%)",
         "gmp_last_updated": "17:45",
         "match_confidence": 100.0,
-        "gmp_percentage": "22.83%"
+        "gmp_percentage": "25.59%"
       },
       {
         "company": "LCC Projects",
@@ -235,15 +235,15 @@
         "action": "106.83x",
         "groww_status": "Closed",
         "status_source": "closed",
-        "ipowatch_name": "Rays of Belief",
-        "ipowatch_url": "https://ipowatch.in/rays-of-belief-ipo-details/",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
         "gmp": "₹15",
-        "gmp_status": "8 Sept, 08:18",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹239",
-        "estimated_listing": "₹254 (6.28%)",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
         "gmp_last_updated": "17:45",
-        "match_confidence": 100.0,
+        "match_confidence": 0,
         "gmp_percentage": "6.28%"
       },
       {
@@ -257,15 +257,15 @@
         "action": "42.20x",
         "groww_status": "Closed",
         "status_source": "closed",
-        "ipowatch_name": "Deepa Jewellers",
-        "ipowatch_url": "https://ipowatch.in/deepa-jewellers-ipo/",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
         "gmp": "₹24",
-        "gmp_status": "8 Sept, 08:18",
-        "gmp_trend": "🔴",
-        "gmp_price_band": "₹177",
-        "estimated_listing": "₹201 (13.56%)",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
         "gmp_last_updated": "10:24",
-        "match_confidence": 100.0,
+        "match_confidence": 0,
         "gmp_percentage": "13.56%"
       },
       {
