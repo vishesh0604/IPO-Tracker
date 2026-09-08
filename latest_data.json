@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-08 23:37",
+  "fetched_at": "2026-09-09 02:56",
   "data": {
     "open": [
       {
@@ -224,6 +224,28 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Qualiance International",
+        "type": "SME",
+        "open_date": "04 Sep 2026",
+        "close_date": "08 Sep 2026",
+        "allotment_date": "11 Sep 2026",
+        "issue_price": "09 Sep 2026",
+        "subscription": "--",
+        "action": "425.07x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹59",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
+        "gmp_last_updated": "17:45",
+        "match_confidence": 0,
+        "gmp_percentage": "46.46%"
+      },
       {
         "company": "Rays of Belief",
         "type": "Mainboard",
