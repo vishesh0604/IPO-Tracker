@@ -1109,6 +1109,10 @@
     {
       "timestamp": "2026-09-09 02:56",
       "gmp": 59.0
+    },
+    {
+      "timestamp": "2026-09-09 12:12",
+      "gmp": 65.0
     }
   ],
   "Pranav Constructions": [
@@ -1143,6 +1147,10 @@
     {
       "timestamp": "2026-09-08 23:37",
       "gmp": 210.0
+    },
+    {
+      "timestamp": "2026-09-09 12:12",
+      "gmp": 218.0
     }
   ],
   "Prasol Chemicals": [
@@ -1203,12 +1211,20 @@
     {
       "timestamp": "2026-09-08 23:37",
       "gmp": 65.0
+    },
+    {
+      "timestamp": "2026-09-09 12:12",
+      "gmp": 69.0
     }
   ],
   "LCC Projects": [
     {
       "timestamp": "2026-09-07 10:26",
       "gmp": 25.0
+    },
+    {
+      "timestamp": "2026-09-09 12:12",
+      "gmp": 33.0
     }
   ],
   "Manipal Payment and Identity Solutions": [
@@ -1229,6 +1245,10 @@
     {
       "timestamp": "2026-09-08 08:24",
       "gmp": 125.0
+    },
+    {
+      "timestamp": "2026-09-09 12:12",
+      "gmp": 135.0
     }
   ],
   "Farm Peace": [
@@ -1249,6 +1269,10 @@
     {
       "timestamp": "2026-09-08 23:37",
       "gmp": 15.0
+    },
+    {
+      "timestamp": "2026-09-09 12:12",
+      "gmp": 18.0
     }
   ]
 }
