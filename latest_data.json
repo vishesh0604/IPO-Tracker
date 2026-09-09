@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-09 22:24",
+  "fetched_at": "2026-09-10 01:31",
   "data": {
     "open": [
       {
@@ -224,6 +224,50 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Pranav Constructions",
+        "type": "Mainboard",
+        "open_date": "07 Sep 2026",
+        "close_date": "09 Sep 2026",
+        "allotment_date": "15 Sep 2026",
+        "issue_price": "10 Sep 2026",
+        "subscription": "--",
+        "action": "120.16x",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Pranav Constructions",
+        "ipowatch_url": "https://ipowatch.in/pranav-constructions-ipo/",
+        "gmp": "₹44",
+        "gmp_status": "9 Sept, 18:01",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹124",
+        "estimated_listing": "₹168 (35.48%)",
+        "gmp_last_updated": "17:59",
+        "match_confidence": 100.0,
+        "gmp_percentage": "35.48%"
+      },
+      {
+        "company": "Apana Logistics",
+        "type": "SME",
+        "open_date": "07 Sep 2026",
+        "close_date": "09 Sep 2026",
+        "allotment_date": "15 Sep 2026",
+        "issue_price": "10 Sep 2026",
+        "subscription": "--",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "ipowatch_name": "Pranav Constructions",
+        "ipowatch_url": "https://ipowatch.in/pranav-constructions-ipo/",
+        "gmp": "₹44",
+        "gmp_status": "9 Sept, 18:01",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹124",
+        "estimated_listing": "₹168 (35.48%)",
+        "gmp_last_updated": "17:59",
+        "match_confidence": 57.1,
+        "gmp_percentage": "16.67%"
+      },
       {
         "company": "Qualiance International",
         "type": "SME",
