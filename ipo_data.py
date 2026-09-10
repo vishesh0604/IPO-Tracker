@@ -13,6 +13,11 @@ from concurrent.futures import ThreadPoolExecutor
 
 GROWW_URL = "https://groww.in/ipo"
 
+# The /ipo landing page only shows the latest 10 rows per table.
+# The full lists live behind its "View All" links.
+GROWW_OPEN_URL = "https://groww.in/ipo/open"
+GROWW_CLOSED_URL = "https://groww.in/ipo/closed"
+
 IPOWATCH_URL = "https://ipowatch.in/ipo-grey-market-premium-latest-ipo/"
 
 HEADERS = {
@@ -98,15 +103,21 @@ def similarity(name1, name2):
 
 def get_groww_ipos():
 
-    html = get_page(GROWW_URL)
+    # Read the full open + closed lists, not the truncated
+    # 10-row tables on the /ipo landing page.
+    rows = []
 
-    soup = BeautifulSoup(
-        html,
-        "html.parser"
-    )
+    for url in (GROWW_OPEN_URL, GROWW_CLOSED_URL):
 
-    rows = soup.select("tr.cur-po")
-    
+        soup = BeautifulSoup(
+            get_page(url),
+            "html.parser"
+        )
+
+        rows.extend(
+            soup.select("tr.cur-po")
+        )
+
     ipos = []
 
     for row in rows:
@@ -186,21 +197,25 @@ def get_groww_ipos():
 
         elif is_closed:
 
+            # Groww /ipo/closed columns:
+            # 0 Company | 1 Type | 2 Open | 3 Close | 4 Listing |
+            # 5 Allotment | 6 Issue Price | 7 Listing Price |
+            # 8 Subscription | 9 Performance
             ipo = {
                 "company": company,
                 "type": values[1],
                 "open_date": values[2],
                 "close_date": values[3],
-                "allotment_date": values[4],
-                "issue_price": values[5],
+                "allotment_date": values[5],
+                "issue_price": values[6],
                 "subscription": (
-                    values[7]
-                    if len(values) > 7
+                    values[8]
+                    if len(values) > 8
                     else "—"
                 ),
                 "action": (
-                    values[8]
-                    if len(values) > 8
+                    values[9]
+                    if len(values) > 9
                     else "Closed"
                 ),
                 "groww_status": "Closed",
