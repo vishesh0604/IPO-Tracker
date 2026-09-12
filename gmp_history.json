@@ -1285,6 +1285,10 @@
     {
       "timestamp": "2026-09-11 12:08",
       "gmp": 50.0
+    },
+    {
+      "timestamp": "2026-09-12 12:01",
+      "gmp": 75.0
     }
   ],
   "Manipal Payment and Identity Solutions": [
@@ -1369,6 +1373,10 @@
     {
       "timestamp": "2026-09-10 17:09",
       "gmp": 11.0
+    },
+    {
+      "timestamp": "2026-09-12 12:01",
+      "gmp": 10.0
     }
   ],
   "Vinod Texworld": [
@@ -1385,6 +1393,10 @@
     {
       "timestamp": "2026-09-11 12:08",
       "gmp": 28.0
+    },
+    {
+      "timestamp": "2026-09-12 12:01",
+      "gmp": 30.0
     }
   ],
   "Maharaja & Speedex India": [
@@ -1397,6 +1409,16 @@
     {
       "timestamp": "2026-09-10 17:09",
       "gmp": 13.0
+    },
+    {
+      "timestamp": "2026-09-12 12:01",
+      "gmp": 10.0
+    }
+  ],
+  "Panchatv Bharat": [
+    {
+      "timestamp": "2026-09-12 12:01",
+      "gmp": 7.0
     }
   ]
 }

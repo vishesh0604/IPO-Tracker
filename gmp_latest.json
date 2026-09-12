@@ -208,16 +208,16 @@
     "gmp": 45.0
   },
   "Asset Reconstruction": {
-    "timestamp": "2026-09-12 07:04",
+    "timestamp": "2026-09-12 12:01",
     "gmp": 14.0
   },
   "Karamtara Engineering": {
-    "timestamp": "2026-09-12 07:04",
+    "timestamp": "2026-09-12 12:01",
     "gmp": 69.0
   },
   "LCC Projects": {
-    "timestamp": "2026-09-12 07:04",
-    "gmp": 50.0
+    "timestamp": "2026-09-12 12:01",
+    "gmp": 75.0
   },
   "Manipal Payment and Identity Solutions": {
     "timestamp": "2026-09-11 12:08",
@@ -232,31 +232,35 @@
     "gmp": 57.0
   },
   "Steamhouse India": {
-    "timestamp": "2026-09-12 07:04",
+    "timestamp": "2026-09-12 12:01",
     "gmp": 22.0
   },
   "Veegaland Developers": {
-    "timestamp": "2026-09-12 07:04",
+    "timestamp": "2026-09-12 12:01",
     "gmp": 24.0
   },
   "Amtech Esters": {
-    "timestamp": "2026-09-12 07:04",
-    "gmp": 11.0
+    "timestamp": "2026-09-12 12:01",
+    "gmp": 10.0
   },
   "Vinod Texworld": {
     "timestamp": "2026-09-11 12:08",
     "gmp": 20.0
   },
   "Raksan Transformers": {
-    "timestamp": "2026-09-12 07:04",
-    "gmp": 28.0
+    "timestamp": "2026-09-12 12:01",
+    "gmp": 30.0
   },
   "Maharaja & Speedex India": {
-    "timestamp": "2026-09-12 07:04",
+    "timestamp": "2026-09-12 12:01",
     "gmp": 30.0
   },
   "Manika Plastech": {
-    "timestamp": "2026-09-12 07:04",
-    "gmp": 13.0
+    "timestamp": "2026-09-12 12:01",
+    "gmp": 10.0
+  },
+  "Panchatv Bharat": {
+    "timestamp": "2026-09-12 12:01",
+    "gmp": 7.0
   }
 }
