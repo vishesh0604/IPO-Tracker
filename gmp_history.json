@@ -1424,5 +1424,35 @@
       "timestamp": "2026-09-12 12:01",
       "gmp": 7.0
     }
+  ],
+  "Jindal Supreme": [
+    {
+      "timestamp": "2026-09-13 12:17",
+      "gmp": 21.0
+    }
+  ],
+  "SS Retail": [
+    {
+      "timestamp": "2026-09-13 12:17",
+      "gmp": 80.0
+    }
+  ],
+  "Hero Motors": [
+    {
+      "timestamp": "2026-09-13 12:17",
+      "gmp": 10.0
+    }
+  ],
+  "Sonaselection Limited": [
+    {
+      "timestamp": "2026-09-13 12:17",
+      "gmp": 0.0
+    }
+  ],
+  "NSE": [
+    {
+      "timestamp": "2026-09-13 12:17",
+      "gmp": 218.0
+    }
   ]
 }
