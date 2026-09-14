@@ -1241,6 +1241,10 @@
     {
       "timestamp": "2026-09-11 12:08",
       "gmp": 14.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 15.0
     }
   ],
   "Karamtara Engineering": [
@@ -1267,6 +1271,10 @@
     {
       "timestamp": "2026-09-11 12:08",
       "gmp": 69.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 71.0
     }
   ],
   "LCC Projects": [
@@ -1289,6 +1297,10 @@
     {
       "timestamp": "2026-09-12 12:01",
       "gmp": 75.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 64.0
     }
   ],
   "Manipal Payment and Identity Solutions": [
@@ -1367,6 +1379,10 @@
     {
       "timestamp": "2026-09-10 10:49",
       "gmp": 24.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 15.0
     }
   ],
   "Amtech Esters": [
@@ -1429,18 +1445,30 @@
     {
       "timestamp": "2026-09-13 12:17",
       "gmp": 21.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 27.0
     }
   ],
   "SS Retail": [
     {
       "timestamp": "2026-09-13 12:17",
       "gmp": 80.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 120.0
     }
   ],
   "Hero Motors": [
     {
       "timestamp": "2026-09-13 12:17",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-09-14 12:38",
+      "gmp": 24.0
     }
   ],
   "Sonaselection Limited": [
