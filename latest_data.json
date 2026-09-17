@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17 17:37",
+  "fetched_at": "2026-09-17 22:46",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "18 Sep 2026",
         "allotment_date": "September 21, 2026",
         "issue_price": "₹88 - ₹93",
-        "subscription": "31.50x",
+        "subscription": "31.51x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -97,7 +97,7 @@
         "close_date": "21 Sep 2026",
         "allotment_date": "September 22, 2026",
         "issue_price": "₹1700 - ₹1785",
-        "subscription": "0.42x",
+        "subscription": "0.43x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
