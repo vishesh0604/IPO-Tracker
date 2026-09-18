@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18 17:21",
+  "fetched_at": "2026-09-18 22:14",
   "data": {
     "open": [
       {
@@ -9,14 +9,14 @@
         "close_date": "21 Sep 2026",
         "allotment_date": "September 22, 2026",
         "issue_price": "₹94 - ₹99",
-        "subscription": "0.88x",
+        "subscription": "0.90x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Sonaselection India",
         "ipowatch_url": "https://ipowatch.in/sonaselection-india-ipo/",
         "gmp": "₹2",
-        "gmp_status": "18 Sept, 07:20",
+        "gmp_status": "18 Sept, 18:24",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹99",
         "estimated_listing": "₹101 (2.02%)",
@@ -31,18 +31,18 @@
         "close_date": "21 Sep 2026",
         "allotment_date": "September 22, 2026",
         "issue_price": "₹1700 - ₹1785",
-        "subscription": "1.13x",
+        "subscription": "1.15x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "NSE",
         "ipowatch_url": "https://ipowatch.in/nse-ipo/",
         "gmp": "₹148",
-        "gmp_status": "18 Sept, 07:20",
+        "gmp_status": "18 Sept, 18:24",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹1785",
         "estimated_listing": "₹1933 (8.29%)",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:06",
         "match_confidence": 100.0,
         "gmp_percentage": "8.29%"
       },
@@ -64,7 +64,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "9.90%"
       },
@@ -75,7 +75,7 @@
         "close_date": "21 Sep 2026",
         "allotment_date": "September 22, 2026",
         "issue_price": "₹112 - ₹118",
-        "subscription": "18.05x",
+        "subscription": "18.43x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -86,7 +86,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "25.42%"
       },
@@ -97,7 +97,7 @@
         "close_date": "22 Sep 2026",
         "allotment_date": "September 18, 2026",
         "issue_price": "₹51 - ₹54",
-        "subscription": "0.57x",
+        "subscription": "0.58x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -108,7 +108,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       }
@@ -132,7 +132,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -154,7 +154,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "10.17%"
       },
@@ -176,7 +176,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "0.88%"
       },
@@ -194,11 +194,11 @@
         "ipowatch_name": "Manika Plastech",
         "ipowatch_url": "https://ipowatch.in/manika-plastech-ipo/",
         "gmp": "₹2",
-        "gmp_status": "18 Sept, 07:20",
+        "gmp_status": "18 Sept, 18:24",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹43",
         "estimated_listing": "₹45 (4.65%)",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:06",
         "match_confidence": 100.0,
         "gmp_percentage": "4.65%"
       },
@@ -220,7 +220,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:50",
+        "gmp_last_updated": "18:20",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       }
