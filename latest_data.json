@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19 15:13",
+  "fetched_at": "2026-09-19 18:56",
   "data": {
     "open": [
       {
@@ -16,7 +16,7 @@
         "ipowatch_name": "Sonaselection India",
         "ipowatch_url": "https://ipowatch.in/sonaselection-india-ipo/",
         "gmp": "₹2",
-        "gmp_status": "19 Sept, 07:20",
+        "gmp_status": "19 Sept, 17:10",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹99",
         "estimated_listing": "₹101 (2.02%)",
@@ -37,11 +37,11 @@
         "status_source": "current",
         "ipowatch_name": "NSE",
         "ipowatch_url": "https://ipowatch.in/nse-ipo/",
-        "gmp": "₹111",
-        "gmp_status": "19 Sept, 07:20",
+        "gmp": "₹90",
+        "gmp_status": "19 Sept, 17:10",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹1785",
-        "estimated_listing": "₹1896 (6.22%)",
+        "estimated_listing": "₹1875 (5.04%)",
         "gmp_last_updated": "18:06",
         "match_confidence": 100.0,
         "gmp_percentage": "8.29%"
@@ -194,7 +194,7 @@
         "ipowatch_name": "Jindal Supreme",
         "ipowatch_url": "https://ipowatch.in/jindal-supreme-ipo/",
         "gmp": "₹30",
-        "gmp_status": "19 Sept, 07:20",
+        "gmp_status": "19 Sept, 17:10",
         "gmp_trend": "🟢",
         "gmp_price_band": "₹93",
         "estimated_listing": "₹123 (32.26%)",
@@ -216,7 +216,7 @@
         "ipowatch_name": "SS Retail",
         "ipowatch_url": "https://ipowatch.in/ss-retail-ipo/",
         "gmp": "₹145",
-        "gmp_status": "19 Sept, 07:20",
+        "gmp_status": "19 Sept, 17:10",
         "gmp_trend": "🔴",
         "gmp_price_band": "₹424",
         "estimated_listing": "₹569 (34.20%)",
@@ -238,7 +238,7 @@
         "ipowatch_name": "Hero Motors",
         "ipowatch_url": "https://ipowatch.in/hero-motors-ipo/",
         "gmp": "₹0",
-        "gmp_status": "19 Sept, 07:20",
+        "gmp_status": "19 Sept, 17:10",
         "gmp_trend": "🟡",
         "gmp_price_band": "₹84",
         "estimated_listing": "₹- (0.00%)",
