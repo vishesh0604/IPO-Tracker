@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20 07:11",
+  "fetched_at": "2026-09-20 12:33",
   "data": {
     "open": [
       {
@@ -177,6 +177,28 @@
         "gmp_last_updated": "18:13",
         "match_confidence": 0,
         "gmp_percentage": "-%"
+      },
+      {
+        "company": "Varmora Granito",
+        "type": "Mainboard",
+        "open_date": "22 Sep 2026",
+        "close_date": "24 Sep 2026",
+        "allotment_date": "September 25, 2026",
+        "issue_price": "₹140 - ₹148",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Varmora Granito",
+        "ipowatch_url": "https://ipowatch.in/varmora-granito-ipo/",
+        "gmp": "₹15",
+        "gmp_status": "19 Sept, 17:10",
+        "gmp_trend": "🟢",
+        "gmp_price_band": "₹148",
+        "estimated_listing": "₹163 (10.14%)",
+        "gmp_last_updated": "18:06",
+        "match_confidence": 100.0,
+        "gmp_percentage": "6.76%"
       }
     ],
     "recent_closed": [
