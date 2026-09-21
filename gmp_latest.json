@@ -264,24 +264,24 @@
     "gmp": 3.0
   },
   "Jindal Supreme": {
-    "timestamp": "2026-09-21 06:00",
+    "timestamp": "2026-09-21 11:04",
     "gmp": 30.0
   },
   "SS Retail": {
-    "timestamp": "2026-09-21 06:00",
-    "gmp": 145.0
+    "timestamp": "2026-09-21 11:04",
+    "gmp": 147.0
   },
   "Hero Motors": {
-    "timestamp": "2026-09-21 06:00",
+    "timestamp": "2026-09-21 11:04",
     "gmp": 0.0
   },
   "Sonaselection Limited": {
-    "timestamp": "2026-09-21 06:00",
-    "gmp": 2.0
+    "timestamp": "2026-09-21 11:04",
+    "gmp": 0.0
   },
   "NSE": {
-    "timestamp": "2026-09-21 06:00",
-    "gmp": 90.0
+    "timestamp": "2026-09-21 11:04",
+    "gmp": 48.0
   },
   "Vama Wovenfab": {
     "timestamp": "2026-09-18 22:14",
@@ -292,19 +292,23 @@
     "gmp": 10.0
   },
   "SpectraA Technology": {
-    "timestamp": "2026-09-21 06:00",
+    "timestamp": "2026-09-21 11:04",
     "gmp": 45.0
   },
   "Shakti Polytarp": {
-    "timestamp": "2026-09-21 06:00",
+    "timestamp": "2026-09-21 11:04",
     "gmp": 6.0
   },
   "Robokidz Eduventures": {
-    "timestamp": "2026-09-21 06:00",
+    "timestamp": "2026-09-21 11:04",
     "gmp": 51.0
   },
   "Varmora Granito": {
-    "timestamp": "2026-09-21 06:00",
-    "gmp": 15.0
+    "timestamp": "2026-09-21 11:04",
+    "gmp": 10.0
+  },
+  "ArMee Infotech": {
+    "timestamp": "2026-09-21 11:04",
+    "gmp": 1.0
   }
 }
