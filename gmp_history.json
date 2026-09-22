@@ -1673,6 +1673,10 @@
     {
       "timestamp": "2026-09-21 16:37",
       "gmp": 61.0
+    },
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 65.0
     }
   ],
   "Vama Wovenfab": [
@@ -1715,6 +1719,10 @@
     {
       "timestamp": "2026-09-20 18:08",
       "gmp": 45.0
+    },
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 67.0
     }
   ],
   "Shakti Polytarp": [
@@ -1727,6 +1735,10 @@
     {
       "timestamp": "2026-09-19 10:36",
       "gmp": 51.0
+    },
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 55.0
     }
   ],
   "Varmora Granito": [
@@ -1737,12 +1749,50 @@
     {
       "timestamp": "2026-09-21 11:04",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 5.0
     }
   ],
   "ArMee Infotech": [
     {
       "timestamp": "2026-09-21 11:04",
       "gmp": 1.0
+    },
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 12.0
+    }
+  ],
+  "Anand Seamless": [
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 60.0
+    }
+  ],
+  "Swastika Infra": [
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 8.0
+    }
+  ],
+  "Elevate Campuses": [
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 16.0
+    }
+  ],
+  "Adroit Industries": [
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 32.0
+    }
+  ],
+  "A-One Steels": [
+    {
+      "timestamp": "2026-09-22 10:54",
+      "gmp": 60.0
     }
   ]
 }
