@@ -1795,6 +1795,10 @@
     {
       "timestamp": "2026-09-23 17:44",
       "gmp": 55.0
+    },
+    {
+      "timestamp": "2026-09-24 23:04",
+      "gmp": 20.0
     }
   ],
   "Anand Seamless": [
@@ -1853,6 +1857,10 @@
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 55.0
+    },
+    {
+      "timestamp": "2026-09-24 23:04",
+      "gmp": 45.0
     }
   ],
   "Liqvd Digital": [
@@ -1881,24 +1889,40 @@
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 0.0
+    },
+    {
+      "timestamp": "2026-09-24 23:04",
+      "gmp": 1.5
     }
   ],
   "German Green Steel and Power": [
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 24.0
+    },
+    {
+      "timestamp": "2026-09-24 23:04",
+      "gmp": 28.0
     }
   ],
   "Runwal Enterprises": [
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 18.0
+    },
+    {
+      "timestamp": "2026-09-24 23:04",
+      "gmp": 35.0
     }
   ],
   "Orient Cables": [
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 45.0
+    },
+    {
+      "timestamp": "2026-09-24 23:04",
+      "gmp": 60.0
     }
   ],
   "Bench Mark Infotech": [

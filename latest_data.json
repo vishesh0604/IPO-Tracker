@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24 17:45",
+  "fetched_at": "2026-09-24 23:04",
   "data": {
     "open": [
       {
@@ -9,20 +9,20 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "September 28, 2026",
         "issue_price": "₹350 - ₹375",
-        "subscription": "1.14x",
+        "subscription": "1.17x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹55",
+        "gmp": "₹20",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
-        "gmp_percentage": "14.66%"
+        "gmp_percentage": "5.33%"
       },
       {
         "company": "Swastika Infra",
@@ -31,7 +31,7 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "September 28, 2026",
         "issue_price": "₹175 - ₹185",
-        "subscription": "1.58x",
+        "subscription": "1.64x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -42,7 +42,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "4.32%"
       },
@@ -64,7 +64,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "0.83%"
       },
@@ -75,7 +75,7 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "TBA",
         "issue_price": "₹126 - ₹134",
-        "subscription": "17.30x",
+        "subscription": "18.07x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -86,7 +86,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "25.37%"
       },
@@ -97,7 +97,7 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "TBA",
         "issue_price": "₹119 - ₹125",
-        "subscription": "0.29x",
+        "subscription": "0.37x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -108,7 +108,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -119,7 +119,7 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "September 28, 2026",
         "issue_price": "₹51 - ₹54",
-        "subscription": "1.22x",
+        "subscription": "1.23x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -130,7 +130,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "5.56%"
       },
@@ -141,7 +141,7 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "September 28, 2026",
         "issue_price": "₹109 - ₹115",
-        "subscription": "0.42x",
+        "subscription": "0.44x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -152,7 +152,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -174,7 +174,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -185,7 +185,7 @@
         "close_date": "25 Sep 2026",
         "allotment_date": "TBA",
         "issue_price": "₹74 - ₹78",
-        "subscription": "0.41x",
+        "subscription": "0.48x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -196,7 +196,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -207,20 +207,20 @@
         "close_date": "28 Sep 2026",
         "allotment_date": "TBA",
         "issue_price": "₹385 - ₹405",
-        "subscription": "0.54x",
+        "subscription": "0.58x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹55",
+        "gmp": "₹45",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
-        "gmp_percentage": "13.58%"
+        "gmp_percentage": "11.11%"
       },
       {
         "company": "Moneyview",
@@ -229,7 +229,7 @@
         "close_date": "28 Sep 2026",
         "allotment_date": "September 29, 2026",
         "issue_price": "₹32 - ₹34",
-        "subscription": "1.37x",
+        "subscription": "1.44x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -240,7 +240,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "41.18%"
       },
@@ -262,7 +262,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -284,7 +284,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -295,7 +295,7 @@
         "close_date": "28 Sep 2026",
         "allotment_date": "September 29, 2026",
         "issue_price": "₹60 - ₹64",
-        "subscription": "1.20x",
+        "subscription": "1.26x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -306,7 +306,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "12.50%"
       },
@@ -323,14 +323,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹-",
+        "gmp": "₹1.5",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "17:50",
         "match_confidence": 0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "4.69%"
       },
       {
         "company": "German Green Steel and Power",
@@ -345,14 +345,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹24",
+        "gmp": "₹28",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
-        "gmp_percentage": "17.27%"
+        "gmp_percentage": "20.14%"
       },
       {
         "company": "Runwal Enterprises",
@@ -367,14 +367,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹18",
+        "gmp": "₹35",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
-        "gmp_percentage": "5.90%"
+        "gmp_percentage": "11.48%"
       },
       {
         "company": "Orient Cables",
@@ -389,14 +389,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹45",
+        "gmp": "₹60",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
-        "gmp_percentage": "16.54%"
+        "gmp_percentage": "22.06%"
       },
       {
         "company": "Sai Urja Indo Ventures",
@@ -416,7 +416,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -438,7 +438,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "10.91%"
       },
@@ -460,7 +460,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       }
@@ -484,7 +484,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "51.89%"
       },
@@ -506,7 +506,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "3.45%"
       },
@@ -528,7 +528,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -550,7 +550,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:47",
+        "gmp_last_updated": "18:06",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
