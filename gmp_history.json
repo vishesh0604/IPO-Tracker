@@ -1759,6 +1759,10 @@
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 55.0
+    },
+    {
+      "timestamp": "2026-09-25 13:43",
+      "gmp": 70.0
     }
   ],
   "Varmora Granito": [
@@ -1861,6 +1865,10 @@
     {
       "timestamp": "2026-09-24 23:04",
       "gmp": 45.0
+    },
+    {
+      "timestamp": "2026-09-25 13:43",
+      "gmp": 49.0
     }
   ],
   "Liqvd Digital": [
@@ -1893,6 +1901,10 @@
     {
       "timestamp": "2026-09-24 23:04",
       "gmp": 1.5
+    },
+    {
+      "timestamp": "2026-09-25 13:43",
+      "gmp": 2.0
     }
   ],
   "German Green Steel and Power": [
@@ -1913,6 +1925,10 @@
     {
       "timestamp": "2026-09-24 23:04",
       "gmp": 35.0
+    },
+    {
+      "timestamp": "2026-09-25 13:43",
+      "gmp": 30.0
     }
   ],
   "Orient Cables": [
@@ -1923,6 +1939,10 @@
     {
       "timestamp": "2026-09-24 23:04",
       "gmp": 60.0
+    },
+    {
+      "timestamp": "2026-09-25 13:43",
+      "gmp": 113.0
     }
   ],
   "Bench Mark Infotech": [
@@ -1939,6 +1959,12 @@
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 4.0
+    }
+  ],
+  "Dudani Retail": [
+    {
+      "timestamp": "2026-09-25 13:43",
+      "gmp": 3.0
     }
   ]
 }
