@@ -1849,6 +1849,10 @@
     {
       "timestamp": "2026-09-26 12:08",
       "gmp": 4.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 10.0
     }
   ],
   "Adroit Industries": [
@@ -1907,6 +1911,10 @@
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 8.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 32.0
     }
   ],
   "AceVector": [
@@ -1931,6 +1939,10 @@
     {
       "timestamp": "2026-09-24 23:04",
       "gmp": 28.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 29.0
     }
   ],
   "Runwal Enterprises": [
@@ -1945,6 +1957,10 @@
     {
       "timestamp": "2026-09-25 13:43",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 14.0
     }
   ],
   "Orient Cables": [
@@ -1963,6 +1979,10 @@
     {
       "timestamp": "2026-09-26 12:08",
       "gmp": 80.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 90.0
     }
   ],
   "Bench Mark Infotech": [
@@ -1977,6 +1997,10 @@
     {
       "timestamp": "2026-09-26 12:08",
       "gmp": 16.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 18.0
     }
   ],
   "FX Multitech": [
@@ -1995,12 +2019,32 @@
     {
       "timestamp": "2026-09-26 12:08",
       "gmp": 32.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 33.0
     }
   ],
   "Shah Investor's Home": [
     {
       "timestamp": "2026-09-26 12:08",
       "gmp": 12.0
+    },
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 10.0
+    }
+  ],
+  "Shivchem Agro": [
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 6.0
+    }
+  ],
+  "EverestIMS Technologies": [
+    {
+      "timestamp": "2026-09-28 13:11",
+      "gmp": 13.0
     }
   ]
 }
