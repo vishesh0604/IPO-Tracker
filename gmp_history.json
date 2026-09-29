@@ -1901,6 +1901,10 @@
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-09-29 21:38",
+      "gmp": 25.0
     }
   ],
   "Liqvd Digital": [
@@ -1917,6 +1921,10 @@
     {
       "timestamp": "2026-09-24 12:17",
       "gmp": 14.0
+    },
+    {
+      "timestamp": "2026-09-29 21:38",
+      "gmp": 13.0
     }
   ],
   "Roopa Screen": [
@@ -1931,6 +1939,10 @@
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 38.0
+    },
+    {
+      "timestamp": "2026-09-29 21:38",
+      "gmp": 30.0
     }
   ],
   "AceVector": [
@@ -2067,6 +2079,10 @@
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 33.0
+    },
+    {
+      "timestamp": "2026-09-29 21:38",
+      "gmp": 20.0
     }
   ],
   "Shah Investor's Home": [
@@ -2085,12 +2101,20 @@
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 14.0
+    },
+    {
+      "timestamp": "2026-09-29 21:38",
+      "gmp": 13.0
     }
   ],
   "Shivchem Agro": [
     {
       "timestamp": "2026-09-28 13:11",
       "gmp": 6.0
+    },
+    {
+      "timestamp": "2026-09-29 21:38",
+      "gmp": 10.0
     }
   ],
   "EverestIMS Technologies": [
