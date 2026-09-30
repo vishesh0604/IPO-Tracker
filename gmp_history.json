@@ -2200,5 +2200,23 @@
       "timestamp": "2026-09-30 11:31",
       "gmp": 38.0
     }
+  ],
+  "Eventions": [
+    {
+      "timestamp": "2026-09-30 18:32",
+      "gmp": 2.0
+    }
+  ],
+  "Acme India Industries": [
+    {
+      "timestamp": "2026-09-30 18:32",
+      "gmp": 31.0
+    }
+  ],
+  "AceVector (Snapdeal)": [
+    {
+      "timestamp": "2026-09-30 18:32",
+      "gmp": 2.0
+    }
   ]
 }
