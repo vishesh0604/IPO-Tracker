@@ -1975,6 +1975,10 @@
     {
       "timestamp": "2026-09-30 02:33",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 13.0
     }
   ],
   "Runwal Enterprises": [
@@ -2087,6 +2091,10 @@
     {
       "timestamp": "2026-09-29 21:38",
       "gmp": 20.0
+    },
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 31.0
     }
   ],
   "Shah Investor's Home": [
@@ -2109,6 +2117,10 @@
     {
       "timestamp": "2026-09-29 21:38",
       "gmp": 13.0
+    },
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 15.0
     }
   ],
   "Shivchem Agro": [
@@ -2139,18 +2151,30 @@
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 45.0
+    },
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 90.0
     }
   ],
   "Nityas Gems & Jewellery": [
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 9.0
+    },
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 5.0
     }
   ],
   "Vishal Nirmiti": [
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 2.0
+    },
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 6.0
     }
   ],
   "Acme India": [
@@ -2163,6 +2187,18 @@
     {
       "timestamp": "2026-09-29 14:36",
       "gmp": 7.0
+    }
+  ],
+  "Pind Hospitality": [
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 20.0
+    }
+  ],
+  "Black Opal Consultants": [
+    {
+      "timestamp": "2026-09-30 11:31",
+      "gmp": 38.0
     }
   ]
 }
