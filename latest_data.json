@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-02 05:45",
+  "fetched_at": "2026-10-02 11:45",
   "data": {
     "open": [
       {
@@ -15,14 +15,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹5",
+        "gmp": "₹3",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "6.67%"
+        "gmp_percentage": "4.00%"
       },
       {
         "company": "Vishal Nirmiti",
@@ -37,14 +37,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹35",
+        "gmp": "₹20",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "15.91%"
+        "gmp_percentage": "9.09%"
       },
       {
         "company": "EverestIMS Technologies",
@@ -59,14 +59,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹20",
+        "gmp": "₹28",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "23.53%"
+        "gmp_percentage": "32.94%"
       },
       {
         "company": "Shree TNB Polymers",
@@ -86,7 +86,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -108,7 +108,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -130,7 +130,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -152,7 +152,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -174,7 +174,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -196,7 +196,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -218,7 +218,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -235,14 +235,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹30",
+        "gmp": "₹25",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "15.31%"
+        "gmp_percentage": "12.76%"
       },
       {
         "company": "TNA Solutions",
@@ -257,14 +257,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹7",
+        "gmp": "₹6",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "10.00%"
+        "gmp_percentage": "8.57%"
       }
     ],
     "recent_closed": [
@@ -286,7 +286,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -303,14 +303,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹48",
+        "gmp": "₹66",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "24.37%"
+        "gmp_percentage": "33.50%"
       },
       {
         "company": "Papadmalji Agro",
@@ -330,7 +330,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -347,14 +347,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹90",
+        "gmp": "₹70",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
-        "gmp_percentage": "76.27%"
+        "gmp_percentage": "59.32%"
       },
       {
         "company": "SRIT India",
@@ -374,7 +374,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:15",
+        "gmp_last_updated": "09:31",
         "match_confidence": 0,
         "gmp_percentage": "36.92%"
       }
