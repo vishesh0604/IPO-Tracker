@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-03 06:58",
+  "fetched_at": "2026-10-03 12:37",
   "data": {
     "open": [
       {
@@ -20,7 +20,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "4.00%"
       },
@@ -42,7 +42,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "9.09%"
       },
@@ -59,14 +59,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹28",
+        "gmp": "₹40",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:37",
         "match_confidence": 0,
-        "gmp_percentage": "32.94%"
+        "gmp_percentage": "47.06%"
       },
       {
         "company": "Shree TNB Polymers",
@@ -86,7 +86,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:43",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -108,7 +108,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -130,7 +130,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -152,7 +152,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -174,7 +174,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -196,7 +196,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:22",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -218,7 +218,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:12",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -240,7 +240,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:12",
         "match_confidence": 0,
         "gmp_percentage": "12.76%"
       },
@@ -262,9 +262,31 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:12",
         "match_confidence": 0,
         "gmp_percentage": "8.57%"
+      },
+      {
+        "company": "R K Fashion",
+        "type": "SME",
+        "open_date": "05 Oct 2026",
+        "close_date": "07 Oct 2026",
+        "allotment_date": "TBA",
+        "issue_price": "₹77 - ₹82",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "ipowatch_name": "Not found",
+        "ipowatch_url": null,
+        "gmp": "₹-",
+        "gmp_status": "—",
+        "gmp_trend": "—",
+        "gmp_price_band": "—",
+        "estimated_listing": "—",
+        "gmp_last_updated": "10:15",
+        "match_confidence": 0,
+        "gmp_percentage": "-%"
       }
     ],
     "recent_closed": [
@@ -286,7 +308,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:58",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -303,14 +325,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹66",
+        "gmp": "₹78",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:43",
         "match_confidence": 0,
-        "gmp_percentage": "33.50%"
+        "gmp_percentage": "39.59%"
       },
       {
         "company": "Papadmalji Agro",
@@ -330,7 +352,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:39",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -352,7 +374,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:40",
         "match_confidence": 0,
         "gmp_percentage": "59.32%"
       },
@@ -369,14 +391,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹48",
+        "gmp": "₹53",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:22",
+        "gmp_last_updated": "10:44",
         "match_confidence": 0,
-        "gmp_percentage": "36.92%"
+        "gmp_percentage": "40.77%"
       }
     ]
   }
