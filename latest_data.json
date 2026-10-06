@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-06 08:50",
+  "fetched_at": "2026-10-06 16:17",
   "data": {
     "open": [
       {
@@ -9,7 +9,7 @@
         "close_date": "06 Oct 2026",
         "allotment_date": "October 7, 2026",
         "issue_price": "₹119 - ₹127",
-        "subscription": "1.49x",
+        "subscription": "1.82x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -20,7 +20,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -31,20 +31,20 @@
         "close_date": "06 Oct 2026",
         "allotment_date": "TBA",
         "issue_price": "₹186 - ₹196",
-        "subscription": "3.56x",
+        "subscription": "111.85x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹30",
+        "gmp": "₹40",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
-        "gmp_percentage": "15.31%"
+        "gmp_percentage": "20.41%"
       },
       {
         "company": "TNA Solutions",
@@ -53,7 +53,7 @@
         "close_date": "06 Oct 2026",
         "allotment_date": "October 7, 2026",
         "issue_price": "₹66 - ₹70",
-        "subscription": "2.85x",
+        "subscription": "50.34x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
@@ -64,7 +64,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
         "gmp_percentage": "14.29%"
       },
@@ -75,20 +75,20 @@
         "close_date": "07 Oct 2026",
         "allotment_date": "TBA",
         "issue_price": "₹77 - ₹82",
-        "subscription": "0.38x",
+        "subscription": "0.45x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹-",
+        "gmp": "₹7",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "8.54%"
       }
     ],
     "recent_closed": [
@@ -105,14 +105,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹40",
+        "gmp": "₹42",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
-        "gmp_percentage": "47.06%"
+        "gmp_percentage": "49.41%"
       },
       {
         "company": "Shree TNB Polymers",
@@ -132,7 +132,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -154,7 +154,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -176,7 +176,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -193,14 +193,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹3",
+        "gmp": "₹1",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "13:50",
+        "gmp_last_updated": "09:10",
         "match_confidence": 0,
-        "gmp_percentage": "4.00%"
+        "gmp_percentage": "1.33%"
       }
     ]
   }

@@ -2173,6 +2173,10 @@
     {
       "timestamp": "2026-10-03 12:37",
       "gmp": 40.0
+    },
+    {
+      "timestamp": "2026-10-06 16:17",
+      "gmp": 42.0
     }
   ],
   "Vans Electroengineerings": [
@@ -2201,6 +2205,10 @@
     {
       "timestamp": "2026-10-02 11:45",
       "gmp": 3.0
+    },
+    {
+      "timestamp": "2026-10-06 16:17",
+      "gmp": 1.0
     }
   ],
   "Vishal Nirmiti": [
@@ -2299,6 +2307,10 @@
     {
       "timestamp": "2026-10-05 13:12",
       "gmp": 30.0
+    },
+    {
+      "timestamp": "2026-10-06 16:17",
+      "gmp": 40.0
     }
   ],
   "AceVector (Snapdeal)": [
@@ -2311,6 +2323,12 @@
     {
       "timestamp": "2026-10-01 13:19",
       "gmp": 10.0
+    }
+  ],
+  "R K Fashion": [
+    {
+      "timestamp": "2026-10-06 16:17",
+      "gmp": 7.0
     }
   ]
 }
