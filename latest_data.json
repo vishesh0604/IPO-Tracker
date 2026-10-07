@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-07 07:19",
+  "fetched_at": "2026-10-07 13:14",
   "data": {
     "open": [
       {
@@ -9,20 +9,20 @@
         "close_date": "07 Oct 2026",
         "allotment_date": "TBA",
         "issue_price": "₹77 - ₹82",
-        "subscription": "0.47x",
+        "subscription": "1.13x",
         "action": "Apply",
         "groww_status": "Open",
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹7",
+        "gmp": "₹15",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:56",
+        "gmp_last_updated": "10:00",
         "match_confidence": 0,
-        "gmp_percentage": "8.54%"
+        "gmp_percentage": "18.29%"
       }
     ],
     "recent_closed": [
@@ -44,7 +44,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:56",
+        "gmp_last_updated": "10:00",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -61,14 +61,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹40",
+        "gmp": "₹65",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:56",
+        "gmp_last_updated": "10:00",
         "match_confidence": 0,
-        "gmp_percentage": "20.41%"
+        "gmp_percentage": "33.16%"
       },
       {
         "company": "TNA Solutions",
@@ -83,14 +83,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹10",
+        "gmp": "₹3",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:56",
+        "gmp_last_updated": "10:00",
         "match_confidence": 0,
-        "gmp_percentage": "14.29%"
+        "gmp_percentage": "4.29%"
       },
       {
         "company": "EverestIMS Technologies",
@@ -105,14 +105,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹42",
+        "gmp": "₹55",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:56",
+        "gmp_last_updated": "10:00",
         "match_confidence": 0,
-        "gmp_percentage": "49.41%"
+        "gmp_percentage": "64.71%"
       },
       {
         "company": "Shree TNB Polymers",
@@ -132,7 +132,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:56",
+        "gmp_last_updated": "10:00",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       }
