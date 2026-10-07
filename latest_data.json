@@ -1,30 +1,7 @@
 {
-  "fetched_at": "2026-10-07 13:14",
+  "fetched_at": "2026-10-07 20:15",
   "data": {
-    "open": [
-      {
-        "company": "R K Fashion",
-        "type": "SME",
-        "open_date": "05 Oct 2026",
-        "close_date": "07 Oct 2026",
-        "allotment_date": "TBA",
-        "issue_price": "₹77 - ₹82",
-        "subscription": "1.13x",
-        "action": "Apply",
-        "groww_status": "Open",
-        "status_source": "current",
-        "ipowatch_name": "Not found",
-        "ipowatch_url": null,
-        "gmp": "₹15",
-        "gmp_status": "—",
-        "gmp_trend": "—",
-        "gmp_price_band": "—",
-        "estimated_listing": "—",
-        "gmp_last_updated": "10:00",
-        "match_confidence": 0,
-        "gmp_percentage": "18.29%"
-      }
-    ],
+    "open": [],
     "recent_closed": [
       {
         "company": "Paramount Syntex",
@@ -44,7 +21,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:00",
+        "gmp_last_updated": "17:04",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -66,7 +43,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:00",
+        "gmp_last_updated": "17:04",
         "match_confidence": 0,
         "gmp_percentage": "33.16%"
       },
@@ -88,7 +65,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:00",
+        "gmp_last_updated": "17:04",
         "match_confidence": 0,
         "gmp_percentage": "4.29%"
       },
@@ -110,7 +87,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:00",
+        "gmp_last_updated": "17:04",
         "match_confidence": 0,
         "gmp_percentage": "64.71%"
       },
@@ -132,7 +109,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "10:00",
+        "gmp_last_updated": "17:04",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       }
