@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08 12:10",
+  "fetched_at": "2026-10-08 19:34",
   "data": {
     "open": [],
     "recent_closed": [
@@ -21,7 +21,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:32",
+        "gmp_last_updated": "17:06",
         "match_confidence": 0,
         "gmp_percentage": "2.43%"
       },
@@ -43,7 +43,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:35",
+        "gmp_last_updated": "17:09",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -60,14 +60,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹59",
+        "gmp": "₹33",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:34",
+        "gmp_last_updated": "17:09",
         "match_confidence": 0,
-        "gmp_percentage": "30.10%"
+        "gmp_percentage": "16.84%"
       },
       {
         "company": "TNA Solutions",
@@ -82,14 +82,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹2",
+        "gmp": "₹0",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "09:33",
+        "gmp_last_updated": "17:09",
         "match_confidence": 0,
-        "gmp_percentage": "2.86%"
+        "gmp_percentage": "0.00"
       },
       {
         "company": "EverestIMS Technologies",
