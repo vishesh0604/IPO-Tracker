@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08 05:55",
+  "fetched_at": "2026-10-08 12:10",
   "data": {
     "open": [],
     "recent_closed": [
@@ -16,14 +16,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹15",
+        "gmp": "₹2",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:04",
+        "gmp_last_updated": "09:32",
         "match_confidence": 0,
-        "gmp_percentage": "18.29%"
+        "gmp_percentage": "2.43%"
       },
       {
         "company": "Paramount Syntex",
@@ -43,7 +43,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:04",
+        "gmp_last_updated": "09:35",
         "match_confidence": 0,
         "gmp_percentage": "-%"
       },
@@ -60,14 +60,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹65",
+        "gmp": "₹59",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:04",
+        "gmp_last_updated": "09:34",
         "match_confidence": 0,
-        "gmp_percentage": "33.16%"
+        "gmp_percentage": "30.10%"
       },
       {
         "company": "TNA Solutions",
@@ -82,14 +82,14 @@
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹3",
+        "gmp": "₹2",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:04",
+        "gmp_last_updated": "09:33",
         "match_confidence": 0,
-        "gmp_percentage": "4.29%"
+        "gmp_percentage": "2.86%"
       },
       {
         "company": "EverestIMS Technologies",
@@ -99,19 +99,19 @@
         "allotment_date": "06 Oct 2026",
         "issue_price": "₹85.00",
         "subscription": "271.74x",
-        "action": "--",
+        "action": "+48.24%",
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹55",
+        "gmp": "₹50",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:04",
+        "gmp_last_updated": "09:40",
         "match_confidence": 0,
-        "gmp_percentage": "64.71%"
+        "gmp_percentage": "58.82%"
       }
     ]
   }
