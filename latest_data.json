@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-09 06:10",
+  "fetched_at": "2026-10-09 12:16",
   "data": {
     "open": [],
     "recent_closed": [
@@ -21,7 +21,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:06",
+        "gmp_last_updated": "11:23",
         "match_confidence": 0,
         "gmp_percentage": "2.43%"
       },
@@ -33,7 +33,7 @@
         "allotment_date": "07 Oct 2026",
         "issue_price": "₹127.00",
         "subscription": "1.83x",
-        "action": "--",
+        "action": "-9.45%",
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Not found",
@@ -55,7 +55,7 @@
         "allotment_date": "07 Oct 2026",
         "issue_price": "₹196.00",
         "subscription": "114.91x",
-        "action": "--",
+        "action": "+12.76%",
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Not found",
@@ -77,7 +77,7 @@
         "allotment_date": "07 Oct 2026",
         "issue_price": "₹70.00",
         "subscription": "51.12x",
-        "action": "--",
+        "action": "-20.00%",
         "groww_status": "Closed",
         "status_source": "closed",
         "ipowatch_name": "Not found",
