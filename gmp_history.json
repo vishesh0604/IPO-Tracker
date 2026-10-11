@@ -2370,5 +2370,17 @@
       "timestamp": "2026-10-08 12:10",
       "gmp": 2.0
     }
+  ],
+  "HD Fire Protect": [
+    {
+      "timestamp": "2026-10-11 14:49",
+      "gmp": 75.0
+    }
+  ],
+  "Ravita Engineering Services": [
+    {
+      "timestamp": "2026-10-11 14:49",
+      "gmp": 10.0
+    }
   ]
 }
