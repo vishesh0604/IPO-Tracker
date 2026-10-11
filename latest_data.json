@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-11 21:28",
+  "fetched_at": "2026-10-12 02:05",
   "data": {
     "open": [
       {
@@ -15,14 +15,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹55",
+        "gmp": "₹85",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:09",
+        "gmp_last_updated": "17:00",
         "match_confidence": 0,
-        "gmp_percentage": "20.29%"
+        "gmp_percentage": "31.37%"
       },
       {
         "company": "Ravita Engineering Services",
@@ -37,14 +37,14 @@
         "status_source": "current",
         "ipowatch_name": "Not found",
         "ipowatch_url": null,
-        "gmp": "₹-",
+        "gmp": "₹10",
         "gmp_status": "—",
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "—",
+        "gmp_last_updated": "17:00",
         "match_confidence": 0,
-        "gmp_percentage": "-%"
+        "gmp_percentage": "8.93%"
       },
       {
         "company": "Vaibhav Vyapar",
@@ -88,7 +88,7 @@
         "gmp_trend": "—",
         "gmp_price_band": "—",
         "estimated_listing": "—",
-        "gmp_last_updated": "17:06",
+        "gmp_last_updated": "17:00",
         "match_confidence": 0,
         "gmp_percentage": "2.43%"
       },
