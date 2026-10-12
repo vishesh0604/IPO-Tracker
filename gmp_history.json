@@ -2387,12 +2387,22 @@
     {
       "timestamp": "2026-10-12 02:05",
       "gmp": 85.0
+    },
+    {
+      "timestamp": "2026-10-12 12:05",
+      "gmp": 75.0
     }
   ],
   "Ravita Engineering Services": [
     {
       "timestamp": "2026-10-11 14:49",
       "gmp": 10.0
+    }
+  ],
+  "Zetwerk": [
+    {
+      "timestamp": "2026-10-12 12:05",
+      "gmp": 20.0
     }
   ]
 }
