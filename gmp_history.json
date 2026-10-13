@@ -2391,12 +2391,20 @@
     {
       "timestamp": "2026-10-12 12:05",
       "gmp": 75.0
+    },
+    {
+      "timestamp": "2026-10-13 17:43",
+      "gmp": 86.0
     }
   ],
   "Ravita Engineering Services": [
     {
       "timestamp": "2026-10-11 14:49",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-10-13 17:43",
+      "gmp": 4.0
     }
   ],
   "Zetwerk": [
@@ -2407,12 +2415,32 @@
     {
       "timestamp": "2026-10-12 21:39",
       "gmp": 13.0
+    },
+    {
+      "timestamp": "2026-10-13 17:43",
+      "gmp": 20.0
     }
   ],
   "Fusion CX": [
     {
       "timestamp": "2026-10-12 21:39",
       "gmp": 13.0
+    },
+    {
+      "timestamp": "2026-10-13 17:43",
+      "gmp": 20.0
+    }
+  ],
+  "Sahajanand Medical Technologies": [
+    {
+      "timestamp": "2026-10-13 17:43",
+      "gmp": 42.0
+    }
+  ],
+  "Tonbo Imaging": [
+    {
+      "timestamp": "2026-10-13 17:43",
+      "gmp": 460.0
     }
   ]
 }
