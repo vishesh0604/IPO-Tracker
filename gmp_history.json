@@ -2395,6 +2395,10 @@
     {
       "timestamp": "2026-10-13 17:43",
       "gmp": 86.0
+    },
+    {
+      "timestamp": "2026-10-14 19:33",
+      "gmp": 91.0
     }
   ],
   "Ravita Engineering Services": [
@@ -2405,6 +2409,10 @@
     {
       "timestamp": "2026-10-13 17:43",
       "gmp": 4.0
+    },
+    {
+      "timestamp": "2026-10-14 19:33",
+      "gmp": 2.0
     }
   ],
   "Zetwerk": [
@@ -2419,6 +2427,10 @@
     {
       "timestamp": "2026-10-13 17:43",
       "gmp": 20.0
+    },
+    {
+      "timestamp": "2026-10-14 19:33",
+      "gmp": 23.0
     }
   ],
   "Fusion CX": [
@@ -2433,6 +2445,10 @@
     {
       "timestamp": "2026-10-14 01:03",
       "gmp": 25.0
+    },
+    {
+      "timestamp": "2026-10-14 19:33",
+      "gmp": 34.0
     }
   ],
   "Sahajanand Medical Technologies": [
@@ -2445,6 +2461,16 @@
     {
       "timestamp": "2026-10-13 17:43",
       "gmp": 460.0
+    },
+    {
+      "timestamp": "2026-10-14 19:33",
+      "gmp": 500.0
+    }
+  ],
+  "Bonfiglioli Transmissions": [
+    {
+      "timestamp": "2026-10-14 19:33",
+      "gmp": 180.0
     }
   ]
 }
