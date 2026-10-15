@@ -1,2199 +1,313 @@
-import streamlit as st
-from datetime import datetime
-from zoneinfo import ZoneInfo
-from html import escape
-
-
-
-# =========================================================
-# IMPORT DATA
-# =========================================================
-
-import json
-from pathlib import Path
 import base64
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+
+import streamlit as st
 
 
 # =========================================================
-# PAGE CONFIG
+# IPO TRACKER — REDESIGN HOST
+#
+# Streamlit only loads the data and hands it to a single
+# client-side app (ui/index.html + ui/styles.css + ui/app.js).
+# Search, filters, sorting, popups and animations all run in
+# the browser, so nothing triggers a Streamlit rerun.
 # =========================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+UI_DIR = BASE_DIR / "ui"
 
 st.set_page_config(
     page_title="IPO Tracker",
-    page_icon="ipo_tracker_favicon.png",
+    page_icon=str(BASE_DIR / "ipo_tracker_favicon.png"),
     layout="wide",
-)
-# =========================================================
-# WELCOME POPUP — ONCE PER SESSION
-# =========================================================
-
-if "welcome_seen" not in st.session_state:
-    st.session_state.welcome_seen = True
-
-    @st.dialog("Welcome to IPO Tracker!")
-    def welcome_popup():
-
-        with st.container(
-            key="welcome-scroll"
-        ):
-            st.markdown(
-                """
-
-                ### WHAT YOU CAN TRACK
-
-                - Current & upcoming IPOs
-                - Mainboard & SME IPOs
-                - Application & allotment dates
-                - Issue price & GMP prices
-
-                ### ABOUT THE DATA
-
-                IPO data is sourced from [Groww](https://groww.in/ipo), while GMP data is sourced from [IPOWatch](https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/).
-
-                Please note that GMP and other IPO information can change throughout the day.
-
-                Information displayed on this website is provided for informational purposes.
-
-                ### DISCLAIMER
-
-                IPO Tracker is an independent informational project and
-                **is not investment advice or a recommendation to apply for
-                or avoid any IPO**.
-
-                Please verify important information with official sources
-                before making any investment decision.
-                """
-            )
-
-        if st.button(
-            "Understood!",
-            type="primary",
-            use_container_width=True
-        ):
-            st.rerun()
-
-    welcome_popup()
-
-# =========================================================
-# CSS
-# =========================================================
-
-st.markdown(
-    """
-<style>
-
-[data-testid="stAppViewContainer"] .main {
-    padding-top: 0 !important;
-}
-
-[data-testid="stAppViewContainer"] .block-container {
-    padding-top: 0 !important;
-}
-
-.block-container {
-    max-width: 1200px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-
-/* HEADER */
-
-.main-title {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1;
-}
-.developer-credit {
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-top: 8px;
-}
-
-.subtitle {
-    color: #888;
-    font-size: 14px;
-    margin-top: 8px;
-}
-
-.refresh-text {
-    color: #666;
-    font-size: 11px;
-    margin-top: 5px;
-}
-
-
-/* SUMMARY */
-
-.summary-box {
-    border: 1px solid rgba(128,128,128,0.22);
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-}
-
-
-.summary-number {
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.summary-label {
-    color: #888;
-    font-size: 10px;
-    margin-top: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-}
-
-.summary-link {
-    display: block;
-    text-decoration: none !important;
-    color: inherit !important;
-    border: 1px solid rgba(128,128,128,0.22);
-    border-radius: 12px;
-    transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.summary-link:hover {
-    background: #2B202F !important;
-    border-color: rgba(255,255,255,0.12);
-    text-decoration: none !important;
-}
-
-.summary-link .summary-box {
-    border: none !important;
-}
-
-/* SECTION */
-
-.section-title {
-    font-size: 25px;
-    font-weight: 800;
-    margin-top: 38px;
-    margin-bottom: 3px;
-}
-
-.section-subtitle {
-    color: #777;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.apply-heading {
-    border-left: 4px solid #2ecc71;
-    padding-left: 12px;
-    margin-top: 0px;
-    margin-bottom: 15px;
-}
-
-
-.preapply-heading {
-    border-left: 4px solid #f1c40f;
-    padding-left: 12px;
-}
-
-
-.closed-heading {
-    border-left: 4px solid #FF0000;
-    padding-left: 12px;
-}
-
-
-/* IPO CARD */
-
-.ipo-card-title {
-    font-size: 20px;
-    font-weight: 750;
-    line-height: 1.2;
-}
-
-.ipo-card-type {
-    color: #888;
-    font-size: 12px;
-    margin-top: 4px;
-}
-
-
-/* STATUS */
-
-.status-open {
-    display: inline-block;
-    padding: 4px 9px;
-    border-radius: 5px;
-    background: rgba(46, 204, 113, 0.12);
-    color: #2ecc71;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
-
-.status-last-day {
-    display: inline-block;
-    margin-left: 5px;
-    padding: 4px 9px;
-    border-radius: 5px;
-    background: rgba(231, 76, 60, 0.12);
-    color: #e74c3c;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
-
-.status-preapply {
-    display: inline-block;
-    margin-top: 0px;
-    padding: 4px 9px;
-    border-radius: 5px;
-    background: rgba(241, 196, 15, 0.12);
-    color: #f1c40f;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
-
-
-/* GMP */
-
-.gmp-label {
-    color: #777;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-}
-
-.gmp-value {
-    font-size: 32px;
-    font-weight: 850;
-    line-height: 1;
-    margin-top: 3px;
-}
-
-.gmp-percent {
-    font-size: 18px;
-    font-weight: 850;
-    margin-top: 5px;
-}
-
-
-/* DETAILS */
-
-.detail-label {
-    color: #777;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin-bottom: 4px;
-}
-
-.detail-value {
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.listing-price {
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.countdown {
-    color: #888;
-    font-size: 10px;
-    font-weight: 650;
-    margin-top: 5px;
-}
-
-
-/* CLOSED */
-
-.closed-name {
-    font-size: 17px;
-    font-weight: 750;
-}
-
-.closed-type {
-    color: #888;
-    font-size: 11px;
-    margin-top: 3px;
-}
-
-.closed-details {
-    color: #888;
-    font-size: 11px;
-    margin-top: 7px;
-}
-
-.closed-gmp {
-    font-size: 22px;
-    font-weight: 800;
-    text-align: right;
-}
-
-.closed-percent {
-    font-size: 13px;
-    font-weight: 750;
-    text-align: right;
-    margin-top: 3px;
-}
-.gmp-trend-mobile {
-    display: none;
-}
-@media screen and (max-width: 600px) {
-
-    .gmp-trend-desktop {
-        display: none !important;
-    }
-
-    .gmp-trend-mobile {
-        display: inline !important;
-        white-space: nowrap !important;
-        font-size: 11px !important;
-        line-height: 18px !important;
-    }
-
-    .block-container {
-        padding: 2.8rem 0.6rem !important;
-        max-width: 100% !important;
-    }
-
-    .summary-box {
-        padding: 8px 4px !important;
-        border-radius: 9px !important;
-    }
-
-    .summary-number {
-        font-size: 21px !important;
-    }
-
-    .summary-label {
-        font-size: 8px !important;
-        margin-top: 3px !important;
-    }
-
-    .section-title {
-        font-size: 21px !important;
-        margin-top: 20px !important;
-        margin-bottom: 2px !important;
-    }
-
-    .section-subtitle {
-        font-size: 10px !important;
-        margin-bottom: 8px !important;
-    }
-
-    /* IPO card */
-    div[data-testid="stVerticalBlockBorderWrapper"] {
-        margin-bottom: 8px !important;
-    }
-
-    div[data-testid="stVerticalBlockBorderWrapper"] > div {
-        padding: 10px !important;
-    }
-
-    div[data-testid="stHorizontalBlock"] > div {
-        min-width: 0 !important;
-    }
-
-    .ipo-card-title {
-        font-size: 18px !important;
-    }
-
-    .ipo-card-type {
-        font-size: 10px !important;
-        margin-top: 2px !important;
-    }
-
-    .status-open,
-    .status-last-day,
-    .status-preapply {
-        margin-top: 9px !important;
-        padding: 4px 9px !important;
-        font-size: 10px !important;
-    }
-    .gmp-label {
-        font-size: 8px !important;
-    }
-
-    .gmp-value {
-        font-size: 25px !important;
-    }
-
-    .gmp-percent {
-        font-size: 14px !important;
-        margin-top: 2px !important;
-    }
-
-    
-    .detail-label {
-        font-size: 8px !important;
-        margin-bottom: 2px !important;
-    }
-
-    .detail-value {
-        font-size: 12px !important;
-    }
-
-    .listing-price {
-        font-size: 13px !important;
-    }
-
-    .countdown {
-        font-size: 8px !important;
-        margin-top: 2px !important;
-    }
-
-    div[data-testid="stVerticalBlockBorderWrapper"] hr {
-        margin: 7px 0 !important;
-    }
-/* Mobile filter layout */
-div[data-testid="stHorizontalBlock"]:has(
-    input[placeholder="Search by company name..."]
-) {
-    flex-wrap: wrap !important;
-}
-
-/* Keep Search + Type on the first row */
-div[data-testid="stHorizontalBlock"]:has(
-    input[placeholder="Search by company name..."]
-) > div:nth-child(1),
-div[data-testid="stHorizontalBlock"]:has(
-    input[placeholder="Search by company name..."]
-) > div:nth-child(2) {
-    flex: 0 0 auto !important;
-}
-
-/* Move Refresh Data underneath */
-div[data-testid="stHorizontalBlock"]:has(
-    input[placeholder="Search by company name..."]
-) > div:nth-child(3) {
-    flex: 0 0 100% !important;
-    width: 100% !important;
-}
-
-/* Full-width Refresh button */
-div[data-testid="stHorizontalBlock"]:has(
-    input[placeholder="Search by company name..."]
-) > div:nth-child(3) button {
-    width: 100% !important;
-    white-space: nowrap !important;
-    font-size: 13px !important;
-}
-    /* Make Search + Type fill the full phone width */
-    div[data-testid="stHorizontalBlock"]:has(
-        input[placeholder="Search by company name..."]
-    ) > div:nth-child(1) {
-        flex: 3 1 0% !important;
-    }
-
-    div[data-testid="stHorizontalBlock"]:has(
-        input[placeholder="Search by company name..."]
-    ) > div:nth-child(2) {
-        flex: 2 1 0% !important;
-    }
-        div[data-testid="stHorizontalBlock"]:has(
-        input[placeholder="Search by company name..."]
-    ) > div:nth-child(2) {
-        flex: 2 1 0% !important;
-    }
-    /* MAIN LOGO */
-
-    }
-    /* MAIN LOGO SPACING */
-
-/* MAIN LOGO */
-
-/* WEBSITE LOGO HEADER */
-
-.site-logo-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 !important;
-    margin: 10px 0 0 0 !important;
-}
-
-.site-logo {
-    width: 300px;
-    max-width: 55vw;
-    height: auto;
-    display: block;
-}
-
-@media screen and (max-width: 600px) {
-
-    .site-logo-header {
-        padding: 6px 0 4px 0;
-        margin: -8px 0 2px 0;
-    }
-
-    .site-logo {
-        width: 180px;
-        max-width: 60vw;
-    }
-
-}
-.mobile-break {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .mobile-break {
-        display: inline;
-    }
-}
-.with-word {
-    text-transform: lowercase;
-}
-
-@media screen and (max-width: 600px) {
-    .with-word {
-        text-transform: capitalize;
-    }
-}
-
-/* =========================================================
-   IPO CARDS — USE SECONDARY THEME
-   ========================================================= */
-
-[class*="st-key-ipo-card-apply-"],
-[class*="st-key-ipo-card-preapply-"],
-[class*="st-key-ipo-card-closed-"] {
-    background: #2B202F !important;
-}
-
-[class*="st-key-ipo-card-apply-"] > div,
-[class*="st-key-ipo-card-preapply-"] > div,
-[class*="st-key-ipo-card-closed-"] > div {
-    background: #2B202F !important;
-}
-
-#apply-now,
-#pre-apply {
-    scroll-margin-top: 35px;
-}
-
-/* Custom st.info box */
-div[data-testid="stAlert"] {
-    background: #2B202F !important;
-    background-color: #2B202F !important;
-    border: 1px solid #2B202F !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-}
-
-div[data-testid="stAlert"] > div {
-    background: #2B202F !important;
-    background-color: #2B202F !important;
-    border-radius: 12px !important;
-}
-
-div[data-testid="stAlert"] p {
-    color: #FFFFFF !important;
-}
-
-div[data-testid="stAlert"] svg {
-    color: #FFFFFF !important;
-    fill: #FFFFFF !important;
-}
-
-/* Welcome dialog scroll area */
-div.st-key-welcome-scroll {
-    height: 70vh !important;
-    max-height: 70vh !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-}
-
-/* LOCK THE PAGE WHILE WELCOME DIALOG IS OPEN */
-html:has(div[data-testid="stDialog"]),
-body:has(div[data-testid="stDialog"]) {
-    overflow: hidden !important;
-}
-
-/* CENTER THE WELCOME DIALOG */
-div[data-testid="stDialog"] {
-    position: fixed !important;
-    inset: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-}
-
-/* LET THE OUTER FLEX CONTAINER POSITION THE DIALOG */
-div[data-testid="stDialog"] div[role="dialog"] {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-}
-
-/* ONLY THE WELCOME CONTENT SCROLLS */
-div.st-key-welcome-scroll {
-    height: calc(100dvh - 220px) !important;
-    max-height: calc(100dvh - 220px) !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    overscroll-behavior: contain !important;
-}
-
-/* =========================================================
-   QUICK OVERVIEW
-   ========================================================= */
-
-div.st-key-quick-overview-scroll {
-    height: calc(100dvh - 220px) !important;
-    max-height: calc(100dvh - 220px) !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    overscroll-behavior: contain !important;
-}
-
-.quick-overview-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 13px;
-}
-
-.quick-overview-table th {
-    text-align: left;
-    padding: 10px 8px;
-    color: #888;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid rgba(128,128,128,0.22);
-}
-
-.quick-overview-table td {
-    padding: 10px 8px;
-    border-bottom: 1px solid rgba(128,128,128,0.12);
-    vertical-align: middle;
-}
-
-.quick-overview-table th:not(:first-child),
-.quick-overview-table td:not(:first-child) {
-    text-align: right;
-}
-
-.quick-overview-section {
-    font-size: 17px;
-    font-weight: 800;
-    margin-top: 18px;
-    margin-bottom: 8px;
-    padding-left: 10px;
-    border-left: 3px solid #2B202F;
-}
-
-.quick-overview-empty {
-    color: #777;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-div.st-key-quick-overview-button button {
-    width: 100% !important;
-    min-height: 42px !important;
-    height: 42px !important;
-}
-
-
- /* =========================================================
-    STREAMLIT HEADER
-    ========================================================= */
-
-[data-testid="stHeader"] {
-    background: #1A121B !important;
-    display: none !important;
-}
-
-
-</style>
-
-""",
-    unsafe_allow_html=True,
+    initial_sidebar_state="collapsed",
 )
 
 
 # =========================================================
-# DEPTH PASS — cards, summary cards, buttons only
+# PARSING HELPERS
 # =========================================================
 
-st.markdown(
-    """
-<style>
-
-/* ---------- TOP-OF-PAGE GLOW ---------- */
-
-[data-testid="stAppViewContainer"] {
-    background:
-        radial-gradient(1100px 620px at 50% -10%,
-                        rgba(163, 116, 232, 0.12), transparent 60%),
-        #1A121B !important;
-}
-
-/* ---------- IPO CARDS: raised, not flat ---------- */
-
-[class*="st-key-ipo-card-apply-"],
-[class*="st-key-ipo-card-preapply-"],
-[class*="st-key-ipo-card-closed-"] {
-    background: linear-gradient(180deg, #2D2230 0%, #2B202F 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-top-color: rgba(255, 255, 255, 0.10) !important;
-    border-radius: 14px !important;
-    padding: 20px !important;
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.22),
-        0 4px 10px -4px rgba(0, 0, 0, 0.24) !important;
-    transition: box-shadow .16s ease, border-color .16s ease !important;
-}
-
-[class*="st-key-ipo-card-apply-"] > div,
-[class*="st-key-ipo-card-preapply-"] > div,
-[class*="st-key-ipo-card-closed-"] > div {
-    background: transparent !important;
-}
-
-[class*="st-key-ipo-card-apply-"]:hover,
-[class*="st-key-ipo-card-preapply-"]:hover,
-[class*="st-key-ipo-card-closed-"]:hover {
-    transform: translateY(-2px);
-    border-top-color: rgba(255, 255, 255, 0.14) !important;
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.22),
-        0 9px 18px -8px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* ---------- SUMMARY "CLICK TO VIEW" CARDS ---------- */
-
-.summary-link {
-    background: linear-gradient(180deg, #2D2230 0%, #2B202F 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-top-color: rgba(255, 255, 255, 0.10) !important;
-    border-radius: 14px !important;
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.22),
-        0 4px 10px -4px rgba(0, 0, 0, 0.24);
-    transition: box-shadow .16s ease, border-color .16s ease,
-                background .16s ease;
-}
-
-.summary-link .summary-box { padding: 20px 16px !important; }
-
-.summary-link:hover {
-    background: linear-gradient(180deg, #322636 0%, #2F2434 100%) !important;
-    border-color: rgba(255, 255, 255, 0.12) !important;
-    border-top-color: rgba(255, 255, 255, 0.14) !important;
-    transform: translateY(-2px);
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.22),
-        0 9px 18px -8px rgba(0, 0, 0, 0.3);
-}
-
-/* ---------- BUTTONS: raised & tactile ---------- */
-
-a[data-testid="stBaseLinkButton-secondary"],
-button[data-testid="stBaseButton-secondary"],
-div[data-testid="stLinkButton"] a,
-div[data-testid="stButton"] button[kind="secondary"] {
-    background: linear-gradient(180deg, #362A3D 0%, #322638 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.11) !important;
-    border-top-color: rgba(255, 255, 255, 0.15) !important;
-    border-radius: 11px !important;
-    color: #F1E9F4 !important;
-    font-weight: 600 !important;
-    min-height: 48px !important;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.2),
-        0 1px 1px rgba(0, 0, 0, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
-    transition: box-shadow .1s ease, background .1s ease,
-                border-color .1s ease !important;
-}
-
-a[data-testid="stBaseLinkButton-secondary"]:hover,
-button[data-testid="stBaseButton-secondary"]:hover,
-div[data-testid="stLinkButton"] a:hover,
-div[data-testid="stButton"] button[kind="secondary"]:hover {
-    background: linear-gradient(180deg, #40334A 0%, #3C2F44 100%) !important;
-    border-top-color: rgba(255, 255, 255, 0.2) !important;
-    color: #FFFFFF !important;
-    transform: translateY(-1px);
-    box-shadow:
-        0 3px 8px -2px rgba(0, 0, 0, 0.24),
-        0 2px 4px rgba(0, 0, 0, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-}
-
-a[data-testid="stBaseLinkButton-secondary"]:active,
-button[data-testid="stBaseButton-secondary"]:active,
-div[data-testid="stLinkButton"] a:active,
-div[data-testid="stButton"] button[kind="secondary"]:active {
-    transform: translateY(1px);
-    box-shadow:
-        inset 0 2px 4px rgba(0, 0, 0, 0.24),
-        0 1px 2px rgba(0, 0, 0, 0.16) !important;
-}
-
-</style>
-    """,
-    unsafe_allow_html=True,
-)
+MISSING = {"", "-", "—", "–", "--", "na", "n/a", "tba"}
 
 
-# =========================================================
-# HELPERS
-# =========================================================
+def to_number(value):
+    """'₹1,200' / '35.4%' / '61.38x' / '+12.76%' -> float, else None."""
 
-def parse_date(value):
-
-    if not value or value in ["—", "TBA"]:
+    if value is None:
         return None
 
-    formats = [
+    text = (
+        str(value)
+        .replace("₹", "")
+        .replace(",", "")
+        .replace("%", "")
+        .replace("×", "")
+        .strip()
+        .rstrip("xX")
+        .strip()
+    )
+
+    if text.lower() in MISSING:
+        return None
+
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def to_iso_date(value):
+    """Groww and IPOWatch use several date styles; normalise to ISO."""
+
+    if not value:
+        return None
+
+    text = str(value).strip()
+
+    for fmt in (
         "%d %b %Y",
         "%d %B %Y",
-    ]
-
-    for fmt in formats:
-
+        "%B %d, %Y",
+        "%b %d, %Y",
+        "%d %b, %Y",
+    ):
         try:
-            return datetime.strptime(
-                value,
-                fmt
-            ).date()
-
+            return datetime.strptime(text, fmt).date().isoformat()
         except ValueError:
             pass
 
     return None
 
 
-def get_estimated_listing_price(
-    issue_price,
-    gmp
-):
+def price_band(value):
+    """'₹258 - ₹271' -> (258, 271); '₹93.00' -> (93, 93)."""
 
-    try:
+    text = str(value or "").replace("₹", "").replace(",", "")
+    parts = [
+        to_number(part)
+        for part in re.split(r"\s*[-–]\s*", text)
+        if part.strip()
+    ]
+    parts = [part for part in parts if part is not None]
 
-        price_text = (
-            str(issue_price)
-            .replace("₹", "")
-            .replace(",", "")
-            .strip()
-        )
+    if not parts:
+        return None, None
 
-        if "-" in price_text:
-
-            upper_price = (
-                price_text
-                .split("-")[-1]
-                .strip()
-            )
-
-        elif "–" in price_text:
-
-            upper_price = (
-                price_text
-                .split("–")[-1]
-                .strip()
-            )
-
-        else:
-
-            upper_price = price_text
+    return min(parts), max(parts)
 
 
-        gmp_text = (
-            str(gmp)
-            .replace("₹", "")
-            .replace(",", "")
-            .strip()
-        )
-
-        upper_price = float(
-            upper_price
-        )
-
-        gmp_value = float(
-            gmp_text
-        )
-
-        return (
-            f"₹{upper_price + gmp_value:,.0f}"
-        )
-
-    except Exception:
-
-        return "—"
+def slug(text):
+    return re.sub(r"[^a-z0-9]+", "-", str(text).lower()).strip("-")
 
 
-def countdown(close_date):
+def safe_url(value):
+    if isinstance(value, str) and value.startswith(("https://", "http://")):
+        return value
 
-    date = parse_date(
-        close_date
-    )
-
-    if date is None:
-        return ""
-
-    today = datetime.now(
-        ZoneInfo("Asia/Kolkata")
-    ).date()
-
-    days = (
-        date - today
-    ).days
-
-    if days < 0:
-        return "Closed"
-
-    if days == 0:
-        return "Closes today"
-
-    if days == 1:
-        return "Closes tomorrow"
-
-    return f"Closes in {days} days"
-
-
-# =========================================================
-# IPOWATCH URL
-# =========================================================
-
-def get_ipowatch_url(ipo):
-
-    return ipo.get("ipowatch_url") or "https://ipowatch.in/"
-
-# =========================================================
-# LOAD DATA
-# =========================================================
-
-@st.cache_data(ttl=1800)
-def load_data():
-    data_file = Path(__file__).parent / "latest_data.json"
-
-    with open(
-        data_file,
-        "r",
-        encoding="utf-8"
-    ) as file:
-        saved_data = json.load(file)
-
-    data = saved_data["data"]
-
-    fetched_at = datetime.strptime(
-        saved_data["fetched_at"],
-        "%Y-%m-%d %H:%M"
-    )
-
-    return data, fetched_at
-
-
-try:
-
-    with st.spinner(
-        "Loading IPO data..."
-    ):
-
-        data, fetched_at = load_data()
-
-except Exception as e:
-
-    st.error(
-        "Could not fetch IPO data."
-    )
-
-    st.exception(e)
-
-    st.stop()
+    return None
 
 
 # =========================================================
 # DATA
 # =========================================================
 
-all_open_ipos = data["open"]
-
-recent_closed = data["recent_closed"]
-gmp_history_file = (
-    Path(__file__).parent / "gmp_history.json"
-)
-
-with open(
-    gmp_history_file,
-    "r",
-    encoding="utf-8"
-) as file:
-    gmp_history = json.load(file)
-    
-
-# =========================================================
-# SPLIT APPLY / PRE-APPLY
-# =========================================================
-
-apply_ipos = [
-    ipo
-    for ipo in all_open_ipos
-    if ipo.get("groww_status") == "Open"
-]
+def read_json(name):
+    with open(BASE_DIR / name, "r", encoding="utf-8") as file:
+        return json.load(file)
 
 
-preapply_ipos = [
-    ipo
-    for ipo in all_open_ipos
-    if ipo.get("groww_status") == "Pre-apply"
-]
-apply_ipos.sort(
-    key=lambda ipo: datetime.strptime(
-        ipo["close_date"],
-        "%d %b %Y"
-    )
-)
+def build_ipo(ipo, section, history):
+    low, high = price_band(ipo.get("issue_price"))
+    gmp = to_number(ipo.get("gmp"))
+    gmp_pct = to_number(ipo.get("gmp_percentage"))
 
-preapply_ipos.sort(
-    key=lambda ipo: datetime.strptime(
-        ipo["close_date"],
-        "%d %b %Y"
-    )
-)
-
-# =========================================================
-# GMP DAILY TREND
-# =========================================================
-
-for ipo in apply_ipos + preapply_ipos:
-
-    company = ipo["company"]
-
-    history = gmp_history.get(
-        company,
-        []
+    # Same estimate as before: upper end of the band + current GMP.
+    est_listing = (
+        high + gmp
+        if high is not None and gmp is not None
+        else None
     )
 
-    if len(history) >= 2:
+    # GMP move since the previous recorded change (history only
+    # stores actual changes, so this is the last real move).
+    company_history = history.get(ipo.get("company"), [])
+    gmp_change = None
+    gmp_change_at = None
 
-        current_gmp = history[-1]["gmp"]
-        previous_gmp = history[-2]["gmp"]
-
+    if section != "closed" and len(company_history) >= 2:
         gmp_change = (
-            current_gmp - previous_gmp
+            company_history[-1]["gmp"] - company_history[-2]["gmp"]
         )
+        gmp_change_at = company_history[-1].get("timestamp")
 
-    else:
+    return {
+        "id": f"{section}-{slug(ipo.get('company', ''))}",
+        "name": ipo.get("company", "—"),
+        "type": ipo.get("type", "—"),
+        "section": section,
+        "open": to_iso_date(ipo.get("open_date")),
+        "close": to_iso_date(ipo.get("close_date")),
+        "allot": to_iso_date(ipo.get("allotment_date")),
+        "openText": ipo.get("open_date") or "—",
+        "closeText": ipo.get("close_date") or "—",
+        "allotText": ipo.get("allotment_date") or "TBA",
+        "priceText": ipo.get("issue_price") or "—",
+        "priceLow": low,
+        "priceHigh": high,
+        "gmp": gmp,
+        "gmpPct": gmp_pct,
+        "gmpChange": gmp_change,
+        "gmpChangeAt": gmp_change_at,
+        "estListing": est_listing,
+        "subs": to_number(ipo.get("subscription")),
+        # For closed IPOs the parser stores Groww's listing
+        # performance column in "action".
+        "perf": (
+            to_number(ipo.get("action"))
+            if section == "closed"
+            else None
+        ),
+        "ipowatch": safe_url(ipo.get("ipowatch_url")),
+    }
 
-        gmp_change = None
 
-    ipo["gmp_change"] = gmp_change
+@st.cache_data(ttl=1800)
+def load_payload():
+    saved = read_json("latest_data.json")
+    history = read_json("gmp_history.json")
 
-# =========================================================
-# WEBSITE LOGO HEADER
-# =========================================================
+    data = saved.get("data", {})
+    open_ipos = data.get("open", [])
 
-with open(
-    "ipo_tracker_logo.png",
-    "rb"
-) as logo_file:
+    def close_key(ipo):
+        return to_iso_date(ipo.get("close_date")) or "9999-12-31"
 
-    logo_base64 = base64.b64encode(
-        logo_file.read()
-    ).decode()
+    apply_ipos = sorted(
+        [ipo for ipo in open_ipos if ipo.get("groww_status") == "Open"],
+        key=close_key,
+    )
+    preapply_ipos = sorted(
+        [ipo for ipo in open_ipos if ipo.get("groww_status") == "Pre-apply"],
+        key=close_key,
+    )
 
-st.markdown(
-    f'''
-    <div class="site-logo-header">
-        <img
-            src="data:image/png;base64,{logo_base64}"
-            class="site-logo"
-        >
-    </div>
-    ''',
-    unsafe_allow_html=True
+    ipos = (
+        [build_ipo(ipo, "apply", history) for ipo in apply_ipos]
+        + [build_ipo(ipo, "preapply", history) for ipo in preapply_ipos]
+        + [
+            build_ipo(ipo, "closed", history)
+            for ipo in data.get("recent_closed", [])
+        ]
+    )
+
+    fetched = datetime.strptime(saved["fetched_at"], "%Y-%m-%d %H:%M")
+
+    return {
+        "fetchedAt": fetched.strftime("%Y-%m-%dT%H:%M:00+05:30"),
+        "fetchedText": fetched.strftime("%d %b %Y, %I:%M %p IST"),
+        "ipos": ipos,
+    }
+
+
+def data_uri(path, mime):
+    encoded = base64.b64encode(path.read_bytes()).decode()
+    return f"data:{mime};base64,{encoded}"
+
+
+def b64(text):
+    return base64.b64encode(text.encode("utf-8")).decode("ascii")
+
+
+FONTS_URL = (
+    "https://fonts.googleapis.com/css2"
+    "?family=Geist:wght@400;500;600;700"
+    "&family=Geist+Mono:wght@400;500;600"
+    "&family=Instrument+Serif:ital@0;1"
+    "&display=swap"
 )
 
-# =========================================================
-# HEADER
-# =========================================================
+# st.html runs everything through DOMPurify, which drops <link>, SVG and
+# any <style>/<script> whose text contains "<" + letter. So the page only
+# carries plain markup plus this tiny loader (deliberately free of such
+# sequences); CSS, JS and the orbit SVG travel base64-encoded and are
+# injected by the loader in the same task, so nothing flashes unstyled.
+BOOT_TEMPLATE = """
+(function () {
+    var dec = function (data) {
+        var bin = atob(data);
+        var bytes = new Uint8Array(bin.length);
+        for (var i = 0; i !== bin.length; i += 1) { bytes[i] = bin.charCodeAt(i); }
+        return new TextDecoder("utf-8").decode(bytes);
+    };
+    var head = document.head;
+    ["https://fonts.googleapis.com", "https://fonts.gstatic.com"].forEach(function (origin, index) {
+        var id = "ipot-pc-" + index;
+        if (document.getElementById(id)) { return; }
+        var hint = document.createElement("link");
+        hint.id = id;
+        hint.rel = "preconnect";
+        hint.href = origin;
+        if (index === 1) { hint.crossOrigin = "anonymous"; }
+        head.appendChild(hint);
+    });
+    if (!document.getElementById("ipot-fonts")) {
+        var link = document.createElement("link");
+        link.id = "ipot-fonts";
+        link.rel = "stylesheet";
+        link.href = "__FONTS__";
+        head.appendChild(link);
+    }
+    var style = document.getElementById("ipot-style");
+    if (!style) {
+        style = document.createElement("style");
+        style.id = "ipot-style";
+        head.appendChild(style);
+    }
+    var css = dec("__CSS64__");
+    if (style.textContent !== css) { style.textContent = css; }
+    try {
+        new Function("ASSETS", dec("__JS64__"))({ orbit: dec("__SVG64__") });
+    } catch (error) {
+        console.error("IPO Tracker failed to start", error);
+    }
+})();
+"""
 
 
-st.markdown(
-    '<div class="developer-credit logo-byline">'
-    'Open & Upcoming Indian Market IPOs '
-    '<span class="mobile-break"><br></span>'
-    '<span class="with-word">with</span> live GMP data'
-    '</div>',
-    unsafe_allow_html=True
-)
+def render():
+    try:
+        payload = load_payload()
+    except Exception as error:  # pragma: no cover - shown in the UI
+        st.error("Could not load IPO data.")
+        st.exception(error)
+        st.stop()
 
-st.markdown(
-    f'<div class="refresh-text">'
-    f'Last updated: '
-    f'{fetched_at.strftime("%d %b %Y, %I:%M %p")} IST'
-    f' &nbsp; · &nbsp; '
-    f'Updated automatically as new data becomes available'
-    f'</div>',
-    unsafe_allow_html=True
-)
+    # Inside <script> the JSON must not contain "<" at all (closing tag /
+    # sanitizer); < is the same character to JSON.parse.
+    data_json = json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c")
 
-st.write("")
-
-
-# =========================================================
-# FILTERS
-# =========================================================
-
-filter_col1, filter_col2 = st.columns(
-    [3, 2]
-)
-
-
-with filter_col1:
-
-    search_query = st.text_input(
-        "Search IPOs",
-        placeholder="Search by company name...",
-        key="ipo_search"
+    boot = (
+        BOOT_TEMPLATE
+        .replace("__FONTS__", FONTS_URL)
+        .replace("__CSS64__", b64((UI_DIR / "styles.css").read_text(encoding="utf-8")))
+        .replace("__JS64__", b64((UI_DIR / "app.js").read_text(encoding="utf-8")))
+        .replace("__SVG64__", b64((UI_DIR / "orbit.svg").read_text(encoding="utf-8")))
     )
 
-
-with filter_col2:
-
-    type_filter = st.selectbox(
-        "Type",
-        [
-            "All",
-            "Mainboard",
-            "SME"
-        ],
-        key="ipo_type_filter"
+    html = (
+        (UI_DIR / "index.html").read_text(encoding="utf-8")
+        .replace("/*__BOOT__*/", boot)
+        .replace("__LOGO__", data_uri(UI_DIR / "logo.png", "image/png"))
+        .replace("__MARK__", data_uri(UI_DIR / "mark.png", "image/png"))
+        # Data last, so nothing inside it is ever treated as a placeholder.
+        .replace("__DATA__", data_json)
     )
 
-    
-# =========================================================
-# APPLY FILTERS
-# =========================================================
+    st.html(html, unsafe_allow_javascript=True)
 
-search_query = search_query.strip().lower()
 
-
-def matches_filters(ipo):
-
-    # Company-name search
-    if search_query:
-
-        company = str(
-            ipo.get(
-                "company",
-                ""
-            )
-        ).lower()
-
-        if search_query not in company:
-
-            return False
-
-
-    # Mainboard / SME filter
-    if type_filter != "All":
-
-        ipo_type = str(
-            ipo.get(
-                "type",
-                ""
-            )
-        ).lower()
-
-        if ipo_type != type_filter.lower():
-
-            return False
-
-
-    return True
-
-
-apply_ipos = [
-    ipo
-    for ipo in apply_ipos
-    if matches_filters(ipo)
-]
-
-
-preapply_ipos = [
-    ipo
-    for ipo in preapply_ipos
-    if matches_filters(ipo)
-]
-
-# =========================================================
-# QUICK OVERVIEW
-# =========================================================
-
-def build_quick_overview_table(ipos):
-    rows = []
-
-    for ipo in ipos:
-        company = escape(str(ipo.get("company", "—")))
-        gmp = escape(str(ipo.get("gmp", "—")))
-        gmp_percentage = escape(
-            str(ipo.get("gmp_percentage", "—"))
-        )
-
-        history = gmp_history.get(
-            ipo.get("company"),
-            []
-        )
-
-        rows.append(
-            f"""
-            <tr>
-                <td>{company}</td>
-                <td>{gmp}</td>
-                <td>{gmp_percentage}</td>
-                
-            </tr>
-            """
-        )
-
-    if not rows:
-        return """
-        <div class="quick-overview-empty">
-            No IPOs available.
-        </div>
-        """
-
-    return f"""
-    <table class="quick-overview-table">
-        <thead>
-            <tr>
-                <th>Company</th>
-                <th>₹GMP</th>
-                <th>GMP%</th>
-            </tr>
-        </thead>
-        <tbody>
-            {''.join(rows)}
-        </tbody>
-    </table>
-    """
-
-
-@st.dialog("Quick Overview")
-def quick_overview_popup():
-
-    # Use ALL current IPOs, not the filtered search results
-    overview_apply = [
-        ipo
-        for ipo in all_open_ipos
-        if ipo.get("groww_status") == "Open"
-    ]
-
-    overview_preapply = [
-        ipo
-        for ipo in all_open_ipos
-        if ipo.get("groww_status") == "Pre-apply"
-    ]
-
-    # Exactly the 5 closed IPOs shown on the main page
-    overview_closed = recent_closed[:5]
-
-    with st.container(
-        key="quick-overview-scroll"
-    ):
-
-        st.markdown(
-            '<div class="quick-overview-section">APPLY</div>',
-            unsafe_allow_html=True
-        )
-
-        st.html(
-            build_quick_overview_table(overview_apply)
-        )
-
-        st.markdown(
-            '<div class="quick-overview-section">PRE-APPLY</div>',
-            unsafe_allow_html=True
-        )
-
-        st.html(
-            build_quick_overview_table(overview_preapply)
-        )
-
-        st.markdown(
-            '<div class="quick-overview-section">CLOSED</div>',
-            unsafe_allow_html=True
-        )
-
-        st.html(
-            build_quick_overview_table(overview_closed)
-        )
-
-# =========================================================
-# SUMMARY
-# =========================================================
-
-st.write("")
-
-
-s1, s2, s3 = st.columns(3)
-
-
-with s1:
-    st.markdown(
-        f'''
-        <a href="#apply-now" class="summary-link">
-            <div class="summary-box">
-                <div class="summary-number">
-                    {len(all_open_ipos)}
-                </div>
-                <div class="summary-label">
-                    Open IPOs
-                    </br>
-                    (Click to view)
-                </div>
-            </div>
-        </a>
-        ''',
-        unsafe_allow_html=True
-    )
-
-
-with s2:
-    st.markdown(
-        f'''
-        <a href="#apply-now" class="summary-link">
-            <div class="summary-box">
-                <div class="summary-number">
-                    {len(apply_ipos)}
-                </div>
-                <div class="summary-label">
-                    Apply
-                    </br>
-                    (Click to view)
-                </div>
-            </div>
-        </a>
-        ''',
-        unsafe_allow_html=True
-    )
-
-
-with s3:
-    st.markdown(
-        f'''
-        <a href="#pre-apply" class="summary-link">
-            <div class="summary-box">
-                <div class="summary-number">
-                    {len(preapply_ipos)}
-                </div>
-                <div class="summary-label">
-                    Pre-apply
-                    </br>
-                    (Click to view)
-                </div>
-            </div>
-        </a>
-        ''',
-        unsafe_allow_html=True
-    )
-
-st.html(
-    """
-    <script>
-        if (!window.__ipoTrackerSmoothScrollInstalled) {
-            window.__ipoTrackerSmoothScrollInstalled = true;
-
-            document.addEventListener("click", function (event) {
-                const link = event.target.closest("a.summary-link");
-
-                if (!link) {
-                    return;
-                }
-
-                const href = link.getAttribute("href");
-
-                if (
-                    href !== "#apply-now" &&
-                    href !== "#pre-apply"
-                ) {
-                    return;
-                }
-
-                const target = document.querySelector(href);
-
-                if (!target) {
-                    return;
-                }
-
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }, true);
-        }
-    </script>
-    """,
-    unsafe_allow_javascript=True,
-)
-
-if st.button(
-    "Quick Overview",
-    key="quick-overview-button",
-    type="secondary",
-    use_container_width=True
-):
-    quick_overview_popup()
-
-# =========================================================
-# APPLY-NOW
-# =========================================================
-
-st.markdown(
-    '''
-    <div id="apply-now" class="apply-heading">
-        <div class="section-title">
-            Apply Now
-        </div>
-        <div class="section-subtitle">
-            IPOs currently open for application
-        </div>
-    </div>
-    ''',
-    unsafe_allow_html=True
-)
-
-if not apply_ipos:
-
-    st.info(
-        "No IPOs match your current filters."
-    )
-
-for ipo in apply_ipos:
-
-    estimated_listing = (
-        get_estimated_listing_price(
-            ipo.get("issue_price"),
-            ipo.get("gmp")
-        )
-    )
-
-    ipowatch_url = get_ipowatch_url(ipo)
-
-
-    with st.container(
-        border=True,
-        key=f"ipo-card-apply-{ipo['company']}"
-    ):
-
-        left, right = st.columns(
-            [3, 1]
-        )
-
-        # -------------------------------------------------
-        # TITLE
-        # -------------------------------------------------
-
-        with left:
-
-            st.markdown(
-                f'''
-                <div class="ipo-card-title">
-                    {ipo["company"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            today_ist = datetime.now(
-                ZoneInfo("Asia/Kolkata")
-            ).date()
-
-            close_date = parse_date(
-                ipo["close_date"]
-            )
-
-            last_day = (
-                close_date == today_ist
-            )
-
-            st.markdown(
-                f'''
-                <div class="ipo-card-type">
-                    {ipo["type"]}
-                </div>
-
-                <div style="margin-top: 0px;">
-                    <span class="status-open">
-                        OPEN
-                    </span>
-                    {"<span class='status-last-day'>LAST DAY</span>" if last_day else ""}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-        # -------------------------------------------------
-        # GMP
-        # -------------------------------------------------
-
-        with right:
-
-            st.markdown(
-                '''
-                <div style="text-align:right;">
-                    <div class="gmp-label">
-                        GMP
-                    </div>
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div style="text-align:right;"
-                     class="gmp-value">
-                    {ipo["gmp"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div style="text-align:right;"
-                     class="gmp-percent">
-                    {ipo["gmp_percentage"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            # GMP DAILY TREND
-
-            gmp_change = ipo.get(
-                "gmp_change"
-            )
-
-            if gmp_change is None:
-
-                trend_text = (
-                    '<span class="gmp-trend-desktop">'
-                    '🟡'
-                    '</span>'
-                    '<span class="gmp-trend-mobile">'
-                    '🟡'
-                    '</span>'
-                )
-
-                trend_class = (
-                    "gmp-trend-neutral"
-                )
-            elif gmp_change > 0:
-
-                trend_text = (
-                    f"🟢+₹{gmp_change:g}"
-                )
-
-                trend_class = (
-                    "gmp-trend-up"
-                )
-
-            elif gmp_change < 0:
-
-                trend_text = (
-                    f"🔴−₹{abs(gmp_change):g}"
-                )
-
-                trend_class = (
-                    "gmp-trend-down"
-                )
-
-            else:
-
-                trend_text = (
-                    "🟡"
-                )
-
-                trend_class = (
-                    "gmp-trend-neutral"
-                )
-
-            st.markdown(
-                f'''
-                <div class="{trend_class}"
-                     style="
-                         text-align:right;
-                         height:18px;
-                         line-height:18px;
-                         margin-top:4px;
-                         white-space:nowrap;
-                     ">
-                    {trend_text}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        st.divider()
-
-        # -------------------------------------------------
-        # DETAILS
-        # -------------------------------------------------
-
-        d1, d2, d3, d4 = st.columns(4)
-
-
-        with d1:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    PRICE BAND
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value">
-                    {ipo["issue_price"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with d2:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    EST. LISTING
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value listing-price">
-                    {estimated_listing}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                '''
-                <div class="countdown">
-                    Based on current GMP
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with d3:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    LAST APPLICATION
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value">
-                    {ipo["close_date"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="countdown">
-                    {countdown(ipo["close_date"])}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with d4:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    ALLOTMENT
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value">
-                    {ipo["allotment_date"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        st.divider()
-
-
-        # -------------------------------------------------
-        # LINKS
-        # -------------------------------------------------
-
-        link1, link2 = st.columns(2)
-
-
-        with link1:
-
-            st.link_button(
-                "Open IPOWatch :material/open_in_new:",
-                ipowatch_url,
-                use_container_width=True
-            )
-
-
-        with link2:
-
-            st.link_button(
-                "Open Groww IPOs :material/open_in_new:",
-                "https://groww.in/ipo",
-                use_container_width=True
-            )
-
-
-# =========================================================
-# PRE-APPLY
-# =========================================================
-
-st.markdown(
-    '''
-    <div id="pre-apply" class="preapply-heading">
-        <div class="section-title">
-            Pre-Apply
-        </div>
-        <div class="section-subtitle">
-            Upcoming IPOs available for pre-application
-        </div>
-    </div>
-    ''',
-    unsafe_allow_html=True
-)
-
-
-if not preapply_ipos:
-
-    st.info(
-        "No IPOs match your current filters."
-    )
-
-
-for ipo in preapply_ipos:
-
-    estimated_listing = (
-        get_estimated_listing_price(
-            ipo.get("issue_price"),
-            ipo.get("gmp")
-        )
-    )
-
-    ipowatch_url = get_ipowatch_url(ipo)
-
-
-    with st.container(
-        border=True,
-        key=f"ipo-card-preapply-{ipo['company']}"
-    ):
-
-        left, right = st.columns(
-            [3, 1]
-        )
-
-
-        with left:
-
-            st.markdown(
-                f'''
-                <div class="ipo-card-title">
-                    {ipo["company"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="ipo-card-type">
-                    {ipo["type"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                '<span class="status-preapply">'
-                'PRE-APPLY'
-                '</span>',
-                unsafe_allow_html=True
-            )
-
-
-        with right:
-
-            st.markdown(
-                '''
-                <div style="text-align:right;">
-                    <div class="gmp-label">
-                        GMP
-                    </div>
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div style="text-align:right;"
-                     class="gmp-value">
-                    {ipo["gmp"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div style="text-align:right;"
-                     class="gmp-percent">
-                    {ipo["gmp_percentage"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            # GMP DAILY TREND
-
-            gmp_change = ipo.get(
-                "gmp_change"
-            )
-
-            if gmp_change is None:
-
-                trend_text = (
-                    "🟡"
-                )
-
-                trend_class = (
-                    "gmp-trend-neutral"
-                )
-
-            elif gmp_change > 0:
-
-                trend_text = (
-                    f"🟢+₹{gmp_change:g}"
-                )
-
-                trend_class = (
-                    "gmp-trend-up"
-                )
-
-            elif gmp_change < 0:
-
-                trend_text = (
-                    f"🔴−₹{abs(gmp_change):g}"
-                )
-
-                trend_class = (
-                    "gmp-trend-down"
-                )
-
-            else:
-
-                trend_text = (
-                    "🟡"
-                )
-
-                trend_class = (
-                    "gmp-trend-neutral"
-                )
-
-            st.markdown(
-                f'''
-                <div class="{trend_class}"
-                     style="
-                         text-align:right;
-                         height:18px;
-                         line-height:18px;
-                         margin-top:4px;
-                         white-space:nowrap;
-                     ">
-                    {trend_text}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-        st.divider()
-
-
-        d1, d2, d3, d4 = st.columns(4)
-
-
-        with d1:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    PRICE BAND
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value">
-                    {ipo["issue_price"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with d2:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    EST. LISTING
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value listing-price">
-                    {estimated_listing}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                '''
-                <div class="countdown">
-                    Based on current GMP
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with d3:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    LAST APPLICATION
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value">
-                    {ipo["close_date"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="countdown">
-                    {countdown(ipo["close_date"])}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with d4:
-
-            st.markdown(
-                '''
-                <div class="detail-label">
-                    ALLOTMENT
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="detail-value">
-                    {ipo["allotment_date"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        st.divider()
-
-
-        link1, link2 = st.columns(2)
-
-
-        with link1:
-
-            st.link_button(
-                "Open IPOWatch :material/open_in_new:",
-                ipowatch_url,
-                use_container_width=True
-            )
-
-
-        with link2:
-
-            st.link_button(
-                "Open Groww IPOs :material/open_in_new:",
-                "https://groww.in/ipo",
-                use_container_width=True
-            )
-
-
-# =========================================================
-# CLOSED IPOs
-# =========================================================
-
-st.markdown(
-    '''
-    <div class="closed-heading">
-        <div class="section-title">
-            Recently Closed IPOs
-        </div>
-        <div class="section-subtitle">
-            Recent issues for reference
-        </div>
-    </div>
-    ''',
-    unsafe_allow_html=True
-)
-
-for ipo in recent_closed:
-
-    ipowatch_url = get_ipowatch_url(ipo)
-
-
-    with st.container(
-        border=True,
-        key=f"ipo-card-closed-{ipo['company']}"
-    ):
-
-        left, right = st.columns(
-            [3, 1]
-        )
-
-
-        with left:
-
-            st.markdown(
-                f'''
-                <div class="closed-name">
-                    {ipo["company"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="closed-type">
-                    {ipo["type"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="closed-details">
-                    Last application:
-                    {ipo["close_date"]}
-                    &nbsp; · &nbsp;
-                    Allotment:
-                    {ipo["allotment_date"]}
-                    &nbsp; · &nbsp;
-                    Issue price:
-                    {ipo["issue_price"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        with right:
-
-            st.markdown(
-                f'''
-                <div class="closed-gmp">
-                    {ipo["gmp"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                f'''
-                <div class="closed-percent">
-                    {ipo["gmp_percentage"]}
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-            st.markdown(
-                '''
-                <div style="text-align:right;"
-                     class="gmp-label">
-                    GMP
-                </div>
-                ''',
-                unsafe_allow_html=True
-            )
-
-
-        st.divider()
-
-
-        st.link_button(
-            "Open IPOWatch :material/open_in_new:",
-            ipowatch_url,
-            use_container_width=True
-        )
+render()

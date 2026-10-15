@@ -1,0 +1,40 @@
+<svg class="orbit" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="ipot-ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D9B26F" stop-opacity="0"/>
+      <stop offset=".22" stop-color="#E9C88A" stop-opacity=".85"/>
+      <stop offset=".55" stop-color="#F6E2B4" stop-opacity="1"/>
+      <stop offset=".85" stop-color="#B8894C" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#D9B26F" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ipot-bead" cx=".35" cy=".35" r=".65">
+      <stop offset="0" stop-color="#FFF4D6"/>
+      <stop offset=".45" stop-color="#E9C88A"/>
+      <stop offset="1" stop-color="#8E6A35"/>
+    </radialGradient>
+    <filter id="ipot-glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <g transform="rotate(-11 600 320)">
+    <path id="ipot-orbit-a" class="ring ring-a" pathLength="1"
+          d="M 40 320 A 560 168 0 1 1 1160 320 A 560 168 0 1 1 40 320"/>
+    <path id="ipot-orbit-b" class="ring ring-b" pathLength="1"
+          d="M 150 320 A 450 118 0 1 1 1050 320 A 450 118 0 1 1 150 320"/>
+
+    <g class="bead" filter="url(#ipot-glow)">
+      <circle r="7" fill="url(#ipot-bead)"/>
+      <animateMotion dur="26s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#ipot-orbit-a" xlink:href="#ipot-orbit-a"/>
+      </animateMotion>
+    </g>
+    <g class="bead bead-small">
+      <circle r="3" fill="#E9C88A"/>
+      <animateMotion dur="19s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+        <mpath href="#ipot-orbit-b" xlink:href="#ipot-orbit-b"/>
+      </animateMotion>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,199 @@
+<div id="ipot" class="ipot intro" data-mark="__MARK__">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#" id="brand" aria-label="IPO Tracker, back to top">
+        <img src="__LOGO__" alt="IPO Tracker — built by Vishesh Vasudeva" width="560" height="125">
+      </a>
+
+      <div class="topbar-actions">
+        <div class="status-chip" id="status-chip" tabindex="0" aria-describedby="status-pop">
+          <span class="live-dot"></span>
+          <span class="status-text" id="status-text">Updated</span>
+          <span class="chip-pop" id="status-pop" role="tooltip"></span>
+        </div>
+
+        <button class="btn btn-ghost" id="btn-about" type="button">
+          <span class="ico" data-icon="info"></span><span class="btn-text">About</span>
+        </button>
+
+        <button class="btn btn-gold" id="btn-overview" type="button">
+          <span class="ico" data-icon="grid"></span><span>Quick overview</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-gold"></span>
+      <span class="blob blob-plum"></span>
+      <span class="blob blob-deep"></span>
+      <span class="hero-grid-dots"></span>
+
+      <span class="orbit-slot"></span>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span class="live-dot"></span>
+          <span><span class="num" id="eyebrow-count">0</span> <span id="eyebrow-word">IPOs</span> open right now</span>
+          <span class="eyebrow-sep">/</span>
+          <span>Mainboard &amp; SME</span>
+        </p>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span>Open &amp; upcoming</span></span>
+          <span class="line"><span>Indian IPOs,</span></span>
+          <span class="line"><em>with live GMP.</em></span>
+        </h1>
+
+        <p class="hero-sub">
+          Every mainboard and SME issue in one place — dates, price bands,
+          subscription and the grey-market premium, refreshed automatically.
+        </p>
+      </div>
+
+      <aside class="spotlight" id="spotlight" aria-label="Highest GMP right now"></aside>
+    </div>
+
+    <div class="kpis" id="kpis">
+      <button class="kpi" type="button" data-kpi="apply" data-jump="sec-apply">
+        <span class="kpi-label"><i class="kpi-dot dot-open"></i>Apply now</span>
+        <span class="kpi-value num" data-value>0</span>
+        <span class="kpi-sub">open for bids</span>
+      </button>
+      <button class="kpi" type="button" data-kpi="preapply" data-jump="sec-preapply">
+        <span class="kpi-label"><i class="kpi-dot dot-pre"></i>Pre-apply</span>
+        <span class="kpi-value num" data-value>0</span>
+        <span class="kpi-sub">opening soon</span>
+      </button>
+      <button class="kpi kpi-today" type="button" data-kpi="today" data-jump="sec-apply">
+        <span class="kpi-label"><i class="kpi-dot dot-last"></i>Last day today</span>
+        <span class="kpi-value num" data-value>0</span>
+        <span class="kpi-sub">applications close today</span>
+      </button>
+      <div class="kpi kpi-static" data-kpi="avg">
+        <span class="kpi-label"><i class="kpi-dot dot-gold"></i>Average GMP</span>
+        <span class="kpi-value num" data-value>0</span>
+        <span class="kpi-sub" data-sub>across quoted IPOs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TICKER ===================== -->
+  <div class="ticker" id="ticker" aria-label="Live GMP ticker">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+
+  <!-- ===================== TOOLBAR ===================== -->
+  <div class="toolbar-sentinel" id="toolbar-sentinel" aria-hidden="true"></div>
+  <div class="toolbar" id="toolbar">
+    <div class="toolbar-inner">
+      <img class="toolbar-mark" src="__MARK__" alt="" width="113" height="128">
+
+      <label class="search" id="search-wrap">
+        <span class="ico search-ico" data-icon="search"></span>
+        <input id="search" type="text" placeholder="Search IPOs by company…"
+               autocomplete="off" autocorrect="off" spellcheck="false"
+               aria-label="Search IPOs by company">
+        <button class="search-clear" id="search-clear" type="button" aria-label="Clear search" tabindex="-1">
+          <span class="ico" data-icon="x"></span>
+        </button>
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </label>
+
+      <div class="segmented" id="seg" role="radiogroup" aria-label="IPO type">
+        <span class="seg-thumb" aria-hidden="true"></span>
+        <button type="button" role="radio" data-value="all" aria-checked="true">All <span class="seg-count num">0</span></button>
+        <button type="button" role="radio" data-value="mainboard" aria-checked="false">Mainboard <span class="seg-count num">0</span></button>
+        <button type="button" role="radio" data-value="sme" aria-checked="false">SME <span class="seg-count num">0</span></button>
+      </div>
+
+      <button class="select" id="sort-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="ipot-sort-menu">
+        <span class="ico" data-icon="sort"></span>
+        <span class="select-value" id="sort-value">Closing soonest</span>
+        <span class="ico select-chev" data-icon="chev"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== CONTENT ===================== -->
+  <main class="content">
+
+    <section class="section" id="sec-apply" data-section="apply" aria-labelledby="sec-apply-title">
+      <header class="section-head">
+        <div class="section-heading">
+          <p class="section-kicker"><i class="kicker-dot dot-open"></i>01 — Bidding open</p>
+          <h2 class="section-title" id="sec-apply-title">Apply <em>now</em></h2>
+        </div>
+        <p class="section-note">IPOs currently open for application.</p>
+        <span class="section-count"><span class="num" data-count>0</span> <span data-count-word>IPOs</span></span>
+      </header>
+      <div class="collapse" data-empty><div><div class="empty"></div></div></div>
+      <div class="cards" data-list></div>
+    </section>
+
+    <section class="section" id="sec-preapply" data-section="preapply" aria-labelledby="sec-preapply-title">
+      <header class="section-head">
+        <div class="section-heading">
+          <p class="section-kicker"><i class="kicker-dot dot-pre"></i>02 — Opening soon</p>
+          <h2 class="section-title" id="sec-preapply-title">Pre-<em>apply</em></h2>
+        </div>
+        <p class="section-note">Upcoming IPOs available for pre-application before bidding opens.</p>
+        <span class="section-count"><span class="num" data-count>0</span> <span data-count-word>IPOs</span></span>
+      </header>
+      <div class="collapse" data-empty><div><div class="empty"></div></div></div>
+      <div class="cards" data-list></div>
+    </section>
+
+    <section class="section" id="sec-closed" data-section="closed" aria-labelledby="sec-closed-title">
+      <header class="section-head">
+        <div class="section-heading">
+          <p class="section-kicker"><i class="kicker-dot dot-closed"></i>03 — For reference</p>
+          <h2 class="section-title" id="sec-closed-title">Recently <em>closed</em></h2>
+        </div>
+        <p class="section-note">Allotment, subscription and listing performance for the latest issues.</p>
+        <span class="section-count"><span class="num" data-count>0</span> <span data-count-word>IPOs</span></span>
+      </header>
+      <div class="collapse" data-empty><div><div class="empty"></div></div></div>
+      <div class="rows-head" aria-hidden="true">
+        <span>Company</span><span>Closed</span><span>Allotment</span><span>Issue price</span>
+        <span>Subscribed</span><span>GMP</span><span>Listing</span><span></span>
+      </div>
+      <div class="rows" data-list></div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="__MARK__" alt="" width="113" height="128">
+        <div>
+          <p class="footer-name">IPO Tracker</p>
+          <p class="footer-by">Built by Vishesh Vasudeva</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-label">Data</p>
+        <p>IPO details from <a href="https://groww.in/ipo" target="_blank" rel="noopener">Groww</a>,
+           grey-market premium from <a href="https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/" target="_blank" rel="noopener">IPOWatch</a>.</p>
+        <p class="footer-updated">Last updated <span id="footer-updated">—</span>. Updated automatically as new data becomes available.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-label">Disclaimer</p>
+        <p>An independent informational project — not investment advice or a recommendation to apply for or avoid any IPO.
+           GMP and other figures change through the day; verify with official sources before investing.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script type="application/json" id="ipot-data">__DATA__</script>
+<script>/*__BOOT__*/</script>
