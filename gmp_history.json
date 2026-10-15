@@ -2407,6 +2407,10 @@
     {
       "timestamp": "2026-10-14 19:33",
       "gmp": 91.0
+    },
+    {
+      "timestamp": "2026-10-16 02:02",
+      "gmp": 82.0
     }
   ],
   "Ravita Engineering Services": [
@@ -2465,6 +2469,10 @@
     {
       "timestamp": "2026-10-15 22:09",
       "gmp": 22.0
+    },
+    {
+      "timestamp": "2026-10-16 02:02",
+      "gmp": 20.0
     }
   ],
   "Sahajanand Medical Technologies": [
@@ -2495,6 +2503,12 @@
     {
       "timestamp": "2026-10-15 22:09",
       "gmp": 143.0
+    }
+  ],
+  "Vaibhav Vyapar": [
+    {
+      "timestamp": "2026-10-16 02:02",
+      "gmp": 2.0
     }
   ]
 }
