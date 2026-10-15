@@ -1,0 +1,73 @@
+name: Source Check
+
+# One-off diagnostic: which IPO / GMP websites will answer requests coming
+# from GitHub's servers? Run it by hand from the Actions tab. It only reads
+# the sites and reports; it never changes data or commits anything.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-sources:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Check which sites answer GitHub's servers
+        shell: python
+        run: |
+          import os
+          import sys
+
+          # The step runs from a temp file; make the repo importable.
+          sys.path.insert(0, os.environ["GITHUB_WORKSPACE"])
+
+          import requests
+          from bs4 import BeautifulSoup
+          from ipo_data import HEADERS  # same headers the real updater sends
+
+          SITES = [
+              ("InvestorGain GMP", "https://www.investorgain.com/report/ipo-gmp-live/331/",
+               lambda soup: len(soup.select("#tableBody tr"))),
+              ("Chittorgarh", "https://www.chittorgarh.com/", None),
+              ("IPOWatch GMP", "https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/",
+               lambda soup: sum(len(t.find_all("tr")) for t in soup.find_all("table"))),
+              ("Groww open IPOs", "https://groww.in/ipo/open",
+               lambda soup: len(soup.select("tr.cur-po"))),
+          ]
+
+          lines = ["| Site | Result |", "|---|---|"]
+
+          for name, url, count_rows in SITES:
+              try:
+                  response = requests.get(url, headers=HEADERS, timeout=30)
+                  result = f"HTTP {response.status_code}"
+
+                  if response.ok and count_rows:
+                      rows = count_rows(BeautifulSoup(response.text, "html.parser"))
+                      result += f", {rows} table rows"
+
+                  level = "notice" if response.ok else "warning"
+              except Exception as error:
+                  result = f"request failed: {type(error).__name__}: {error}"
+                  level = "warning"
+
+              print(f"{name}: {result}")
+              print(f"::{level} title={name}::{result}")
+              lines.append(f"| {name} | {result} |")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("\n".join(lines) + "\n")
