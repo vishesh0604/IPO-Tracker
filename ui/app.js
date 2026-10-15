@@ -523,6 +523,13 @@
         );
     }
 
+    const INVESTORGAIN_HOME = "https://www.investorgain.com/report/ipo-gmp-live/331/";
+
+    // GMP button: this IPO's InvestorGain page, else the live GMP table.
+    function gmpSourceLink(ipo) {
+        return { label: "InvestorGain", href: ipo.investorgain || INVESTORGAIN_HOME };
+    }
+
     function buildCard(ipo) {
         const hasGmp = ipo.gmp !== null && ipo.gmp !== undefined;
         const hasPct = ipo.gmpPct !== null && ipo.gmpPct !== undefined;
@@ -609,13 +616,13 @@
             { class: "card-actions" },
             h("a", {
                 class: "card-link",
-                href: ipo.ipowatch || "https://ipowatch.in/",
+                href: gmpSourceLink(ipo).href,
                 target: "_blank",
                 rel: "noopener",
-            }, "IPOWatch", icon("arrow")),
+            }, gmpSourceLink(ipo).label, icon("arrow")),
             h("a", {
                 class: "card-link",
-                href: "https://groww.in/ipo",
+                href: ipo.groww || "https://groww.in/ipo",
                 target: "_blank",
                 rel: "noopener",
             }, "Groww", icon("arrow"))
@@ -667,10 +674,10 @@
             ),
             h("a", {
                 class: "row-link",
-                href: ipo.ipowatch || "https://ipowatch.in/",
+                href: gmpSourceLink(ipo).href,
                 target: "_blank",
                 rel: "noopener",
-                "aria-label": "Open " + ipo.name + " on IPOWatch",
+                "aria-label": "Open " + ipo.name + " on " + gmpSourceLink(ipo).label,
             }, icon("arrow"))
         );
     }
@@ -1586,8 +1593,8 @@
                         "IPO data is sourced from ",
                         h("a", { href: "https://groww.in/ipo", target: "_blank", rel: "noopener" }, "Groww"),
                         ", while GMP data is sourced from ",
-                        h("a", { href: "https://ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/", target: "_blank", rel: "noopener" }, "IPOWatch"),
-                        "."
+                        h("a", { href: INVESTORGAIN_HOME, target: "_blank", rel: "noopener" }, "InvestorGain"),
+                        " (Chittorgarh's GMP site)."
                     ),
                     h("p", { class: "w-text" }, "Please note that GMP and other IPO information can change throughout the day."),
                     h("p", { class: "w-text" }, "Information displayed on this website is provided for informational purposes.")

@@ -1,10 +1,11 @@
+import json
+import re
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from difflib import SequenceMatcher
-from urllib.parse import quote, urljoin
-from concurrent.futures import ThreadPoolExecutor
+from urllib.parse import urljoin
 
 
 # =========================================================
@@ -18,7 +19,15 @@ GROWW_URL = "https://groww.in/ipo"
 GROWW_OPEN_URL = "https://groww.in/ipo/open"
 GROWW_CLOSED_URL = "https://groww.in/ipo/closed"
 
-IPOWATCH_URL = "https://ipowatch.in/ipo-grey-market-premium-latest-ipo/"
+# GMP source. Chittorgarh's "Grey Market Premium" links lead here; this is
+# the final page itself — the /live-ipo-gmp/331/ipo/ link Chittorgarh uses
+# is only a JavaScript redirect to it. (IPOWatch was the GMP source until
+# Oct 2026, when its Cloudflare started blocking GitHub's servers.)
+INVESTORGAIN_URL = "https://www.investorgain.com/report/ipo-gmp-live/331/"
+
+# InvestorGain's own index of every IPO page (id + URL slug + dates).
+# Used to link an IPO's exact page when it isn't in the live GMP table.
+INVESTORGAIN_INDEX_URL = "https://webnodejs.investorgain.com/cloud/v2/ipo/ipo-url-lists"
 
 HEADERS = {
     "User-Agent": (
@@ -62,7 +71,7 @@ def clean_name(name):
 
     name = name.lower().strip()
 
-    # Known naming differences between Groww and IPOWatch
+    # Known naming differences between Groww and the GMP site
     aliases = {
         "milky mist dairy food": "milky mist",
         "milky mist dairy foods": "milky mist",
@@ -109,11 +118,38 @@ def similarity(name1, name2):
 # GROWW — GET ALL IPOs
 # =========================================================
 
+def _groww_page_links(soup):
+    """{company name: its Groww IPO page} from the page's __NEXT_DATA__."""
+
+    links = {}
+    script = soup.find("script", id="__NEXT_DATA__")
+
+    try:
+        data = json.loads(script.string)
+        listing = data["props"]["pageProps"].get("dataList") or []
+    except (AttributeError, TypeError, KeyError, ValueError):
+        return links
+
+    for item in listing:
+        name = item.get("companyName")
+        slug = item.get("searchId")
+
+        if name and slug:
+            links[name] = f"https://groww.in/ipo/{slug}"
+
+    return links
+
+
 def get_groww_ipos():
 
     # Read the full open + closed lists, not the truncated
     # 10-row tables on the /ipo landing page.
     rows = []
+
+    # Groww's rows have no links (clicks are handled by JavaScript), but
+    # the page embeds its data: each IPO's "searchId" is the slug of its
+    # own page, groww.in/ipo/<searchId>.
+    groww_urls = {}
 
     for url in (GROWW_OPEN_URL, GROWW_CLOSED_URL):
 
@@ -125,6 +161,8 @@ def get_groww_ipos():
         rows.extend(
             soup.select("tr.cur-po")
         )
+
+        groww_urls.update(_groww_page_links(soup))
 
     ipos = []
 
@@ -197,6 +235,7 @@ def get_groww_ipos():
                     else "Open"
                 ),
                 "status_source": "current",
+                "groww_url": groww_urls.get(company),
             }
 
         # -------------------------------------------------
@@ -228,6 +267,7 @@ def get_groww_ipos():
                 ),
                 "groww_status": "Closed",
                 "status_source": "closed",
+                "groww_url": groww_urls.get(company),
             }
 
         else:
@@ -331,136 +371,209 @@ def get_recent_closed_ipos(ipos):
 
 
 # =========================================================
-# IPOWATCH — CURRENT GMP TABLE
+# INVESTORGAIN — LIVE GMP TABLE
 # =========================================================
 
-def _ipowatch_column(headers, *names):
-    """Index of the first header that starts with one of `names`."""
+def _first_day_month(text):
+    """'15-OctGMP: 500' -> '15-Oct' (the cell also holds a GMP note)."""
 
-    for index, header in enumerate(headers):
-        if any(header.startswith(name) for name in names):
-            return index
-
-    return None
+    found = re.match(r"\s*(\d{1,2}-[A-Za-z]{3})", text or "")
+    return found.group(1) if found else ""
 
 
-def get_ipowatch_ipos():
+def get_investorgain_ipos():
 
-    html = get_page(IPOWATCH_URL)
+    html = get_page(INVESTORGAIN_URL)
 
     soup = BeautifulSoup(
         html,
         "html.parser"
     )
 
-    # IPOWatch has changed this page's layout before (Oct 2026: one
-    # 8+ column table became separate Mainboard and SME tables with
-    # 6 columns), so columns are located by header name, and every
-    # table whose header has "Company" + "GMP" is read.
     ipos = []
 
-    for table in soup.find_all("table"):
+    for row in soup.select("#tableBody tr"):
 
-        rows = table.find_all("tr")
+        # Every cell is labelled, so read by label, not position.
+        cells = {
+            cell.get("data-label"): cell
+            for cell in row.find_all("td")
+            if cell.get("data-label")
+        }
 
-        if not rows:
+        # The table repeats its header row every few entries.
+        name_cell = cells.get("Name")
+
+        if name_cell is None:
             continue
 
-        headers = [
-            cell.get_text(" ", strip=True).lower()
-            for cell in rows[0].find_all(["th", "td"])
-        ]
-
-        col_company = _ipowatch_column(headers, "company", "ipo")
-        col_gmp = _ipowatch_column(headers, "gmp")
-
-        if col_company is None or col_gmp is None:
-            continue
-
-        col_trend = _ipowatch_column(headers, "trend")
-        col_price = _ipowatch_column(headers, "price")
-        col_listing = _ipowatch_column(headers, "est")
-        col_date = _ipowatch_column(headers, "date")
-        col_type = _ipowatch_column(headers, "type")
-        col_status = _ipowatch_column(headers, "status")
-        col_updated = _ipowatch_column(headers, "last", "updated")
-
-        # The new layout states the board in the heading above the table.
-        heading = table.find_previous(["h2", "h3", "h4"])
-        heading_text = heading.get_text(" ", strip=True).lower() if heading else ""
-        table_type = (
-            "SME" if "sme" in heading_text
-            else "Mainboard" if "mainboard" in heading_text
-            else ""
+        link = name_cell.find("a", href=True)
+        company = (
+            link.get_text(" ", strip=True)
+            if link
+            else name_cell.get_text(" ", strip=True)
         )
 
-        for row in rows[1:]:
+        if not company:
+            continue
 
-            cells = row.find_all(["th", "td"])
+        badges = [
+            badge.get_text(" ", strip=True)
+            for badge in name_cell.select("span.badge")
+        ]
 
-            if len(cells) <= max(col_company, col_gmp):
-                continue
+        # GMP cell: "₹<b>115</b> (16.59%)<br><small>83 ↓ / 115 ↑</small>"
+        # "₹ --" means no grey-market quote.
+        gmp_cell = cells.get("GMP")
+        gmp_bold = gmp_cell.find("b") if gmp_cell else None
+        gmp_value = gmp_bold.get_text(strip=True) if gmp_bold else ""
 
-            values = [
-                cell.get_text(" ", strip=True)
-                for cell in cells
-            ]
+        try:
+            gmp_number = float(gmp_value.replace(",", ""))
+        except ValueError:
+            gmp_number = None
 
-            def value(index):
-                return values[index] if index is not None and index < len(values) else ""
+        pct_match = re.search(
+            r"\((-?[\d.]+)%\)",
+            gmp_cell.get_text(" ", strip=True) if gmp_cell else ""
+        )
 
-            # Company name is the link text; the cell also carries a
-            # status badge ("Open", "Upcoming") after a <br>.
-            name_cell = cells[col_company]
-            link = name_cell.find("a", href=True)
-            badge = name_cell.find("span")
+        def text(label):
+            cell = cells.get(label)
+            return cell.get_text(" ", strip=True) if cell else ""
 
-            company = (
-                link.get_text(" ", strip=True)
-                if link
-                else values[col_company]
+        gmp = "—"
+        gmp_percentage = "—"
+
+        if gmp_number is not None:
+            gmp = f"₹{gmp_number:g}"
+            gmp_percentage = (
+                f"{float(pct_match.group(1)):.2f}%"
+                if pct_match
+                else "—"
             )
 
-            if not company:
-                continue
-
-            ipo = {
-                "company": company,
-                "gmp": value(col_gmp),
-                "trend": value(col_trend),
-                "price_band": value(col_price),
-                "estimated_listing": value(col_listing),
-                "date": value(col_date),
-                "type": value(col_type) or table_type,
-                "status": (
-                    value(col_status)
-                    or (badge.get_text(" ", strip=True) if badge else "")
-                ),
-                "last_updated": value(col_updated),
-                # Links are sometimes relative on the new page.
-                "ipowatch_url": (
-                    urljoin(IPOWATCH_URL, link["href"])
-                    if link
-                    else None
-                ),
-            }
-
-            ipos.append(ipo)
+        ipos.append({
+            "company": company,
+            "gmp": gmp,
+            "gmp_percentage": gmp_percentage,
+            "price": text("Price (₹)").replace(",", ""),
+            "type": "SME" if any("SME" in badge for badge in badges) else "Mainboard",
+            "open": _first_day_month(text("Open")),
+            "close": _first_day_month(text("Close")),
+            "allotment": _first_day_month(text("BoA Dt")),
+            "last_updated": text("Updated-On"),
+            "url": urljoin(INVESTORGAIN_URL, link["href"]) if link else None,
+        })
 
     if not ipos:
         raise Exception(
-            "Could not find any rows in the IPOWatch GMP tables."
+            "Could not find any rows in the InvestorGain GMP table."
         )
 
     return ipos
 
+
+def get_investorgain_page_index():
+    """[{company, url, close}] for every IPO page InvestorGain has."""
+
+    response = requests.get(
+        INVESTORGAIN_INDEX_URL,
+        headers=HEADERS,
+        timeout=30
+    )
+
+    response.raise_for_status()
+
+    pages = []
+
+    for entry in response.json().get("lists", []):
+
+        page_id = entry.get("id")
+        slug = entry.get("urlrewrite_folder_name")
+
+        if not page_id or not slug:
+            continue
+
+        pages.append({
+            "company": entry.get("company_short_name") or "",
+            "url": f"https://www.investorgain.com/gmp/{slug}/{page_id}/",
+            "close": (entry.get("issue_end_dt") or "")[:10],
+        })
+
+    return pages
+
+
+def link_missing_investorgain_pages(ipos):
+    """Give every IPO its own InvestorGain page link, even if it isn't
+    in the live GMP table: look it up in InvestorGain's IPO index by
+    name, and only accept a candidate whose closing date matches."""
+
+    missing = [ipo for ipo in ipos if not ipo.get("investorgain_url")]
+
+    if not missing:
+        return
+
+    try:
+        index = get_investorgain_page_index()
+    except Exception as error:
+        print(f"WARNING: InvestorGain page index unavailable ({error}).")
+        return
+
+    for ipo in missing:
+
+        try:
+            close = parse_date(ipo.get("close_date"))
+        except (ValueError, TypeError):
+            close = None
+
+        # Same company name on another date = a different IPO.
+        candidates = []
+
+        for page in index:
+            try:
+                page_close = datetime.strptime(page["close"], "%Y-%m-%d").date()
+            except ValueError:
+                continue
+
+            if close and abs((page_close - close).days) <= 7:
+                candidates.append(page)
+
+        match, score = find_name_match(ipo["company"], candidates)
+
+        if match:
+            ipo["investorgain_url"] = match["url"]
+
+
+def _allotment_from_day_month(day_month, reference_date_text):
+    """'26-Oct' + Groww close date '23 Oct 2026' -> '26 Oct 2026'."""
+
+    if not day_month:
+        return None
+
+    try:
+        reference = parse_date(reference_date_text)
+        day_month_date = datetime.strptime(
+            f"{day_month}-{reference.year}",
+            "%d-%b-%Y"
+        ).date()
+    except (ValueError, TypeError):
+        return None
+
+    # Allotment after a December close falls in the next year.
+    if day_month_date < reference:
+        day_month_date = day_month_date.replace(year=reference.year + 1)
+
+    return day_month_date.strftime("%d %b %Y")
+
+
 # =========================================================
-# MATCH COMPANY TO IPOWATCH
+# MATCH COMPANY NAMES (Groww <-> InvestorGain)
 # =========================================================
 
-def find_ipowatch_match(
+def find_name_match(
     groww_company,
-    ipowatch_ipos
+    source_ipos
 ):
 
     best_match = None
@@ -468,21 +581,30 @@ def find_ipowatch_match(
 
     groww_words = clean_name(groww_company).split()
 
-    for ipo in ipowatch_ipos:
+    for ipo in source_ipos:
 
         score = similarity(
             groww_company,
             ipo["company"]
         )
 
-        # IPOWatch often shortens names ("Sahajanand Medical" for
+        # GMP sites often shorten or extend names ("Sahajanand Medical" for
         # "Sahajanand Medical Technologies"); a multi-word prefix match
         # is a confident match.
-        watch_words = clean_name(ipo["company"]).split()
-        shorter, longer = sorted([groww_words, watch_words], key=len)
+        source_words = clean_name(ipo["company"]).split()
+        shorter, longer = sorted([groww_words, source_words], key=len)
 
         if len(shorter) >= 2 and longer[:len(shorter)] == shorter:
             score = max(score, 0.95)
+
+        # Same idea ignoring spaces/dots: "R K Fashion" vs
+        # "R.K.Fashion Accessories" -> "rkfashion" / "rkfashionaccessories".
+        compact_groww = "".join(groww_words)
+        compact_source = "".join(source_words)
+        short_c, long_c = sorted([compact_groww, compact_source], key=len)
+
+        if len(short_c) >= 6 and long_c.startswith(short_c):
+            score = max(score, 0.9)
 
         if score > best_score:
 
@@ -498,441 +620,73 @@ def find_ipowatch_match(
     return None, best_score
 
 
-# =========================================================
-# IPOWATCH — INDIVIDUAL IPO PAGE
-# GET ALLOTMENT DATE
-# =========================================================
-
-def get_ipowatch_allotment_date(company):
-
-    slug = clean_name(company).replace(
-        " ",
-        "-"
-    )
-
-    url = (
-        f"https://ipowatch.in/"
-        f"{slug}-ipo/"
-    )
-
-    try:
-
-        html = get_page(url)
-
-        soup = BeautifulSoup(
-            html,
-            "html.parser"
-        )
-
-        text = soup.get_text(
-            " ",
-            strip=True
-        )
-
-        marker = "Basis of Allotment:"
-
-        position = text.find(marker)
-
-        if position == -1:
-
-            return "TBA"
-
-        section = text[
-            position:
-            position + 150
-        ]
-
-        section = section.replace(
-            marker,
-            ""
-        ).strip()
-
-        # The date ends before "Refunds:"
-        if "Refunds:" in section:
-
-            allotment = section.split(
-                "Refunds:"
-            )[0].strip()
-
-            return allotment
-
-        return section.split(
-            " "
-        )[0]
-
-    except Exception:
-
-        return "TBA"
-
-
-# =========================================================
-# ADD IPOWATCH DATA
-# =========================================================
-
-def find_ipowatch_page(company):
-
-    search_url = (
-        "https://ipowatch.in/"
-        "?s="
-        + quote(company + " IPO GMP")
-    )
-
-    try:
-
-        html = get_page(search_url)
-
-        soup = BeautifulSoup(
-            html,
-            "html.parser"
-        )
-
-        company_words = [
-            word.lower()
-            for word in company.split()
-            if len(word) > 2
-        ]
-
-        candidates = []
-
-        for link in soup.find_all(
-            "a",
-            href=True
-        ):
-
-            title = link.get_text(
-                " ",
-                strip=True
-            )
-
-            href = link["href"]
-
-            combined = (
-                title + " " + href
-            ).lower()
-
-            matches = sum(
-                word in combined
-                for word in company_words
-            )
-
-            if matches >= min(
-                2,
-                len(company_words)
-            ):
-
-                if (
-                    "ipowatch.in" in href
-                    and "ipo" in combined
-                ):
-
-                    candidates.append(href)
-
-        # Prefer a GMP-specific page
-        for href in candidates:
-
-            if (
-                "gmp" in href.lower()
-                or "grey-market" in href.lower()
-            ):
-
-                return href
-
-        # Otherwise return the normal IPO page
-        if candidates:
-
-            return candidates[0]
-
-    except Exception:
-
-        pass
-
-    return None
-
-
-
-def get_ipowatch_gmp_details(company):
-
-    slug = clean_name(company).replace(" ", "-")
-
-    # Try direct IPOWatch pages first. This avoids the search
-    # request in the normal case and reduces total requests.
-    direct_urls = [
-        f"https://ipowatch.in/{slug}-ipo-gmp-grey-market-premium/",
-        f"https://ipowatch.in/{slug}-ipo/",
-    ]
-
-    direct_urls = list(dict.fromkeys(direct_urls))
-
-    for url in direct_urls:
-
-        try:
-
-            html = get_page(url)
-
-            soup = BeautifulSoup(
-                html,
-                "html.parser"
-            )
-
-            tables = soup.find_all("table")
-
-            for table in tables:
-
-                rows = table.find_all("tr")
-
-                if not rows:
-                    continue
-
-                header_cells = rows[0].find_all(
-                    ["th", "td"]
-                )
-
-                headers = [
-                    cell.get_text(
-                        " ",
-                        strip=True
-                    ).lower()
-                    for cell in header_cells
-                ]
-
-                if (
-                    "ipo gmp" not in headers
-                    or "gain" not in headers
-                ):
-                    continue
-
-                for row in rows[1:]:
-
-                    cells = row.find_all(
-                        ["th", "td"]
-                    )
-
-                    values = [
-                        cell.get_text(
-                            " ",
-                            strip=True
-                        )
-                        for cell in cells
-                    ]
-
-                    if len(values) < 4:
-                        continue
-
-                    return {
-                        "gmp": values[1],
-                        "gmp_trend": values[2],
-                        "gmp_percentage": values[3],
-                        "gmp_last_updated": (
-                            values[4]
-                            if len(values) > 4
-                            else "—"
-                        )
-                    }
-
-        except Exception:
-            continue
-
-    # Fallback: use IPOWatch search only if direct URLs fail.
-    first_url = find_ipowatch_page(company)
-
-    if first_url:
-
-        try:
-
-            html = get_page(first_url)
-
-            soup = BeautifulSoup(
-                html,
-                "html.parser"
-            )
-
-            tables = soup.find_all("table")
-
-            for table in tables:
-
-                rows = table.find_all("tr")
-
-                if not rows:
-                    continue
-
-                header_cells = rows[0].find_all(
-                    ["th", "td"]
-                )
-
-                headers = [
-                    cell.get_text(
-                        " ",
-                        strip=True
-                    ).lower()
-                    for cell in header_cells
-                ]
-
-                if (
-                    "ipo gmp" not in headers
-                    or "gain" not in headers
-                ):
-                    continue
-
-                for row in rows[1:]:
-
-                    cells = row.find_all(
-                        ["th", "td"]
-                    )
-
-                    values = [
-                        cell.get_text(
-                            " ",
-                            strip=True
-                        )
-                        for cell in cells
-                    ]
-
-                    if len(values) < 4:
-                        continue
-
-                    return {
-                        "gmp": values[1],
-                        "gmp_trend": values[2],
-                        "gmp_percentage": values[3],
-                        "gmp_last_updated": (
-                            values[4]
-                            if len(values) > 4
-                            else "—"
-                        )
-                    }
-
-        except Exception:
-            pass
-
-    return {
-        "gmp": "—",
-        "gmp_trend": "—",
-        "gmp_percentage": "—",
-        "gmp_last_updated": "—"
-    }
-
-
-
 def enrich_ipo(
     ipo,
-    ipowatch_ipos,
-    use_ipowatch_pages=True
+    investorgain_ipos
 ):
-
-    match, score = find_ipowatch_match(
-        ipo["company"],
-        ipowatch_ipos
-    )
 
     result = ipo.copy()
 
     if "groww_status" not in result:
         result["groww_status"] = "Open"
 
-    # -------------------------------------------------
-    # First: use the IPOWatch main table
-    # for the current GMP/status.
-    # -------------------------------------------------
+    # Defaults: no grey-market quote found.
+    result.update({
+        "gmp": "—",
+        "gmp_percentage": "—",
+        "gmp_last_updated": "—",
+        "estimated_listing": "—",
+        "gmp_source": "—",
+        "investorgain_name": "Not found",
+        "investorgain_url": None,
+        "investorgain_confidence": 0,
+    })
+
+    match, score = find_name_match(
+        result["company"],
+        investorgain_ipos
+    )
+
+    # Did InvestorGain actually look this IPO up? If not (no row for it,
+    # or the site was unreachable), update_data.py keeps the last known
+    # GMP instead of blanking it.
+    result["gmp_checked"] = bool(match)
 
     if match:
 
-        result["ipowatch_name"] = (
-            match["company"]
-        )
-        result["ipowatch_url"] = (
-        match.get("ipowatch_url")
-        )
+        result["investorgain_name"] = match["company"]
+        result["investorgain_url"] = match["url"]
+        result["investorgain_confidence"] = round(score * 100, 1)
 
-        result["gmp"] = match["gmp"]
+        # "₹ --" on InvestorGain means no grey-market quote right now.
+        if match["gmp"] != "—":
 
-        result["gmp_status"] = (
-            match["status"]
-        )
+            result["gmp"] = match["gmp"]
+            result["gmp_percentage"] = match["gmp_percentage"]
+            result["gmp_last_updated"] = match["last_updated"] or "—"
+            result["gmp_source"] = "InvestorGain"
 
-        result["gmp_trend"] = (
-            match["trend"]
-        )
+            try:
+                upper_price = float(match["price"])
+                gmp_value = float(match["gmp"].replace("₹", ""))
+                result["estimated_listing"] = (
+                    f"₹{upper_price + gmp_value:g} ({match['gmp_percentage']})"
+                )
+            except ValueError:
+                pass
 
-        result["gmp_price_band"] = (
-            match["price_band"]
-        )
-
-        result["estimated_listing"] = (
-            match["estimated_listing"]
-        )
-
-        result["gmp_last_updated"] = (
-            match["last_updated"]
-        )
-
-        result["match_confidence"] = round(
-            score * 100,
-            1
-        )
-
-    else:
-
-        result["ipowatch_name"] = "Not found"
-        result["ipowatch_url"] = None
-        result["gmp"] = "—"
-        result["gmp_status"] = "—"
-        result["gmp_trend"] = "—"
-        result["gmp_price_band"] = "—"
-        result["estimated_listing"] = "—"
-        result["gmp_last_updated"] = "—"
-        result["match_confidence"] = 0
-
-    # -------------------------------------------------
-    # Second: get GMP percentage from individual
-    # IPOWatch page.
-    # -------------------------------------------------
-
-    # When IPOWatch is refusing us (e.g. HTTP 403), every per-IPO page
-    # would fail too, so don't request them at all.
-    gmp_details = (
-        get_ipowatch_gmp_details(result["company"])
-        if use_ipowatch_pages
-        else {
-            "gmp": "—",
-            "gmp_trend": "—",
-            "gmp_percentage": "—",
-            "gmp_last_updated": "—",
-        }
-    )
-
-    if result["gmp"] == "—":
-        result["gmp"] = gmp_details["gmp"]
-
-    result["gmp_percentage"] = (
-        gmp_details["gmp_percentage"]
-    )
-
-    # Fallback: the main table's "Est. Gain" reads "₹1349 (20.55%)".
-    if result["gmp_percentage"] in ["—", "", "-%", None]:
-
-        gain = str(result.get("estimated_listing") or "")
-
-        if "(" in gain and "%" in gain:
-            result["gmp_percentage"] = (
-                gain.split("(")[-1].split(")")[0].strip()
+        # Allotment date from InvestorGain's "BoA Dt" when Groww has none.
+        if result["allotment_date"] == "—":
+            result["allotment_date"] = (
+                _allotment_from_day_month(
+                    match["allotment"],
+                    result.get("close_date")
+                )
+                or "—"
             )
 
-    if gmp_details["gmp_last_updated"] != "—":
-        result["gmp_last_updated"] = (
-            gmp_details["gmp_last_updated"]
-        )
-
-    # -------------------------------------------------
-    # Third: allotment date
-    # -------------------------------------------------
-
-    if result["allotment_date"] == "—" and use_ipowatch_pages:
-
-        result["allotment_date"] = (
-            get_ipowatch_allotment_date(
-                result["company"]
-            )
-        )
+    if result["allotment_date"] == "—":
+        result["allotment_date"] = "TBA"
 
     return result
 
@@ -973,33 +727,22 @@ def get_dashboard_data(progress_callback=None):
         )
 
     # -----------------------------------------------
-    # 3. IPOWatch GMP
+    # 3. InvestorGain GMP
     # -----------------------------------------------
 
-    # A problem with IPOWatch must not stop the whole update.
-    #  - Site unreachable / refusing us (e.g. Cloudflare HTTP 403 on
-    #    GitHub's servers): skip all IPOWatch requests this run and
-    #    report it, so update_data.py can keep the last known GMP.
-    #  - Main table unreadable (layout change): each IPO still falls
-    #    back to its own IPOWatch page below.
-    ipowatch_available = True
-
+    # A failure here must not stop the update: Groww data is still saved
+    # and update_data.py keeps each IPO's last known GMP.
     try:
-        ipowatch_ipos = get_ipowatch_ipos()
-
-    except requests.RequestException as error:
-        ipowatch_available = False
-        ipowatch_ipos = []
-        print(f"WARNING: IPOWatch unreachable ({error}). Skipping GMP lookups this run.")
-
+        investorgain_ipos = get_investorgain_ipos()
+        print(f"InvestorGain GMP table: {len(investorgain_ipos)} rows.")
     except Exception as error:
-        ipowatch_ipos = []
-        print(f"WARNING: IPOWatch GMP table unreadable ({error}); using per-IPO pages.")
+        investorgain_ipos = []
+        print(f"WARNING: InvestorGain GMP unavailable ({error}). Keeping last known GMP.")
 
     if progress_callback:
         progress_callback(
             40,
-            "IPOWatch GMP data fetched"
+            "GMP data fetched"
         )
 
     # -----------------------------------------------
@@ -1017,20 +760,14 @@ def get_dashboard_data(progress_callback=None):
             "Enriching IPO data..."
         )
 
-    with ThreadPoolExecutor(
-        max_workers=5
-    ) as executor:
+    # Pure matching against the one table — no further requests.
+    enriched_ipos = [
+        enrich_ipo(ipo, investorgain_ipos)
+        for ipo in all_ipos
+    ]
 
-        enriched_ipos = list(
-            executor.map(
-                lambda ipo: enrich_ipo(
-                    ipo,
-                    ipowatch_ipos,
-                    use_ipowatch_pages=ipowatch_available
-                ),
-                all_ipos
-            )
-        )
+    # Exact InvestorGain page for IPOs the GMP table didn't list.
+    link_missing_investorgain_pages(enriched_ipos)
 
     if progress_callback:
         progress_callback(
@@ -1063,8 +800,6 @@ def get_dashboard_data(progress_callback=None):
     return {
         "open": open_ipos,
         "recent_closed": recent_closed,
-        # Read (and removed) by update_data.py before saving.
-        "ipowatch_available": ipowatch_available,
     }
     
 
@@ -1151,8 +886,8 @@ def main():
         )
 
         print(
-            "IPOWatch status:",
-            ipo["gmp_status"]
+            "GMP source:",
+            ipo["gmp_source"]
         )
 
         print(
@@ -1161,9 +896,9 @@ def main():
         )
 
         print(
-            "Match:",
-            ipo["match_confidence"],
-            "%"
+            "InvestorGain match:",
+            ipo["investorgain_name"],
+            f"({ipo['investorgain_confidence']}%)"
         )
 
         print("-" * 70)

@@ -51,26 +51,26 @@ def save_json(file_path, data):
 
 MISSING = [None, "", "—", "-", "TBA", "₹-", "-%"]
 
-# Everything that comes from IPOWatch for one IPO.
+# Everything that comes from the GMP source for one IPO.
 GMP_FIELDS = [
     "gmp",
     "gmp_percentage",
-    "gmp_trend",
-    "gmp_status",
-    "gmp_price_band",
     "estimated_listing",
     "gmp_last_updated",
-    "ipowatch_name",
-    "ipowatch_url",
-    "match_confidence",
+    "gmp_source",
+    "investorgain_name",
+    "investorgain_confidence",
+    # Not "investorgain_url": page links are rebuilt fresh every run
+    # (from the GMP table or InvestorGain's page index).
 ]
 
 
 def carry_forward_gmp(data, previous_data):
-    """IPOWatch was unreachable this run: keep each IPO's last known
-    GMP (and allotment date) from the previous update instead of
-    blanking it. Carried values are flagged so they are not recorded
-    as new GMP observations."""
+    """For IPOs the GMP source could not look up this run (InvestorGain
+    unreachable, or no row for that IPO), keep the last known GMP from
+    the previous update instead of blanking it.
+    Missing allotment dates are kept the same way. Carried values are
+    flagged so they are not recorded as new GMP observations."""
 
     previous = {
         ipo.get("company"): ipo
@@ -83,12 +83,19 @@ def carry_forward_gmp(data, previous_data):
     for section in ("open", "recent_closed"):
         for ipo in data.get(section, []):
 
+            # Internal flag from ipo_data.py; not saved.
+            checked = ipo.pop("gmp_checked", True)
+
             before = previous.get(ipo.get("company"))
 
             if not before:
                 continue
 
-            if before.get("gmp") not in MISSING:
+            if (
+                not checked
+                and ipo.get("gmp") in MISSING
+                and before.get("gmp") not in MISSING
+            ):
                 for field in GMP_FIELDS:
                     if field in before:
                         ipo[field] = before[field]
@@ -210,15 +217,14 @@ def update_data():
 
     data = get_dashboard_data()
 
-    ipowatch_available = data.pop("ipowatch_available", True)
+    # Decided per IPO: only IPOs InvestorGain could not look up keep
+    # their last known GMP. Always run, so the internal
+    # "gmp_checked" flag is stripped before saving.
+    previous = load_json(LATEST_DATA_FILE).get("data", {})
+    carried = carry_forward_gmp(data, previous)
 
-    if not ipowatch_available:
-        previous = load_json(LATEST_DATA_FILE).get("data", {})
-        carried = carry_forward_gmp(data, previous)
-        print(
-            f"IPOWatch unavailable: kept the last known GMP for "
-            f"{carried} IPO(s); Groww data is fresh."
-        )
+    if carried:
+        print(f"Kept the last known GMP for {carried} IPO(s) InvestorGain could not check.")
 
     timestamp = get_ist_time()
 

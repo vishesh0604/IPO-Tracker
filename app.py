@@ -61,7 +61,7 @@ def to_number(value):
 
 
 def to_iso_date(value):
-    """Groww and IPOWatch use several date styles; normalise to ISO."""
+    """Groww and InvestorGain use several date styles; normalise to ISO."""
 
     if not value:
         return None
@@ -171,7 +171,8 @@ def build_ipo(ipo, section, history):
             if section == "closed"
             else None
         ),
-        "ipowatch": safe_url(ipo.get("ipowatch_url")),
+        "investorgain": safe_url(ipo.get("investorgain_url")),
+        "groww": safe_url(ipo.get("groww_url")),
     }
 
 
