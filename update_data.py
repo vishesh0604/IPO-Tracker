@@ -49,6 +49,62 @@ def save_json(file_path, data):
         )
 
 
+MISSING = [None, "", "—", "-", "TBA", "₹-", "-%"]
+
+# Everything that comes from IPOWatch for one IPO.
+GMP_FIELDS = [
+    "gmp",
+    "gmp_percentage",
+    "gmp_trend",
+    "gmp_status",
+    "gmp_price_band",
+    "estimated_listing",
+    "gmp_last_updated",
+    "ipowatch_name",
+    "ipowatch_url",
+    "match_confidence",
+]
+
+
+def carry_forward_gmp(data, previous_data):
+    """IPOWatch was unreachable this run: keep each IPO's last known
+    GMP (and allotment date) from the previous update instead of
+    blanking it. Carried values are flagged so they are not recorded
+    as new GMP observations."""
+
+    previous = {
+        ipo.get("company"): ipo
+        for section in ("open", "recent_closed")
+        for ipo in previous_data.get(section, [])
+    }
+
+    carried = 0
+
+    for section in ("open", "recent_closed"):
+        for ipo in data.get(section, []):
+
+            before = previous.get(ipo.get("company"))
+
+            if not before:
+                continue
+
+            if before.get("gmp") not in MISSING:
+                for field in GMP_FIELDS:
+                    if field in before:
+                        ipo[field] = before[field]
+
+                ipo["gmp_carried_forward"] = True
+                carried += 1
+
+            if (
+                ipo.get("allotment_date") in MISSING
+                and before.get("allotment_date") not in MISSING
+            ):
+                ipo["allotment_date"] = before["allotment_date"]
+
+    return carried
+
+
 def update_gmp_history(data, timestamp):
     history = load_json(GMP_HISTORY_FILE)
     latest = load_json(GMP_LATEST_FILE)
@@ -67,6 +123,10 @@ def update_gmp_history(data, timestamp):
             continue
 
         if gmp in [None, "—", ""]:
+            continue
+
+        # A carried-forward value was not observed this run.
+        if ipo.get("gmp_carried_forward"):
             continue
 
         try:
@@ -149,6 +209,16 @@ def update_data():
     print("Fetching latest IPO data...")
 
     data = get_dashboard_data()
+
+    ipowatch_available = data.pop("ipowatch_available", True)
+
+    if not ipowatch_available:
+        previous = load_json(LATEST_DATA_FILE).get("data", {})
+        carried = carry_forward_gmp(data, previous)
+        print(
+            f"IPOWatch unavailable: kept the last known GMP for "
+            f"{carried} IPO(s); Groww data is fresh."
+        )
 
     timestamp = get_ist_time()
 

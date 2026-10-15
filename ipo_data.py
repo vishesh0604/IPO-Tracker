@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from difflib import SequenceMatcher
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 from concurrent.futures import ThreadPoolExecutor
 
 
@@ -25,7 +25,15 @@ HEADERS = {
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/150.0.0.0 Safari/537.36"
-    )
+    ),
+    # A bare User-Agent looks like a bot to Cloudflare; send what a
+    # real browser sends for a page load.
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,"
+        "image/avif,image/webp,*/*;q=0.8"
+    ),
+    "Accept-Language": "en-IN,en;q=0.9",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 
@@ -326,6 +334,16 @@ def get_recent_closed_ipos(ipos):
 # IPOWATCH — CURRENT GMP TABLE
 # =========================================================
 
+def _ipowatch_column(headers, *names):
+    """Index of the first header that starts with one of `names`."""
+
+    for index, header in enumerate(headers):
+        if any(header.startswith(name) for name in names):
+            return index
+
+    return None
+
+
 def get_ipowatch_ipos():
 
     html = get_page(IPOWATCH_URL)
@@ -335,68 +353,104 @@ def get_ipowatch_ipos():
         "html.parser"
     )
 
-    tables = soup.find_all("table")
-
-    if not tables:
-
-        raise Exception(
-            "Could not find IPOWatch GMP table."
-        )
-
-    # Table 0 = current GMP table
-    table = tables[0]
-
-    rows = table.find_all("tr")
-
+    # IPOWatch has changed this page's layout before (Oct 2026: one
+    # 8+ column table became separate Mainboard and SME tables with
+    # 6 columns), so columns are located by header name, and every
+    # table whose header has "Company" + "GMP" is read.
     ipos = []
 
-    for row in rows[1:]:
+    for table in soup.find_all("table"):
 
-        cells = row.find_all(
-            ["th", "td"]
-        )
+        rows = table.find_all("tr")
 
-        values = [
-            cell.get_text(
-                " ",
-                strip=True
-            )
-            for cell in cells
-        ]
-
-        if len(values) < 8:
+        if not rows:
             continue
 
-        # Get the REAL IPOWatch URL from the IPO name link.
-        ipowatch_url = None
+        headers = [
+            cell.get_text(" ", strip=True).lower()
+            for cell in rows[0].find_all(["th", "td"])
+        ]
 
-        if cells:
-            link = cells[0].find(
-                "a",
-                href=True
+        col_company = _ipowatch_column(headers, "company", "ipo")
+        col_gmp = _ipowatch_column(headers, "gmp")
+
+        if col_company is None or col_gmp is None:
+            continue
+
+        col_trend = _ipowatch_column(headers, "trend")
+        col_price = _ipowatch_column(headers, "price")
+        col_listing = _ipowatch_column(headers, "est")
+        col_date = _ipowatch_column(headers, "date")
+        col_type = _ipowatch_column(headers, "type")
+        col_status = _ipowatch_column(headers, "status")
+        col_updated = _ipowatch_column(headers, "last", "updated")
+
+        # The new layout states the board in the heading above the table.
+        heading = table.find_previous(["h2", "h3", "h4"])
+        heading_text = heading.get_text(" ", strip=True).lower() if heading else ""
+        table_type = (
+            "SME" if "sme" in heading_text
+            else "Mainboard" if "mainboard" in heading_text
+            else ""
+        )
+
+        for row in rows[1:]:
+
+            cells = row.find_all(["th", "td"])
+
+            if len(cells) <= max(col_company, col_gmp):
+                continue
+
+            values = [
+                cell.get_text(" ", strip=True)
+                for cell in cells
+            ]
+
+            def value(index):
+                return values[index] if index is not None and index < len(values) else ""
+
+            # Company name is the link text; the cell also carries a
+            # status badge ("Open", "Upcoming") after a <br>.
+            name_cell = cells[col_company]
+            link = name_cell.find("a", href=True)
+            badge = name_cell.find("span")
+
+            company = (
+                link.get_text(" ", strip=True)
+                if link
+                else values[col_company]
             )
 
-            if link:
-                ipowatch_url = link["href"]
+            if not company:
+                continue
 
-        ipo = {
-            "company": values[0],
-            "gmp": values[1],
-            "trend": values[2],
-            "price_band": values[3],
-            "estimated_listing": values[4],
-            "date": values[5],
-            "type": values[6],
-            "status": values[7],
-            "last_updated": (
-                values[8]
-                if len(values) > 8
-                else ""
-            ),
-            "ipowatch_url": ipowatch_url,
-        }
+            ipo = {
+                "company": company,
+                "gmp": value(col_gmp),
+                "trend": value(col_trend),
+                "price_band": value(col_price),
+                "estimated_listing": value(col_listing),
+                "date": value(col_date),
+                "type": value(col_type) or table_type,
+                "status": (
+                    value(col_status)
+                    or (badge.get_text(" ", strip=True) if badge else "")
+                ),
+                "last_updated": value(col_updated),
+                # Links are sometimes relative on the new page.
+                "ipowatch_url": (
+                    urljoin(IPOWATCH_URL, link["href"])
+                    if link
+                    else None
+                ),
+            }
 
-        ipos.append(ipo)
+            ipos.append(ipo)
+
+    if not ipos:
+        raise Exception(
+            "Could not find any rows in the IPOWatch GMP tables."
+        )
 
     return ipos
 
@@ -412,6 +466,8 @@ def find_ipowatch_match(
     best_match = None
     best_score = 0
 
+    groww_words = clean_name(groww_company).split()
+
     for ipo in ipowatch_ipos:
 
         score = similarity(
@@ -419,12 +475,23 @@ def find_ipowatch_match(
             ipo["company"]
         )
 
+        # IPOWatch often shortens names ("Sahajanand Medical" for
+        # "Sahajanand Medical Technologies"); a multi-word prefix match
+        # is a confident match.
+        watch_words = clean_name(ipo["company"]).split()
+        shorter, longer = sorted([groww_words, watch_words], key=len)
+
+        if len(shorter) >= 2 and longer[:len(shorter)] == shorter:
+            score = max(score, 0.95)
+
         if score > best_score:
 
             best_score = score
             best_match = ipo
 
-    if best_score >= 0.55:
+    # 0.55 used to pair unrelated names that share a common word
+    # (e.g. "Acme India" with "Shellz India").
+    if best_score >= 0.75:
 
         return best_match, best_score
 
@@ -748,7 +815,8 @@ def get_ipowatch_gmp_details(company):
 
 def enrich_ipo(
     ipo,
-    ipowatch_ipos
+    ipowatch_ipos,
+    use_ipowatch_pages=True
 ):
 
     match, score = find_ipowatch_match(
@@ -819,8 +887,17 @@ def enrich_ipo(
     # IPOWatch page.
     # -------------------------------------------------
 
-    gmp_details = get_ipowatch_gmp_details(
-        result["company"]
+    # When IPOWatch is refusing us (e.g. HTTP 403), every per-IPO page
+    # would fail too, so don't request them at all.
+    gmp_details = (
+        get_ipowatch_gmp_details(result["company"])
+        if use_ipowatch_pages
+        else {
+            "gmp": "—",
+            "gmp_trend": "—",
+            "gmp_percentage": "—",
+            "gmp_last_updated": "—",
+        }
     )
 
     if result["gmp"] == "—":
@@ -829,6 +906,16 @@ def enrich_ipo(
     result["gmp_percentage"] = (
         gmp_details["gmp_percentage"]
     )
+
+    # Fallback: the main table's "Est. Gain" reads "₹1349 (20.55%)".
+    if result["gmp_percentage"] in ["—", "", "-%", None]:
+
+        gain = str(result.get("estimated_listing") or "")
+
+        if "(" in gain and "%" in gain:
+            result["gmp_percentage"] = (
+                gain.split("(")[-1].split(")")[0].strip()
+            )
 
     if gmp_details["gmp_last_updated"] != "—":
         result["gmp_last_updated"] = (
@@ -839,7 +926,7 @@ def enrich_ipo(
     # Third: allotment date
     # -------------------------------------------------
 
-    if result["allotment_date"] == "—":
+    if result["allotment_date"] == "—" and use_ipowatch_pages:
 
         result["allotment_date"] = (
             get_ipowatch_allotment_date(
@@ -889,7 +976,25 @@ def get_dashboard_data(progress_callback=None):
     # 3. IPOWatch GMP
     # -----------------------------------------------
 
-    ipowatch_ipos = get_ipowatch_ipos()
+    # A problem with IPOWatch must not stop the whole update.
+    #  - Site unreachable / refusing us (e.g. Cloudflare HTTP 403 on
+    #    GitHub's servers): skip all IPOWatch requests this run and
+    #    report it, so update_data.py can keep the last known GMP.
+    #  - Main table unreadable (layout change): each IPO still falls
+    #    back to its own IPOWatch page below.
+    ipowatch_available = True
+
+    try:
+        ipowatch_ipos = get_ipowatch_ipos()
+
+    except requests.RequestException as error:
+        ipowatch_available = False
+        ipowatch_ipos = []
+        print(f"WARNING: IPOWatch unreachable ({error}). Skipping GMP lookups this run.")
+
+    except Exception as error:
+        ipowatch_ipos = []
+        print(f"WARNING: IPOWatch GMP table unreadable ({error}); using per-IPO pages.")
 
     if progress_callback:
         progress_callback(
@@ -920,7 +1025,8 @@ def get_dashboard_data(progress_callback=None):
             executor.map(
                 lambda ipo: enrich_ipo(
                     ipo,
-                    ipowatch_ipos
+                    ipowatch_ipos,
+                    use_ipowatch_pages=ipowatch_available
                 ),
                 all_ipos
             )
@@ -957,6 +1063,8 @@ def get_dashboard_data(progress_callback=None):
     return {
         "open": open_ipos,
         "recent_closed": recent_closed,
+        # Read (and removed) by update_data.py before saving.
+        "ipowatch_available": ipowatch_available,
     }
     
 
