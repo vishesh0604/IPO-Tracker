@@ -2423,6 +2423,10 @@
     {
       "timestamp": "2026-10-17 11:44",
       "gmp": 74.0
+    },
+    {
+      "timestamp": "2026-10-17 16:41",
+      "gmp": 72.0
     }
   ],
   "Ravita Engineering Services": [
@@ -2509,6 +2513,10 @@
     {
       "timestamp": "2026-10-17 01:35",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-10-17 16:41",
+      "gmp": 10.5
     }
   ],
   "Sahajanand Medical Technologies": [
@@ -2531,6 +2539,10 @@
     {
       "timestamp": "2026-10-17 04:32",
       "gmp": 35.0
+    },
+    {
+      "timestamp": "2026-10-17 16:41",
+      "gmp": 28.0
     }
   ],
   "Tonbo Imaging": [
@@ -2545,6 +2557,10 @@
     {
       "timestamp": "2026-10-16 22:28",
       "gmp": 516.0
+    },
+    {
+      "timestamp": "2026-10-17 16:41",
+      "gmp": 520.0
     }
   ],
   "Bonfiglioli Transmissions": [
@@ -2567,12 +2583,20 @@
     {
       "timestamp": "2026-10-16 22:28",
       "gmp": 129.0
+    },
+    {
+      "timestamp": "2026-10-17 16:41",
+      "gmp": 131.0
     }
   ],
   "Vaibhav Vyapar": [
     {
       "timestamp": "2026-10-16 02:02",
       "gmp": 2.0
+    },
+    {
+      "timestamp": "2026-10-17 16:41",
+      "gmp": 3.0
     }
   ],
   "Jio Platforms": [
