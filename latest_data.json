@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-23 22:58",
+  "fetched_at": "2026-10-24 02:09",
   "data": {
     "open": [
       {
@@ -46,6 +46,48 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Jio Platforms",
+        "type": "Mainboard",
+        "open_date": "21 Oct 2026",
+        "close_date": "23 Oct 2026",
+        "allotment_date": "26 Oct 2026",
+        "issue_price": "₹1065 - ₹1119",
+        "subscription": "21.46x",
+        "action": "Apply",
+        "groww_status": "Open",
+        "status_source": "current",
+        "groww_url": "https://groww.in/ipo/reliance-jio-ipo",
+        "gmp": "₹249",
+        "gmp_percentage": "22.25%",
+        "gmp_last_updated": "23-Oct 22:02",
+        "estimated_listing": "₹1368 (22.25%)",
+        "gmp_source": "InvestorGain",
+        "investorgain_name": "Jio Platforms",
+        "investorgain_url": "https://www.investorgain.com/gmp/jio-platforms-ipo/2306/",
+        "investorgain_confidence": 100.0
+      },
+      {
+        "company": "Paras Healthcare",
+        "type": "Mainboard",
+        "open_date": "21 Oct 2026",
+        "close_date": "23 Oct 2026",
+        "allotment_date": "26 Oct 2026",
+        "issue_price": "₹693.00",
+        "subscription": "2.22x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "groww_url": "https://groww.in/ipo/paras-healthcare-ipo",
+        "gmp": "₹11",
+        "gmp_percentage": "1.59%",
+        "gmp_last_updated": "23-Oct 22:02",
+        "estimated_listing": "₹704 (1.59%)",
+        "gmp_source": "InvestorGain",
+        "investorgain_name": "Paras Healthcare",
+        "investorgain_url": "https://www.investorgain.com/gmp/paras-healthcare-ipo/1728/",
+        "investorgain_confidence": 100.0
+      },
       {
         "company": "Zetwerk",
         "type": "Mainboard",
@@ -108,48 +150,6 @@
         "investorgain_name": "Tonbo Imaging India",
         "investorgain_url": "https://www.investorgain.com/gmp/tonbo-imaging-india-ipo/2369/",
         "investorgain_confidence": 95.0
-      },
-      {
-        "company": "Shellz India",
-        "type": "SME",
-        "open_date": "15 Oct 2026",
-        "close_date": "19 Oct 2026",
-        "allotment_date": "21 Oct 2026",
-        "issue_price": "₹179.00",
-        "subscription": "50.49x",
-        "action": "+0.00%",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "groww_url": "https://groww.in/ipo/shellz-india-ipo",
-        "gmp": "₹7",
-        "gmp_percentage": "3.91%",
-        "gmp_last_updated": "23-Oct 9:37",
-        "estimated_listing": "₹186 (3.91%)",
-        "gmp_source": "InvestorGain",
-        "investorgain_name": "Shellz India",
-        "investorgain_url": "https://www.investorgain.com/gmp/shellz-india-ipo/2228/",
-        "investorgain_confidence": 100.0
-      },
-      {
-        "company": "Bonfiglioli Transmissions",
-        "type": "Mainboard",
-        "open_date": "15 Oct 2026",
-        "close_date": "19 Oct 2026",
-        "allotment_date": "21 Oct 2026",
-        "issue_price": "₹586.00",
-        "subscription": "45.98x",
-        "action": "+0.00%",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "groww_url": "https://groww.in/ipo/bonfiglioli-transmissions-ipo",
-        "gmp": "₹66",
-        "gmp_percentage": "11.26%",
-        "gmp_last_updated": "23-Oct 9:37",
-        "estimated_listing": "₹652 (11.26%)",
-        "gmp_source": "InvestorGain",
-        "investorgain_name": "Bonfiglioli Transmissions",
-        "investorgain_url": "https://www.investorgain.com/gmp/bonfiglioli-transmissions-ipo/2124/",
-        "investorgain_confidence": 100.0
       }
     ]
   }
