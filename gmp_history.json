@@ -3079,24 +3079,40 @@
     {
       "timestamp": "2026-10-25 23:22",
       "gmp": 9.0
+    },
+    {
+      "timestamp": "2026-10-26 20:04",
+      "gmp": 11.0
     }
   ],
   "BLS Polymers": [
     {
       "timestamp": "2026-10-25 10:50",
       "gmp": 38.0
+    },
+    {
+      "timestamp": "2026-10-26 20:04",
+      "gmp": 40.0
     }
   ],
   "SFC Environmental Technologies": [
     {
       "timestamp": "2026-10-25 10:50",
       "gmp": 32.0
+    },
+    {
+      "timestamp": "2026-10-26 20:04",
+      "gmp": 27.0
     }
   ],
   "EAAA India Alternatives": [
     {
       "timestamp": "2026-10-26 12:30",
       "gmp": 36.0
+    },
+    {
+      "timestamp": "2026-10-26 20:04",
+      "gmp": 35.0
     }
   ]
 }
