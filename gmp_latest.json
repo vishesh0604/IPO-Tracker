@@ -444,7 +444,7 @@
     "gmp": 7.0
   },
   "Zetwerk": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 1.2
   },
   "Fusion CX": {
@@ -452,11 +452,11 @@
     "gmp": 20.0
   },
   "Sahajanand Medical Technologies": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 17.0
   },
   "Tonbo Imaging": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 452.0
   },
   "Bonfiglioli Transmissions": {
@@ -468,7 +468,7 @@
     "gmp": 5.0
   },
   "Jio Platforms": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 247.0
   },
   "Shellz India": {
@@ -476,15 +476,19 @@
     "gmp": 7.0
   },
   "Paras Healthcare": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 9.0
   },
   "BLS Polymers": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 38.0
   },
   "SFC Environmental Technologies": {
-    "timestamp": "2026-10-26 07:15",
+    "timestamp": "2026-10-26 12:30",
     "gmp": 32.0
+  },
+  "EAAA India Alternatives": {
+    "timestamp": "2026-10-26 12:30",
+    "gmp": 36.0
   }
 }
