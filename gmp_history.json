@@ -3015,6 +3015,10 @@
     {
       "timestamp": "2026-10-28 06:14",
       "gmp": 248.0
+    },
+    {
+      "timestamp": "2026-10-28 11:49",
+      "gmp": 250.0
     }
   ],
   "Shellz India": [
@@ -3197,6 +3201,10 @@
     {
       "timestamp": "2026-10-28 06:14",
       "gmp": 11.0
+    },
+    {
+      "timestamp": "2026-10-28 11:49",
+      "gmp": 10.0
     }
   ],
   "M. K. Sons Fine Jewels": [
@@ -3215,6 +3223,22 @@
     {
       "timestamp": "2026-10-28 02:59",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-10-28 11:49",
+      "gmp": 8.5
+    }
+  ],
+  "Ajwa Projects": [
+    {
+      "timestamp": "2026-10-28 11:49",
+      "gmp": 38.0
+    }
+  ],
+  "Bombay Coated & Special Steels": [
+    {
+      "timestamp": "2026-10-28 11:49",
+      "gmp": 9.0
     }
   ]
 }
