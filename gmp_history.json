@@ -3153,6 +3153,10 @@
     {
       "timestamp": "2026-10-29 00:37",
       "gmp": 51.0
+    },
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 60.0
     }
   ],
   "SFC Environmental Technologies": [
@@ -3191,6 +3195,10 @@
     {
       "timestamp": "2026-10-29 05:04",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 6.5
     }
   ],
   "EAAA India Alternatives": [
@@ -3229,6 +3237,10 @@
     {
       "timestamp": "2026-10-29 05:04",
       "gmp": 28.0
+    },
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 27.0
     }
   ],
   "M. K. Sons Fine Jewels": [
@@ -3263,6 +3275,10 @@
     {
       "timestamp": "2026-10-29 05:04",
       "gmp": 15.0
+    },
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 11.0
     }
   ],
   "Ajwa Projects": [
@@ -3273,12 +3289,28 @@
     {
       "timestamp": "2026-10-28 19:03",
       "gmp": 35.0
+    },
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 15.0
     }
   ],
   "Bombay Coated & Special Steels": [
     {
       "timestamp": "2026-10-28 11:49",
       "gmp": 9.0
+    }
+  ],
+  "Maxwell Engineering": [
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 52.0
+    }
+  ],
+  "Johnsoncab Electricals": [
+    {
+      "timestamp": "2026-10-29 15:55",
+      "gmp": 13.0
     }
   ]
 }
