@@ -3207,6 +3207,10 @@
     {
       "timestamp": "2026-10-30 03:31",
       "gmp": 19.0
+    },
+    {
+      "timestamp": "2026-10-30 14:31",
+      "gmp": 20.0
     }
   ],
   "EAAA India Alternatives": [
@@ -3261,6 +3265,10 @@
     {
       "timestamp": "2026-10-30 07:39",
       "gmp": 38.0
+    },
+    {
+      "timestamp": "2026-10-30 14:31",
+      "gmp": 56.0
     }
   ],
   "M. K. Sons Fine Jewels": [
@@ -3307,6 +3315,10 @@
     {
       "timestamp": "2026-10-30 03:31",
       "gmp": 12.5
+    },
+    {
+      "timestamp": "2026-10-30 14:31",
+      "gmp": 7.0
     }
   ],
   "Ajwa Projects": [
@@ -3325,6 +3337,10 @@
     {
       "timestamp": "2026-10-29 22:35",
       "gmp": 5.0
+    },
+    {
+      "timestamp": "2026-10-30 14:31",
+      "gmp": 2.0
     }
   ],
   "Bombay Coated & Special Steels": [
@@ -3347,6 +3363,10 @@
     {
       "timestamp": "2026-10-29 15:55",
       "gmp": 13.0
+    },
+    {
+      "timestamp": "2026-10-30 14:31",
+      "gmp": 10.0
     }
   ]
 }
