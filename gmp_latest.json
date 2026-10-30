@@ -480,16 +480,16 @@
     "gmp": 13.0
   },
   "BLS Polymers": {
-    "timestamp": "2026-10-30 14:31",
-    "gmp": 68.0
+    "timestamp": "2026-10-30 21:45",
+    "gmp": 73.0
   },
   "SFC Environmental Technologies": {
-    "timestamp": "2026-10-30 14:31",
-    "gmp": 20.0
+    "timestamp": "2026-10-30 21:45",
+    "gmp": 21.0
   },
   "EAAA India Alternatives": {
-    "timestamp": "2026-10-30 14:31",
-    "gmp": 56.0
+    "timestamp": "2026-10-30 21:45",
+    "gmp": 52.0
   },
   "M. K. Sons Fine Jewels": {
     "timestamp": "2026-10-30 14:31",
@@ -500,15 +500,19 @@
     "gmp": 2.0
   },
   "Bombay Coated & Special Steels": {
-    "timestamp": "2026-10-30 14:31",
-    "gmp": 9.0
+    "timestamp": "2026-10-30 21:45",
+    "gmp": 7.0
   },
   "Maxwell Engineering": {
-    "timestamp": "2026-10-30 14:31",
+    "timestamp": "2026-10-30 21:45",
     "gmp": 70.0
   },
   "Johnsoncab Electricals": {
-    "timestamp": "2026-10-30 14:31",
+    "timestamp": "2026-10-30 21:45",
     "gmp": 10.0
+  },
+  "HGS India": {
+    "timestamp": "2026-10-30 21:45",
+    "gmp": 19.0
   }
 }
