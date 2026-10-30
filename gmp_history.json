@@ -3165,6 +3165,10 @@
     {
       "timestamp": "2026-10-30 21:45",
       "gmp": 73.0
+    },
+    {
+      "timestamp": "2026-10-31 02:33",
+      "gmp": 70.0
     }
   ],
   "SFC Environmental Technologies": [
@@ -3219,6 +3223,10 @@
     {
       "timestamp": "2026-10-30 21:45",
       "gmp": 21.0
+    },
+    {
+      "timestamp": "2026-10-31 02:33",
+      "gmp": 20.0
     }
   ],
   "EAAA India Alternatives": [
@@ -3331,6 +3339,10 @@
     {
       "timestamp": "2026-10-30 14:31",
       "gmp": 7.0
+    },
+    {
+      "timestamp": "2026-10-31 02:33",
+      "gmp": 6.0
     }
   ],
   "Ajwa Projects": [
@@ -3389,6 +3401,16 @@
     {
       "timestamp": "2026-10-30 21:45",
       "gmp": 19.0
+    },
+    {
+      "timestamp": "2026-10-31 02:33",
+      "gmp": 30.0
+    }
+  ],
+  "Carver Roboweld": [
+    {
+      "timestamp": "2026-10-31 02:33",
+      "gmp": 5.0
     }
   ]
 }
