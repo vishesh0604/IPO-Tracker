@@ -3169,6 +3169,10 @@
     {
       "timestamp": "2026-10-31 02:33",
       "gmp": 70.0
+    },
+    {
+      "timestamp": "2026-10-31 19:24",
+      "gmp": 68.0
     }
   ],
   "SFC Environmental Technologies": [
@@ -3227,6 +3231,10 @@
     {
       "timestamp": "2026-10-31 02:33",
       "gmp": 20.0
+    },
+    {
+      "timestamp": "2026-10-31 19:24",
+      "gmp": 24.5
     }
   ],
   "EAAA India Alternatives": [
@@ -3343,6 +3351,10 @@
     {
       "timestamp": "2026-10-31 02:33",
       "gmp": 6.0
+    },
+    {
+      "timestamp": "2026-10-31 19:24",
+      "gmp": 5.5
     }
   ],
   "Ajwa Projects": [
@@ -3365,6 +3377,10 @@
     {
       "timestamp": "2026-10-30 14:31",
       "gmp": 2.0
+    },
+    {
+      "timestamp": "2026-10-31 19:24",
+      "gmp": 1.0
     }
   ],
   "Bombay Coated & Special Steels": [
@@ -3375,6 +3391,10 @@
     {
       "timestamp": "2026-10-30 21:45",
       "gmp": 7.0
+    },
+    {
+      "timestamp": "2026-10-31 19:24",
+      "gmp": 10.0
     }
   ],
   "Maxwell Engineering": [
@@ -3395,6 +3415,10 @@
     {
       "timestamp": "2026-10-30 14:31",
       "gmp": 10.0
+    },
+    {
+      "timestamp": "2026-10-31 19:24",
+      "gmp": 5.0
     }
   ],
   "HGS India": [
@@ -3410,6 +3434,12 @@
   "Carver Roboweld": [
     {
       "timestamp": "2026-10-31 02:33",
+      "gmp": 5.0
+    }
+  ],
+  "Vedant Poly Fabs Solutions": [
+    {
+      "timestamp": "2026-10-31 19:24",
       "gmp": 5.0
     }
   ]

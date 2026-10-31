@@ -480,43 +480,47 @@
     "gmp": 13.0
   },
   "BLS Polymers": {
-    "timestamp": "2026-10-31 13:00",
-    "gmp": 70.0
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 68.0
   },
   "SFC Environmental Technologies": {
-    "timestamp": "2026-10-31 13:00",
-    "gmp": 20.0
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 24.5
   },
   "EAAA India Alternatives": {
     "timestamp": "2026-10-30 21:45",
     "gmp": 52.0
   },
   "M. K. Sons Fine Jewels": {
-    "timestamp": "2026-10-31 13:00",
-    "gmp": 6.0
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 5.5
   },
   "Ajwa Projects": {
-    "timestamp": "2026-10-31 13:00",
-    "gmp": 2.0
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 1.0
   },
   "Bombay Coated & Special Steels": {
-    "timestamp": "2026-10-31 13:00",
-    "gmp": 7.0
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 10.0
   },
   "Maxwell Engineering": {
-    "timestamp": "2026-10-31 13:00",
+    "timestamp": "2026-10-31 19:24",
     "gmp": 70.0
   },
   "Johnsoncab Electricals": {
-    "timestamp": "2026-10-31 13:00",
-    "gmp": 10.0
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 5.0
   },
   "HGS India": {
-    "timestamp": "2026-10-31 13:00",
+    "timestamp": "2026-10-31 19:24",
     "gmp": 30.0
   },
   "Carver Roboweld": {
-    "timestamp": "2026-10-31 13:00",
+    "timestamp": "2026-10-31 19:24",
+    "gmp": 5.0
+  },
+  "Vedant Poly Fabs Solutions": {
+    "timestamp": "2026-10-31 19:24",
     "gmp": 5.0
   }
 }
