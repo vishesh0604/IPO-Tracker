@@ -1,7 +1,29 @@
 {
-  "fetched_at": "2026-11-16 08:39",
+  "fetched_at": "2026-11-16 17:34",
   "data": {
-    "open": [],
+    "open": [
+      {
+        "company": "Crystal Crop Protection",
+        "type": "Mainboard",
+        "open_date": "18 Nov 2026",
+        "close_date": "20 Nov 2026",
+        "allotment_date": "23 Nov 2026",
+        "issue_price": "₹259 - ₹272",
+        "subscription": "--",
+        "action": "Pre-apply",
+        "groww_status": "Pre-apply",
+        "status_source": "current",
+        "groww_url": "https://groww.in/ipo/crystal-crop-protection-ipo",
+        "gmp": "₹13",
+        "gmp_percentage": "4.78%",
+        "gmp_last_updated": "16-Nov 17:02",
+        "estimated_listing": "₹285 (4.78%)",
+        "gmp_source": "InvestorGain",
+        "investorgain_name": "Crystal Crop Protection",
+        "investorgain_url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
+        "investorgain_confidence": 100.0
+      }
+    ],
     "recent_closed": [
       {
         "company": "Antala Industries",
