@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20 23:31",
+  "fetched_at": "2026-11-21 05:46",
   "data": {
     "open": [
       {
@@ -16,7 +16,7 @@
         "groww_url": "https://groww.in/ipo/mahanadi-coalfields-ipo",
         "gmp": "₹0.75",
         "gmp_percentage": "0.55%",
-        "gmp_last_updated": "20-Nov 22:02",
+        "gmp_last_updated": "20-Nov 23:37",
         "estimated_listing": "₹136.75 (0.55%)",
         "gmp_source": "InvestorGain",
         "investorgain_name": "Mahanadi Coalfields",
@@ -37,7 +37,7 @@
         "groww_url": "https://groww.in/ipo/watrana-rentals-ipo",
         "gmp": "₹67",
         "gmp_percentage": "27.35%",
-        "gmp_last_updated": "20-Nov 22:02",
+        "gmp_last_updated": "20-Nov 23:37",
         "estimated_listing": "₹312 (27.35%)",
         "gmp_source": "InvestorGain",
         "investorgain_name": "Watrana Rentals",
@@ -46,6 +46,27 @@
       }
     ],
     "recent_closed": [
+      {
+        "company": "Crystal Crop Protection",
+        "type": "Mainboard",
+        "open_date": "18 Nov 2026",
+        "close_date": "20 Nov 2026",
+        "allotment_date": "23 Nov 2026",
+        "issue_price": "₹272.00",
+        "subscription": "16.63x",
+        "action": "--",
+        "groww_status": "Closed",
+        "status_source": "closed",
+        "groww_url": "https://groww.in/ipo/crystal-crop-protection-ipo",
+        "gmp": "₹14.5",
+        "gmp_percentage": "5.33%",
+        "gmp_last_updated": "20-Nov 23:37",
+        "estimated_listing": "₹286.5 (5.33%)",
+        "gmp_source": "InvestorGain",
+        "investorgain_name": "Crystal Crop Protection",
+        "investorgain_url": "https://www.investorgain.com/gmp/crystal-crop-protection-ipo/2067/",
+        "investorgain_confidence": 100.0
+      },
       {
         "company": "Antala Industries",
         "type": "SME",
@@ -129,27 +150,6 @@
         "investorgain_name": "Maxwell Engineering Solutions",
         "investorgain_url": "https://www.investorgain.com/gmp/maxwell-engineering-solutions-ipo/1965/",
         "investorgain_confidence": 95.0
-      },
-      {
-        "company": "Johnsoncab Electricals",
-        "type": "SME",
-        "open_date": "30 Oct 2026",
-        "close_date": "03 Nov 2026",
-        "allotment_date": "04 Nov 2026",
-        "issue_price": "₹200.00",
-        "subscription": "21.99x",
-        "action": "+19.25%",
-        "groww_status": "Closed",
-        "status_source": "closed",
-        "groww_url": "https://groww.in/ipo/johnsoncab-electricals-ipo",
-        "gmp": "₹8",
-        "gmp_percentage": "4.00%",
-        "gmp_last_updated": "6-Nov 9:37",
-        "estimated_listing": "₹208 (4.00%)",
-        "gmp_source": "InvestorGain",
-        "investorgain_name": "Johnsoncab Electricals",
-        "investorgain_url": "https://www.investorgain.com/gmp/johnsoncab-electricals-ipo/2371/",
-        "investorgain_confidence": 100.0
       }
     ]
   }
