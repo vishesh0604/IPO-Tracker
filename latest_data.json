@@ -1,50 +1,7 @@
 {
-  "fetched_at": "2026-11-23 08:41",
+  "fetched_at": "2026-11-23 19:11",
   "data": {
-    "open": [
-      {
-        "company": "Mahanadi Coalfields",
-        "type": "Mainboard",
-        "open_date": "19 Nov 2026",
-        "close_date": "23 Nov 2026",
-        "allotment_date": "25 Nov 2026",
-        "issue_price": "₹129 - ₹136",
-        "subscription": "0.48x",
-        "action": "Apply",
-        "groww_status": "Open",
-        "status_source": "current",
-        "groww_url": "https://groww.in/ipo/mahanadi-coalfields-ipo",
-        "gmp": "₹0.7",
-        "gmp_percentage": "0.51%",
-        "gmp_last_updated": "22-Nov 23:37",
-        "estimated_listing": "₹136.7 (0.51%)",
-        "gmp_source": "InvestorGain",
-        "investorgain_name": "Mahanadi Coalfields",
-        "investorgain_url": "https://www.investorgain.com/gmp/mahanadi-coalfields-ipo/2401/",
-        "investorgain_confidence": 100.0
-      },
-      {
-        "company": "Watrana Rentals",
-        "type": "SME",
-        "open_date": "19 Nov 2026",
-        "close_date": "23 Nov 2026",
-        "allotment_date": "25 Nov 2026",
-        "issue_price": "₹232 - ₹245",
-        "subscription": "11.10x",
-        "action": "Apply",
-        "groww_status": "Open",
-        "status_source": "current",
-        "groww_url": "https://groww.in/ipo/watrana-rentals-ipo",
-        "gmp": "₹55",
-        "gmp_percentage": "22.45%",
-        "gmp_last_updated": "22-Nov 23:37",
-        "estimated_listing": "₹300 (22.45%)",
-        "gmp_source": "InvestorGain",
-        "investorgain_name": "Watrana Rentals",
-        "investorgain_url": "https://www.investorgain.com/gmp/watrana-rentals-ipo/1818/",
-        "investorgain_confidence": 100.0
-      }
-    ],
+    "open": [],
     "recent_closed": [
       {
         "company": "Crystal Crop Protection",
@@ -60,7 +17,7 @@
         "groww_url": "https://groww.in/ipo/crystal-crop-protection-ipo",
         "gmp": "₹14.5",
         "gmp_percentage": "5.33%",
-        "gmp_last_updated": "22-Nov 23:37",
+        "gmp_last_updated": "23-Nov 14:37",
         "estimated_listing": "₹286.5 (5.33%)",
         "gmp_source": "InvestorGain",
         "investorgain_name": "Crystal Crop Protection",
