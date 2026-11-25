@@ -3635,6 +3635,10 @@
     {
       "timestamp": "2026-11-25 03:01",
       "gmp": 19.0
+    },
+    {
+      "timestamp": "2026-11-25 20:29",
+      "gmp": 18.0
     }
   ],
   "Mahanadi Coalfields": [
@@ -3715,6 +3719,10 @@
     {
       "timestamp": "2026-11-24 06:43",
       "gmp": 40.0
+    },
+    {
+      "timestamp": "2026-11-25 20:29",
+      "gmp": 41.0
     }
   ],
   "Shree Siddhivinayak Greentech": [
@@ -3735,6 +3743,10 @@
     {
       "timestamp": "2026-11-25 03:01",
       "gmp": 21.0
+    },
+    {
+      "timestamp": "2026-11-25 20:29",
+      "gmp": 27.0
     }
   ]
 }
