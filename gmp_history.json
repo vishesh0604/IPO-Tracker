@@ -3639,6 +3639,10 @@
     {
       "timestamp": "2026-11-25 20:29",
       "gmp": 18.0
+    },
+    {
+      "timestamp": "2026-11-26 05:17",
+      "gmp": 17.0
     }
   ],
   "Mahanadi Coalfields": [
@@ -3723,6 +3727,10 @@
     {
       "timestamp": "2026-11-25 20:29",
       "gmp": 41.0
+    },
+    {
+      "timestamp": "2026-11-26 05:17",
+      "gmp": 22.0
     }
   ],
   "Shree Siddhivinayak Greentech": [
@@ -3733,6 +3741,10 @@
     {
       "timestamp": "2026-11-25 03:01",
       "gmp": 20.0
+    },
+    {
+      "timestamp": "2026-11-26 05:17",
+      "gmp": 25.0
     }
   ],
   "Foodlink F&B Holdings": [
@@ -3747,6 +3759,10 @@
     {
       "timestamp": "2026-11-25 20:29",
       "gmp": 27.0
+    },
+    {
+      "timestamp": "2026-11-26 05:17",
+      "gmp": 18.0
     }
   ]
 }
