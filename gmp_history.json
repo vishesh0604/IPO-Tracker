@@ -3693,6 +3693,10 @@
     {
       "timestamp": "2026-11-21 13:13",
       "gmp": 0.7
+    },
+    {
+      "timestamp": "2026-11-26 21:17",
+      "gmp": 0.75
     }
   ],
   "Watrana Rentals": [
@@ -3731,6 +3735,10 @@
     {
       "timestamp": "2026-11-26 05:17",
       "gmp": 22.0
+    },
+    {
+      "timestamp": "2026-11-26 21:17",
+      "gmp": 19.0
     }
   ],
   "Shree Siddhivinayak Greentech": [
@@ -3745,6 +3753,10 @@
     {
       "timestamp": "2026-11-26 05:17",
       "gmp": 25.0
+    },
+    {
+      "timestamp": "2026-11-26 21:17",
+      "gmp": 6.0
     }
   ],
   "Foodlink F&B Holdings": [
@@ -3763,12 +3775,20 @@
     {
       "timestamp": "2026-11-26 05:17",
       "gmp": 18.0
+    },
+    {
+      "timestamp": "2026-11-26 21:17",
+      "gmp": 12.0
     }
   ],
   "Airpro Technology": [
     {
       "timestamp": "2026-11-26 10:59",
       "gmp": 4.0
+    },
+    {
+      "timestamp": "2026-11-26 21:17",
+      "gmp": 2.0
     }
   ]
 }
